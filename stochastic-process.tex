@@ -72,9 +72,9 @@
 
 \section{概率}
 
-概率论的一个基本概念是随机试验. 一个试验或观察, 若它的结果预先无法确定, 则称之为随机试验, 简称为试验. 所有试验的可能结果组成的集合, 称为样本空间, 记作 $\Omega$. $\Omega$ 中的元素则称为样本点, 用 $\omega$ 表示. 由 $\Omega$ 的某些样本点构成的子集合, 常用大写字母 $A,B,C$ 等表示, 由 $\Omega$ 中的若干子集构成的集合称为集类, 用花写字母 $\mathcal{A},\mathcal{B},\mathcal{F}$ 等表示
+概率论的一个基本概念是随机试验. 一个试验或观察, 若它的结果预先无法确定, 则称之为随机试验, 简称为试验. 所有试验的可能结果组成的集合, 称为样本空间, 记作 $\Omega$. $\Omega$ 中的元素则称为样本点, 用 $\omega$ 表示. 由 $\Omega$ 的某些样本点构成的子集合, 常用大写字母 $A,B,C$ 等表示, 由 $\Omega$ 中的若干子集构成的集合称为集类, 用花写字母 $\mathcal{A},\mathcal{B},\mathcal{F}$ 等表示.
 
-由于并不是在所有的 $\Omega$ 的子集上都能方便地定义概率, 一般只限制在满足一定条件的集类 $\mathcal{F}$ 上研究概率性质, 为此引入 $\sigma$ 域的概念
+由于并不是在所有的 $\Omega$ 的子集上都能方便地定义概率, 一般只限制在满足一定条件的集类 $\mathcal{F}$ 上研究概率性质, 为此引入 $\sigma$ 域的概念.
 
 \textbf{定义}：$\sigma$ 域与可测空间
 
@@ -87,7 +87,7 @@
   \bigcup_{n=1}^\infty A_n\in\mathcal{F}
 \end{equation}
 
-所以称 $\mathcal{F}$ 为 $\sigma$ 域, 或 $\sigma$ 代数,  称 $(\Omega,\mathcal{F})$ 为可测空间.
+则称 $\mathcal{F}$ 为 $\sigma$ 域, 或 $\sigma$ 代数,  称 $(\Omega,\mathcal{F})$ 为可测空间.
 
 $\sigma$ 域性质
 
@@ -99,144 +99,136 @@ $\sigma$ 域性质
 
 \textbf{定义}：概率测度与概率空间
 
-设 $(\Omega,\mathcal{F})$ 为可测空间, $P:\mathcal{F}\to\mathbb{R}$ 是一个定义在 $\mathcal{F}$ 上的函数, 若满足
+设 $(\Omega,\mathcal{F})$ 为可测空间, $\mathbb{P}:\mathcal{F}\to\mathbb{R}$ 是一个定义在 $\mathcal{F}$ 上的函数, 若满足
 
-(1) 非负性: $P(A)\geqslant0,~\forall A\in\mathcal{F}$
+(1) 非负性: $\mathbb{P}(A)\geqslant0,~\forall A\in\mathcal{F}$
 
-(2) 归一性: $P(\Omega)=1$
+(2) 归一性: $\mathbb{P}(\Omega)=1$
 
 (3) 可列可加性: 若 $A_i\in\mathcal{F},~i=1,2,\cdots$, 且 $A_iA_j=\varnothing,~\forall i\neq j$ 有
 \begin{equation}
-  P\left(\bigcup_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty P(A_i)
+  \mathbb{P}\left(\bigcup_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty \mathbb{P}(A_i)
 \end{equation}
  
-所以称 $P$ 为可测空间 $(\Omega,\mathcal{F})$ 上的一个概率测度, 简称概率. 称 $(\Omega,\mathcal{F},P)$ 为概率空间, 称 $\mathcal{F}$ 为事件域. 若 $A\in\mathcal{F}$, 则称 $A$ 为随机事件, 简称为事件, 称 $P(A)$ 为事件 $A$ 的概率.
+则称 $\mathbb{P}$ 为可测空间 $(\Omega,\mathcal{F})$ 上的一个概率测度, 简称概率. 称 $(\Omega,\mathcal{F},\mathbb{P})$ 为概率空间, 称 $\mathcal{F}$ 为事件域. 若 $A\in\mathcal{F}$, 则称 $A$ 为随机事件, 简称为事件, 称 $\mathbb{P}(A)$ 为事件 $A$ 的概率.
 
 概率的基本性质
 
-补集概率: $P(\varnothing)=0$, $P(A^c)=1-P(A)$
+补集概率: $\mathbb{P}(\varnothing)=0$, $\mathbb{P}(A^c)=1-\mathbb{P}(A)$
 
 有限可加性: 若 $A_i\in\mathcal{F},~i=1,2,\cdots,n$ 互不相容则
 \begin{equation}
-  P\left(\bigcup_{i=1}^n A_i\right)=\sum_{i=1}^n P(A_i)
+  \mathbb{P}\left(\bigcup_{i=1}^n A_i\right)=\sum_{i=1}^n \mathbb{P}(A_i)
 \end{equation}
-
 
 交集和并集概率:
 \begin{equation}
-  P(A\cup B)=P(A)+P(B)-P(AB)
+  \mathbb{P}(A\cup B)=\mathbb{P}(A)+\mathbb{P}(B)-\mathbb{P}(AB)
 \end{equation}
 
 \begin{equation}
-  P(A-B)=P(A)-P(AB)
+  \mathbb{P}(A-B)=\mathbb{P}(A)-\mathbb{P}(AB)
 \end{equation}
 
-
-概率比较大小: 若 $A\subset B$, 则 $P(A)\leqslant P(B)$
+概率比较大小: 若 $A\subset B$, 则 $\mathbb{P}(A)\leqslant \mathbb{P}(B)$
 
 次可列可加性: 若 $A_i\in\mathcal{F},~i=1,2,\cdots,n$, 则
 \begin{equation}
-  P\left(\bigcup_{i=1}^n A_i\right)\leqslant\sum_{i=1}^n P(A_i)
+  \mathbb{P}\left(\bigcup_{i=1}^n A_i\right)\leqslant\sum_{i=1}^n \mathbb{P}(A_i)
 \end{equation}
-
 
 可列交并等式: 若 $A_i\in\mathcal{F},~i=1,2,\cdots,n$, 则
 \begin{equation}
-  P\left(\bigcup_{i=1}^n A_i\right)=\sum_{k=1}^n\left[ (-1)^{k+1}\sum_{1\leqslant i_1<i_2<\cdots<i_k\leqslant n}P\left(A_{i_1}\cap A_{i_2}\cap\cdots\cap A_{i_k}\right)\right]
+  \mathbb{P}\left(\bigcup_{i=1}^n A_i\right)=\sum_{k=1}^n\left[ (-1)^{k+1}\sum_{1\leqslant i_1<i_2<\cdots<i_k\leqslant n}\mathbb{P}\left(A_{i_1}\cap A_{i_2}\cap\cdots\cap A_{i_k}\right)\right]
 \end{equation}
-
 
 \textbf{定义}：事件列的单调性与极限
 
-一事件列 $\{A_n:n\geqslant1\}$ 称为单调增序列, 若 $A_n\subset A_{n+1},~n\geqslant1$; 称为単调减序列, 若 $A_n\supset A_{n+1},~n\geqslant1$. 
+一事件列 $\{A_n:n\geqslant1\}$ 称为单调增序列, 若 $A_n\subset A_{n+1},~n\geqslant1$; 称为单调减序列, 若 $A_n\supset A_{n+1},~n\geqslant1$. 
 
 如果 $\{A_n:n\geqslant1\}$ 是单调增序列, 定义事件列的极限
 \begin{equation}
   \lim_{n\to\infty}A_n=\bigcup_{i=1}^\infty A_i
 \end{equation}
- 如果 $\{A_n:n\geqslant1\}$ 是单调减序列, 定义事件列的极限
+如果 $\{A_n:n\geqslant1\}$ 是单调减序列, 定义事件列的极限
 \begin{equation}
   \lim_{n\to\infty}A_n=\bigcap_{i=1}^\infty A_i
 \end{equation}
-
 
 \textbf{命题}：连续性定理
 
 若 $\{A_n:n\geqslant1\}$ 是单调增或单调减序列, 则极限与概率测度可换序
 \begin{equation}
-  \lim_{n\to\infty}P(A_n)=P\left(\lim_{n\to\infty}A_n\right)
+  \lim_{n\to\infty}\mathbb{P}(A_n)=\mathbb{P}\left(\lim_{n\to\infty}A_n\right)
 \end{equation}
-
 
 \textbf{命题}：Borel-Cantelli 引理
 
 设 $\{A_n:n\geqslant1\}$ 是一事件序列, 若
 \begin{equation}
-  \sum_{i=1}^\infty P(A_i)<\infty,
+  \sum_{i=1}^\infty \mathbb{P}(A_i)<\infty,
 \end{equation}
- 则
+则
 \begin{equation}
-  P\left(\limsup_{i\to\infty}A_i\right)=0,
+  \mathbb{P}\left(\limsup_{i\to\infty}A_i\right)=0,
 \end{equation}
- 其中
+其中
 \begin{equation}
-  \limsup_{i\to\infty}A_i\triangleq\bigcap_{n=1}^\infty\bigcup_{i=n}^\infty A_i.
+  \limsup_{i\to\infty}A_i:=\bigcap_{n=1}^\infty\bigcup_{i=n}^\infty A_i.
 \end{equation}
-
 
 \textbf{定义}：事件独立
 
 两个事件 $A,B\in\mathcal{F}$, 若满足
 \begin{equation}
-  P(AB)=P(A)P(B),
+  \mathbb{P}(AB)=\mathbb{P}(A)\mathbb{P}(B),
 \end{equation}
- 则称 $A$ 与 $B$ 相互独立. 
+则称 $A$ 与 $B$ 相互独立. 
 
 容易证明下列命题等价:
 
-(1) $A$ 与 $B$ 独立
+(1) $A$ 与 $B$ 独立;
 
-(2) $A$ 与 $B^c$ 独立
+(2) $A$ 与 $B^c$ 独立;
 
-(3) $P(A|B)=P(A)$
+(3) $\mathbb{P}(A|B)=\mathbb{P}(A)$;
 
-(4) $P(A|B^c)=P(A)$
+(4) $\mathbb{P}(A|B^c)=\mathbb{P}(A)$.
 
 三个事件 $A,B,C\in\mathcal{F}$, 若满足
 \begin{equation}
-  P(AB)=P(A)P(B),~P(AC)=P(A)P(C),~P(BC)=P(B)P(C)
+  \mathbb{P}(AB)=\mathbb{P}(A)\mathbb{P}(B),~\mathbb{P}(AC)=\mathbb{P}(A)\mathbb{P}(C),~\mathbb{P}(BC)=\mathbb{P}(B)\mathbb{P}(C)
 \end{equation}
- 及
+及
 \begin{equation}
-  P(ABC)=P(A)P(B)P(C)
+  \mathbb{P}(ABC)=\mathbb{P}(A)\mathbb{P}(B)\mathbb{P}(C)
 \end{equation}
- 则称 $A,B,C$ 相互独立. 
+则称 $A,B,C$ 相互独立. 
 
 若 $A,B,C$ 相互独立, 则 $A\cup B$ 与 $C$, $AB$ 与 $C$, $A-B$ 与 $C$ 相互独立.
 
 $n$ 个事件 $A_1,A_2,\cdots,A_n\in\mathcal{F}$, 若对其中任意 $k~(2\leqslant k\leqslant n)$ 个事件 $A_{i_1},A_{i_2},\cdots,A_{i_k}$, 其中 $1\leqslant i_1\leqslant i_2\leqslant\cdots\leqslant i_k\leqslant n$, 有
 \begin{equation}
-  P(A_{i_1}A_{i_2}\cdots A_{i_k})=P(A_{i_1})P(A_{i_2})\cdots P(A_{i_k}),
+  \mathbb{P}(A_{i_1}A_{i_2}\cdots A_{i_k})=\mathbb{P}(A_{i_1})\mathbb{P}(A_{i_2})\cdots \mathbb{P}(A_{i_k}),
 \end{equation}
- 则称 $A_1,A_2,\cdots,A_n$ 相互独立. 
+则称 $A_1,A_2,\cdots,A_n$ 相互独立. 
 
 若 $A_1,A_2,\cdots,A_n$ 相互独立, 取 $1\leqslant m<n$, 记
 \begin{equation}
   \mathcal{F}_1=\sigma(A_k,1\leqslant k\leqslant m),~\mathcal{F}_2=\sigma(A_k,m+1\leqslant k\leqslant n),
 \end{equation}
- 任取 $B_1\in\mathcal{F}_1,~B_2\in\mathcal{F}_2$, 则 $B_1$ 与 $B_2$ 独立.
+任取 $B_1\in\mathcal{F}_1,~B_2\in\mathcal{F}_2$, 则 $B_1$ 与 $B_2$ 独立.
 
 \textbf{命题}：独立事件 Borel-Cantelli 引理
 
 若 $\{A_n:n\geqslant1\}$ 是相互独立的事件序列, 且
 \begin{equation}
-  \sum_{n=1}^\infty P(A_n)=\infty,
+  \sum_{n=1}^\infty \mathbb{P}(A_n)=\infty,
 \end{equation}
- 则有
+则有
 \begin{equation}
-  P\left(\limsup_{i\to\infty}A_i\right)=P\left(\bigcap_{n=1}^\infty\bigcup_{i=n}^\infty A_i\right)=\lim_{n\to\infty}P\left(\bigcup_{i=n}^\infty A_i\right)=\lim_{n\to\infty}P\left(\sup_{i\geqslant n} A_i\right)=1.
+  \mathbb{P}\left(\limsup_{i\to\infty}A_i\right)=\mathbb{P}\left(\bigcap_{n=1}^\infty\bigcup_{i=n}^\infty A_i\right)=\lim_{n\to\infty}\mathbb{P}\left(\bigcup_{i=n}^\infty A_i\right)=\lim_{n\to\infty}\mathbb{P}\left(\sup_{i\geqslant n} A_i\right)=1.
 \end{equation}
-
 
 \section{随机变量、分布函数及数字特征}
 
@@ -244,21 +236,21 @@ $n$ 个事件 $A_1,A_2,\cdots,A_n\in\mathcal{F}$, 若对其中任意 $k~(2\leqsl
 
 \textbf{定义}：随机变量
 
-设 $(\Omega,\mathcal{F},P)$ 是一概率空间, $X(\omega):\Omega\to\mathbb{R}$ 是定义在 $\Omega$ 上的単值实函数, 如果对 $\forall a\in\mathbb{R}$, 有
+设 $(\Omega,\mathcal{F},\mathbb{P})$ 是一概率空间, $X(\omega):\Omega\to\mathbb{R}$ 是定义在 $\Omega$ 上的单值实函数, 如果对 $\forall a\in\mathbb{R}$, 有
 \begin{equation}
   \{\omega:X(\omega)\leqslant a\}\in\mathcal{F},
 \end{equation}
- 则称 $X(\omega)$ 为随机变量.
+则称 $X(\omega)$ 为随机变量.
 
 常简记 $\{\omega:X(\omega)\leqslant a\}=\{X\leqslant a\}=\{X\in(-\infty,a]\}$, $X^{-1}(B)=\{\omega:X(\omega)\in B\}$, 且若 $X(\omega)$ 满足 $\{\omega:X(\omega)\leqslant a\}\in\mathcal{F}$, 则 $\forall a,b\in\mathbb{R}$, 有 $\{X>a\},\{X<a\},\{X=a\},\{a<X\leqslant b\},\{a\leqslant X<b\},\{a<X<b\},\{A\leqslant X\leqslant b\}\in\mathcal{F}$.
 
 \textbf{定义}：分布函数
 
-设 $X$ 为 $(\Omega,\mathcal{F},P)$ 上的随机变量, 对 $\forall x\in\mathbb{R}$, 定义
+设 $X$ 为 $(\Omega,\mathcal{F},\mathbb{P})$ 上的随机变量, 对 $\forall x\in\mathbb{R}$, 定义
 \begin{equation}
-  F(x)=P(X\leqslant x)=P(X\in(-\infty,x]),
+  F(x)=\mathbb{P}(X\leqslant x)=\mathbb{P}(X\in(-\infty,x]),
 \end{equation}
- 称 $F(x)$ 为 $X$ 的分布函数.
+称 $F(x)$ 为 $X$ 的分布函数.
 
 \textbf{定义}：连续型与离散型随机变量
 
@@ -272,50 +264,48 @@ $n$ 个事件 $A_1,A_2,\cdots,A_n\in\mathcal{F}$, 若对其中任意 $k~(2\leqsl
 \begin{equation}
   F(x)=\int_{-\infty}^xf(u)\mathrm{d}u
 \end{equation}
- 则称 $f(x)$ 为随机变量 $X$ 的概率密度函数.
+则称 $f(x)$ 为随机变量 $X$ 的概率密度函数.
 
 若 $f(x)$ 连续, 则
 \begin{equation}
   \frac{\mathrm{d}F(x)}{\mathrm{d}x}=f(x)
 \end{equation}
- 即
+即
 \begin{equation}
-  \lim_{h\to0}\frac{P(x<X\leqslant x+h)}{h}=f(x),
+  \lim_{h\to0}\frac{\mathbb{P}(x<X\leqslant x+h)}{h}=f(x),
 \end{equation}
- 或
+或
 \begin{equation}
-  P(x<X\leqslant x+h)=f(x)h+o(h).
+  \mathbb{P}(x<X\leqslant x+h)=f(x)h+o(h).
 \end{equation}
-
 
 \textbf{定义}：联合分布
 
 二维随机变量 $(X,Y)$ 的联合分布函数 $F(x,y)$ 定义为
 \begin{equation}
-  F(x,y)=P(X\leqslant x,~Y\leqslant y).
+  F(x,y)=\mathbb{P}(X\leqslant x,~Y\leqslant y).
 \end{equation}
  
 
 $X$ 和 $Y$ 的边缘分布分别定义为 
 \begin{equation}
-  F_X(x)= P(X\leqslant x)= \lim_{y\to\infty} F(x, y)=F(x,\infty),
+  F_X(x)= \mathbb{P}(X\leqslant x)= \lim_{y\to\infty} F(x, y)=F(x,\infty),
 \end{equation} 
 
 \begin{equation}
-  F_Y(y)= P(Y\leqslant y)= \lim_{x\to\infty} F(x, y)=F(\infty,y).
+  F_Y(y)= \mathbb{P}(Y\leqslant y)= \lim_{x\to\infty} F(x, y)=F(\infty,y).
 \end{equation} 
 
 若存在一非负函数 $f(x,y)$, 对 $\forall(x,y)\in\mathbb{R}^2$ 有
 \begin{equation}
   F(x,y)=\int_{-\infty}^x\int_{-\infty}^yf(u,v)\mathrm{d}u\mathrm{d}v,
 \end{equation}
- 则称 $f(x,y)$ 为 $(X,Y)$ 的联合概率密度函数.
+则称 $f(x,y)$ 为 $(X,Y)$ 的联合概率密度函数.
 
 $n$ 维随机向量 $(X_1,X_2,\cdots,X_n)$ 的联合分布函数定义为
 \begin{equation}
-  F(x_1,x_2,\cdots,x_n)=P(X_1\leqslant x_1,X_2\leqslant x_2,\cdots,X_n\leqslant x_n).
+  F(x_1,x_2,\cdots,x_n)=\mathbb{P}(X_1\leqslant x_1,X_2\leqslant x_2,\cdots,X_n\leqslant x_n).
 \end{equation}
-
 
 \textbf{定理}： 分布函数与事件独立的关系
 
@@ -324,12 +314,11 @@ $n$ 维随机向量 $(X_1,X_2,\cdots,X_n)$ 的联合分布函数定义为
   F(x, y)=F_X(x)F_Y(y).
 \end{equation}
 
-
 若对 $\forall(x_1,x_2,\cdots,x_n)\in\mathbb{R}^n$ 有
 \begin{equation}
   F(x_1,x_2,\cdots,x_n)=F_1(x_1)F_2(x_2)\cdots F_n(x_n),
 \end{equation}
- 则称 $X_1,X_2,\cdots,X_n$ 相互独立, 这里 $F_i(x_i)=F_{X_i}(x_i)=P(X_i\leqslant x_i),~\forall i=1,2,\ldots,n$.
+则称 $X_1,X_2,\cdots,X_n$ 相互独立, 这里 $F_i(x_i)=F_{X_i}(x_i)=\mathbb{P}(X_i\leqslant x_i),~\forall i=1,2,\ldots,n$.
 
 若 $X,Y,Z$ 相互独立, 则 $X\pm Y$ 与 $Z$ 独立, $X\cdot Y$ 与 $Z$ 独立, $X/Y(Y\neq0)$ 与 $Z$ 独立, 更一般有 $g_1(X,Y)$ 与 $g_2(Z)$ 独立, 其中 $g_1(X,Y),~g_2(Z)$ 可以是逐段单调函数或逐段连续函数.
 
@@ -341,15 +330,15 @@ $n$ 维随机向量 $(X_1,X_2,\cdots,X_n)$ 的联合分布函数定义为
 \begin{equation}
   \sum_{i=1}^ng(u_i)\Delta F(x_i)=\sum_{i=1}^ng(u_i)[F(x_i)-F(x_{i-1})].
 \end{equation}
- 令 $\lambda=\max_{1\leqslant i\leqslant n}\Delta x_i=\max_{1\leqslant i\leqslant n}(x_i-x_{i-1})$, 若极限
+令 $\lambda=\max_{1\leqslant i\leqslant n}\Delta x_i=\max_{1\leqslant i\leqslant n}(x_i-x_{i-1})$, 若极限
 \begin{equation}
   J(a,b)=\lim_{\lambda\to0}\sum_{i=1}^ng(u_i)\Delta F(x_i)
 \end{equation}
- 存在, 则记
+存在, 则记
 \begin{equation}
   J(a,b)=\int_a^bg(x)\mathrm{d}F(x),
 \end{equation}
- 称极限 $J(a,b)$ 为 $g(x)$ 关于 $F(x)$ 在 $[a,b]$ 上的 Riemann-Stieltjes 积分.
+称极限 $J(a,b)$ 为 $g(x)$ 关于 $F(x)$ 在 $[a,b]$ 上的 Riemann-Stieltjes 积分.
 
 当取 $F(x)=x$ 时, Riemann-Stieltjes 积分化为原来的 Riemann 积分, 所以 Riemann-Stieltjes 积分是 Riemann 积分的推广.
 
@@ -357,11 +346,11 @@ $n$ 维随机向量 $(X_1,X_2,\cdots,X_n)$ 的联合分布函数定义为
 \begin{equation}
   J(-\infty,\infty)=\lim_{a\to-\infty,~b\to\infty}\int_a^bg(x)\mathrm{d}F(x)
 \end{equation}
- 存在, 则称
+存在, 则称
 \begin{equation}
   J(-\infty,\infty)=\int_{-\infty}^\infty g(x)\mathrm{d}F(x)
 \end{equation}
- 为 $g(x)$ 关于 $F(x)$ 在 $(-\infty,\infty)$ 上的 Riemann-Stieltjes 积分.
+为 $g(x)$ 关于 $F(x)$ 在 $(-\infty,\infty)$ 上的 Riemann-Stieltjes 积分.
 
 Riemann-Stieltjes 积分的基本性质
 
@@ -370,40 +359,35 @@ Riemann-Stieltjes 积分的基本性质
   \int_a^bg(x)\mathrm{d}F(x)=\sum_{i=0}^n\int_{c_i}^{c_{i+1}}g(x)\mathrm{d}F(x)
 \end{equation}
 
-
 对被积函数线性:
 \begin{equation}
   \int_a^b\sum_{i=1}^ng_i(x)\mathrm{d}F(x)=\sum_{i=1}^n\int_a^bg_i(x)\mathrm{d}F(x)
 \end{equation}
-
 
 非负性: 若 $g(x)\geqslant0$ 且 $a<b$ 则
 \begin{equation}
   \int_a^bg(x)\mathrm{d}F(x)\geqslant0
 \end{equation}
 
-
 对被微函数线性: 若 $F_1(x),~F_2(x)$ 为两个分布函数, $c_1,c_2>0$ 为常数, 则
 \begin{equation}
   \int_a^bg(x)\mathrm{d}[c_1F_1(x)+c_2F_2(x)]=c_1\int_a^bg(x)\mathrm{d}F_1(x)+c_2\int_a^bg(x)\mathrm{d}F_2(x)
 \end{equation}
 
-
 被积函数为1: 若 $g(x)=1$, 则
 \begin{equation}
-  \int_a^bg(x)\mathrm{d}F(x)=\int_a^b1\mathrm{d}F(x)=F(b)-F(a)=P(a<X\leqslant b)
+  \int_a^bg(x)\mathrm{d}F(x)=\int_a^b1\mathrm{d}F(x)=F(b)-F(a)=\mathbb{P}(a<X\leqslant b)
 \end{equation}
 
-
-离散型随机变量: 若 $X$ 为离散型随机变量, 即 $P(X=c_i)=p_i,~i=1,2,\ldots,$ 则
+离散型随机变量: 若 $X$ 为离散型随机变量, 即 $\mathbb{P}(X=c_i)=p_i,~i=1,2,\ldots,$ 则
 \begin{equation}
   F(x)=\sum_{c_i\leqslant x}p_i
 \end{equation}
- 是一跳跃型分布函数, 即 $F(x)$ 的变化只在 $c_1,c_2,\ldots$ 这些点且其跃度为 $p_i$, 则 Riemann-Stieltjes 积分
+是一跳跃型分布函数, 即 $F(x)$ 的变化只在 $c_1,c_2,\ldots$ 这些点且其跃度为 $p_i$, 则 Riemann-Stieltjes 积分
 \begin{equation}
   \int_{-\infty}^\infty g(x)\mathrm{d}F(x)=\sum_{n=1}^\infty g(c_n)[F(c_n+0)-F(c_n-0)]=\sum_{n=1}^\infty g(c_n)p_n
 \end{equation}
- 化成了一个级数
+化成了一个级数.
 
 \subsection{数字特征}
 
@@ -413,11 +397,11 @@ Riemann-Stieltjes 积分的基本性质
 \begin{equation}
   \int_{-\infty}^\infty |x|\mathrm{d}F(x)
 \end{equation}
- 存在, 则称
+存在, 则称
 \begin{equation}
   \mathbb{E}X=\int_{-\infty}^\infty x\mathrm{d}F(x)
 \end{equation}
- 为随机变量 $X$ 的数学期望.
+为随机变量 $X$ 的数学期望.
 
 若 $X$ 为非负随机变量, 则有
 \begin{equation}
@@ -426,7 +410,7 @@ Riemann-Stieltjes 积分的基本性质
     &=\int_{0}^\infty x\mathrm{d}F(x)\\
     &=\int_{0}^\infty\int_0^x1\mathrm{d}t\mathrm{d}F(x)\\
     &=\int_{0}^\infty\int_t^\infty1\mathrm{d}F(x)\mathrm{d}t\\
-    &=\int_0^\infty P(X>t)\mathrm{d}t
+    &=\int_0^\infty \mathbb{P}(X>t)\mathrm{d}t
   \end{aligned}
 \end{equation}
 
@@ -434,8 +418,8 @@ Riemann-Stieltjes 积分的基本性质
 \begin{equation}
   \begin{aligned}
     \mathbb{E}X
-    &=\int_0^\infty P(X>t)\mathrm{d}t+\int_{-\infty}^0P(X\leqslant t)\mathrm{d}t\\
-    &=\int_0^\infty P(X>t)\mathrm{d}t-\int_0^\infty P(X\leqslant -t)\mathrm{d}t\\
+    &=\int_0^\infty \mathbb{P}(X>t)\mathrm{d}t+\int_{-\infty}^0\mathbb{P}(X\leqslant t)\mathrm{d}t\\
+    &=\int_0^\infty \mathbb{P}(X>t)\mathrm{d}t-\int_0^\infty \mathbb{P}(X\leqslant -t)\mathrm{d}t\\
   \end{aligned}
 \end{equation}
 
@@ -446,38 +430,33 @@ Riemann-Stieltjes 积分的基本性质
   \mathbb{E}\left(\sum_{i=1}^nc_iX_i\right)=\sum_{i=1}^nc_i\mathbb{E}X_i
 \end{equation}
 
-
 函数复合随机变量:
 \begin{equation}
   \mathbb{E}[g(X)]=\int_{-\infty}^\infty g(x)\mathrm{d}F(x)
 \end{equation}
 
-
-离散型随机变量: $P(X=x_n)=p_n,~n\in\mathbb{N}$,
+离散型随机变量: $\mathbb{P}(X=x_n)=p_n,~n\in\mathbb{N}$,
 \begin{equation}
   \mathbb{E}X=\sum_{n=1}^\infty x_np_n
 \end{equation}
-
 
 连续型随机变量: 概率密度函数 $f(x)$
 \begin{equation}
   \mathbb{E}X=\int_{-\infty}^\infty x\mathrm{d}F(x)=\int_{-\infty}^\infty xf(x)\mathrm{d}x
 \end{equation}
 
-
 \textbf{定义}：方差
 
 随机变量 $X$ 的方差为
 \begin{equation}
-  \mathrm{Var}(X)=\sigma_X^2=DX\triangleq \mathbb{E}(X-\mathbb{E}X)^2=\mathbb{E}X^2-(\mathbb{E}X)^2.
+  \mathrm{Var}(X)=\sigma_X^2=DX:= \mathbb{E}(X-\mathbb{E}X)^2=\mathbb{E}X^2-(\mathbb{E}X)^2.
 \end{equation}
-
 
 \textbf{定义}：协方差
 
 对两个随机变量 $(X,Y)$ 定义协方差为
 \begin{equation}
-  \mathrm{Cov}(X,Y)\triangleq \mathbb{E}[(X-\mathbb{E}X)(Y-\mathbb{E}Y)]=\mathbb{E}(XY)-(\mathbb{E}X)(\mathbb{E}Y).
+  \mathrm{Cov}(X,Y):= \mathbb{E}[(X-\mathbb{E}X)(Y-\mathbb{E}Y)]=\mathbb{E}(XY)-(\mathbb{E}X)(\mathbb{E}Y).
 \end{equation}
  
 
@@ -486,14 +465,12 @@ Riemann-Stieltjes 积分的基本性质
   \mathrm{Cov}(X,Y)=\mathbb{E}(XY)-(\mathbb{E}X)(\mathbb{E}Y)=(\mathbb{E}X)(\mathbb{E}Y)-(\mathbb{E}X)(\mathbb{E}Y)=0.
 \end{equation}
 
-
 \textbf{定义}：相关系数
 
 若 $0<DX=\sigma_X^2<\infty$, $0<DY=\sigma_Y^2<\infty$, 则称
 \begin{equation}
   \rho(X,Y)=\frac{\mathrm{Cov}(X,Y)}{\sigma_X\sigma_Y}=\frac{\mathrm{Cov}(X,Y)}{\sqrt{(DX)(DY)}}
 \end{equation}
-
 
 $\rho(X,Y)$ 刻画了 $X,Y$ 之间线性关系的密切程度, 若 $\rho=0$, 则称 $X,Y$ 不相关.
 
@@ -504,7 +481,6 @@ $\rho(X,Y)$ 刻画了 $X,Y$ 之间线性关系的密切程度, 若 $\rho=0$, 则
   \mathbb{E}(X^k)=\int_{-\infty}^\infty x^k\mathrm{d}F_X(x)
 \end{equation}
 
-
 数字特征性质
 
 方差平方线性且相关:
@@ -512,92 +488,81 @@ $\rho(X,Y)$ 刻画了 $X,Y$ 之间线性关系的密切程度, 若 $\rho=0$, 则
   D\left(\sum_{i=1}^nc_iX_i\right)=\sum_{i=1}^nc_i^2DX_i+2\sum_{i<j}c_ic_j\mathrm{Cov}(X_i,X_j)
 \end{equation}
 
-
 Schwartz 不等式: 若随机变量 $X,Y$ 的二阶矩存在, 则
 \begin{equation}
   |\mathbb{E}(XY)|^2\leqslant \mathbb{E}(X^2)\mathbb{E}(Y^2)
 \end{equation}
 
-
 \subsection{常用随机变量的分布}
 
 二项分布: $X\sim B(n,p)$, $\mathbb{E}X=np$, $DX=np(1-p)$,
 \begin{equation}
-  P(X=k)=\binom{n}{k}p^k(1-p)^{n-k},\quad0\leqslant k\leqslant n
+  \mathbb{P}(X=k)=\binom{n}{k}p^k(1-p)^{n-k},\quad0\leqslant k\leqslant n
 \end{equation}
 
-
-泊松分布: $X\sim P(\lambda)$, $\mathbb{E}X=\lambda$, $DX=\lambda$,
+泊松分布: $X\sim \mathbb{P}(\lambda)$, $\mathbb{E}X=\lambda$, $DX=\lambda$,
 \begin{equation}
-  P(X=k)=\frac{\lambda^k}{k!}\mathrm{e}^{-\lambda},\quad k=0,1,2,\ldots
+  \mathbb{P}(X=k)=\frac{\lambda^k}{k!}\mathrm{e}^{-\lambda},\quad k=0,1,2,\ldots
 \end{equation}
-
 
 几何分布: $X\sim G(p)$, $\mathbb{E}X=1/p$, $DX=(1-p)/p^2$,
 \begin{equation}
-  P(X=k)=(1-p)^{k-1}p,\quad k=1,2,\ldots
+  \mathbb{P}(X=k)=(1-p)^{k-1}p,\quad k=1,2,\ldots
 \end{equation}
-
 
 均匀分布: $X\sim U(a,b)$, $\mathbb{E}X=(a+b)/2$, $DX=(b-a)^2/12$,
 \begin{equation}
   f(x)=\begin{cases}\dfrac{1}{b-a},&\text{if}~a<x<b\\0,&\text{o.w.}\end{cases}
 \end{equation}
 
-
 正态分布: $X\sim N(\mu,\sigma^2)$, $\mathbb{E}X=\mu$, $DX=\sigma^2$, $\mathbb{E}(X-\mu)^{2k}=(2k-1)!!~\sigma^{2k}$
 \begin{equation}
   f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left\{-\frac{(x-\mu)^2}{2\sigma^2}\right\}
 \end{equation}
 
-
-指数分布: $X\sim \mathbb{E}(\lambda)$, $\mathbb{E}X=1/\lambda$, $DX=1/\lambda^2$,
+指数分布: $X\sim E(\lambda)$, $\mathbb{E}X=1/\lambda$, $DX=1/\lambda^2$,
 \begin{equation}
   f(x)=\begin{cases}\lambda\mathrm{e}^{-\lambda x},&\text{if}~x\geqslant0\\0,&\text{o.w.}\end{cases}
 \end{equation}
-
 
 gamma 分布: $X\sim \Gamma(\alpha,\lambda)$, $\mathbb{E}X=\alpha/\lambda$, $DX=\alpha/\lambda^2$,
 \begin{equation}
   f(x)=\begin{cases}\dfrac{\lambda\mathrm{e}^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)},&\text{if}~\alpha>0\\0,&\text{o.w.}\end{cases}
 \end{equation}
- 这里 gamma 函数为
+这里 gamma 函数为
 \begin{equation}
   \Gamma(\alpha)=\int_0^\infty \mathrm{e}^{-t}t^{\alpha-1}\mathrm{d}t,\quad\forall \alpha>0
 \end{equation}
-
 
 beta 分布: $X\sim \mathcal{B}(\alpha,\beta)$, $\mathbb{E}X=\alpha/(\alpha+\beta)$, $DX=\alpha\beta/[(\alpha+\beta+1)(\alpha+\beta)^2]$,
 \begin{equation}
   f(x)=\begin{cases}\dfrac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha,\beta)},&\text{if}~0<x<1\\0,&\text{o.w.}\end{cases}
 \end{equation}
- 这里 beta 函数为
+这里 beta 函数为
 \begin{equation}
   B(\alpha,\beta)=\int_0^1 x^{\alpha-1}(1-x)^{\beta-1}\mathrm{d}x=\frac{\Gamma(\alpha)\cdot\Gamma(\beta)}{\Gamma(\alpha+\beta)}
 \end{equation}
 
-
 \subsection{示性函数的线性组合}
 
-非负随机变量可由事件示性函数的线性组合表示: 设 $X(\omega)$ 为非负随机变量, $P(X<\infty)=1$, 令
+非负随机变量可由事件示性函数的线性组合表示: 设 $X(\omega)$ 为非负随机变量, $\mathbb{P}(X<\infty)=1$, 令
 \begin{equation}
   X_n(\omega)=\sum_{k=0}^{n2^n-1}\frac{k}{2^n}\mathbb{I}_{\{\frac{k}{2^n}\leqslant X<\frac{k+1}{2^n}\}}(\omega)+n\mathbb{I}_{\{X\geqslant n\}}(\omega)
 \end{equation}
- 则 $X_n(\omega)$ 是随机变量, 且 $\forall\omega\in\Omega$, 有
+则 $X_n(\omega)$ 是随机变量, 且 $\forall\omega\in\Omega$, 有
 \begin{equation}
   \lim_{n\to\infty}X_n(\omega)=X(\omega)
 \end{equation}
-
 
 一般随机变量可由事件示性函数的线性组合表示: 设 $X(\omega)$ 为一般的随机变量, 令
 \begin{equation}
   X^+=X\vee0=\max(X,0),~X^-=-(X\wedge0)=-\min(X,0).
 \end{equation}
- 显然 $X^+,X^-\geqslant0$. 由上面的结论, 对 $X^+,X^-$ 存在 $X_n^+\uparrow X^+,~X_m^-\uparrow X^-$, 若令
+显然 $X^+,X^-\geqslant0$. 由上面的结论, 对 $X^+,X^-$ 存在 $X_n^+\uparrow X^+,~X_m^-\uparrow X^-$, 若令
 \begin{equation}
   X_n=X_n^+-X_n^-,
 \end{equation}
- 则 $X_n\uparrow X$.
+则 $X_n\uparrow X$.
 
 \section{矩母函数、特征函数和拉普拉斯变换}
 
@@ -616,9 +581,9 @@ beta 分布: $X\sim \mathcal{B}(\alpha,\beta)$, $\mathbb{E}X=\alpha/(\alpha+\bet
 
 对于取值非负整数的随机变量 $X$, 即
 \begin{equation}
-  P(X=k)=p_k\geqslant0,~k\geqslant0,~\sum_{k=0}^\infty p_k=1,
+  \mathbb{P}(X=k)=p_k\geqslant0,~k\geqslant0,~\sum_{k=0}^\infty p_k=1,
 \end{equation}
- 则 $X$ 的矩母函数记为
+则 $X$ 的矩母函数记为
 \begin{equation}
   g(s)=\mathbb{E}(s^X)=\sum_{k=0}^\infty p_ks^k.
 \end{equation}
@@ -627,25 +592,23 @@ beta 分布: $X\sim \mathcal{B}(\alpha,\beta)$, $\mathbb{E}X=\alpha/(\alpha+\bet
 \begin{equation}
   p_k=\frac{g^{(k)}(0)}{k!},
 \end{equation}
- 且有
+且有
 \begin{equation}
   \mathbb{E}[X(X-1)\cdots(X-k+1)]=g^{(k)}(1).
 \end{equation}
- 特别地,
+特别地,
 \begin{equation}
   \mathbb{E}(X)=g'(1),\quad \mathbb{E}(X(X-1))=\mathbb{E}X^2-\mathbb{E}X=g''(1),
 \end{equation}
- 则有
+则有
 \begin{equation}
   D(X)=\mathbb{E}X^2-(\mathbb{E}X)^2=g''(1)+g'(1)-[g'(1)]^2.
 \end{equation}
-
 
 若 $X_1,X_2$ 相互独立, 其矩母函数分别记为 $g_1(s),g_2(s)$, 则 $X_1+X_2$ 的矩母函数为
 \begin{equation}
   g_{X_1+X_2}(s)=g_1(s)g_2(s).
 \end{equation}
-
 
 \subsection{特征函数}
 
@@ -653,7 +616,7 @@ beta 分布: $X\sim \mathcal{B}(\alpha,\beta)$, $\mathbb{E}X=\alpha/(\alpha+\bet
 
 随机变量 $X$ 的特征函数定义为 
 \begin{equation}
-  \phi(x)\triangleq \mathbb{E}[\mathrm{e}^{\mathrm{i}tX}]=\int_{-\infty}^\infty\mathrm{e}^{\mathrm{i}tx}\mathrm{d}F_X(x).
+  \phi(x):= \mathbb{E}[\mathrm{e}^{\mathrm{i}tX}]=\int_{-\infty}^\infty\mathrm{e}^{\mathrm{i}tx}\mathrm{d}F_X(x).
 \end{equation}
 
 \subsection{Laplace-Stieltjes 变换}
@@ -678,39 +641,39 @@ $\hat{F}_X(s)$ 与 $F_X(x)$ 也有一一对应关系, 且对 $X_1,X_2>0$ 相互�
 
 设 $(X,Y)$ 为两个离散型随机变量, 其联合分布律为
 \begin{equation}
-  P(X=x_i,Y=y_i)=p_{ij}\geqslant0,~\sum_{ij}p_{ij}=1,
+  \mathbb{P}(X=x_i,Y=y_i)=p_{ij}\geqslant0,~\sum_{ij}p_{ij}=1,
 \end{equation}
- 若
+若
 \begin{equation}
-  P(Y=y_j)=\sum_iP(X=x_i,Y=y_i)=\sum_ip_{ij}>0,
+  \mathbb{P}(Y=y_j)=\sum_i\mathbb{P}(X=x_i,Y=y_i)=\sum_ip_{ij}>0,
 \end{equation}
- 则称
+则称
 \begin{equation}
-  P(X=x_i|Y=y_j)=\frac{P(X=x_i,Y=y_i)}{P(Y=y_j)}
+  \mathbb{P}(X=x_i|Y=y_j)=\frac{\mathbb{P}(X=x_i,Y=y_i)}{\mathbb{P}(Y=y_j)}
 \end{equation}
- 为给定 $Y=y_j$ 时, $X$ 的条件分布律.
+为给定 $Y=y_j$ 时, $X$ 的条件分布律.
 
 称
 \begin{equation}
-  \mathbb{E}(X|Y=y_j)\triangleq\sum_ix_iP(X=x_i|Y=y_j)
+  \mathbb{E}(X|Y=y_j):=\sum_ix_i\mathbb{P}(X=x_i|Y=y_j)
 \end{equation}
- 为给定 $Y=y_j$ 时, $X$ 的条件数学期望.
+为给定 $Y=y_j$ 时, $X$ 的条件数学期望.
 
 记
 \begin{equation}
-  \mathbb{E}(X|Y)\triangleq\sum_j\mathbb{I}_{\{Y=y_j\}}(\omega)\mathbb{E}(X|Y=y_j),
+  \mathbb{E}(X|Y):=\sum_j\mathbb{I}_{\{Y=y_j\}}(\omega)\mathbb{E}(X|Y=y_j),
 \end{equation}
- 称 $\mathbb{E}(X|Y)$ 为 $X$ 关于 $Y$ 的条件数学期望. 
+称 $\mathbb{E}(X|Y)$ 为 $X$ 关于 $Y$ 的条件数学期望. 
 
 随机变量 $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $\omega\in\{\omega:Y(\omega)=y_j\}$ 时, $\mathbb{E}(X|Y)$ 的取值为 $\mathbb{E}(X|Y=y_j)$, 其数学期望应为 
 \begin{equation}
   \begin{aligned}
   \mathbb{E}[\mathbb{E}(X|Y)]
-  &=\sum_j\mathbb{E}(X|Y=y_j)P(Y=y_j)\\
-  &=\sum_{i,j}x_iP(X=x_i|Y=y_j)P(Y=y_j)\\
-  &=\sum_{i,j}x_i\frac{P(X=x_i,Y=y_i)}{P(Y=y_j)}P(Y=y_j)\\
-  &=\sum_{i,j}x_iP(X=x_i,Y=y_i)\\
-  &=\sum_{i}x_iP(X=x_i)\\
+  &=\sum_j\mathbb{E}(X|Y=y_j)\mathbb{P}(Y=y_j)\\
+  &=\sum_{i,j}x_i\mathbb{P}(X=x_i|Y=y_j)\mathbb{P}(Y=y_j)\\
+  &=\sum_{i,j}x_i\frac{\mathbb{P}(X=x_i,Y=y_i)}{\mathbb{P}(Y=y_j)}\mathbb{P}(Y=y_j)\\
+  &=\sum_{i,j}x_i\mathbb{P}(X=x_i,Y=y_i)\\
+  &=\sum_{i}x_i\mathbb{P}(X=x_i)\\
   &=\mathbb{E}X
   \end{aligned}
 \end{equation}
@@ -721,7 +684,7 @@ $\hat{F}_X(s)$ 与 $F_X(x)$ 也有一一对应关系, 且对 $X_1,X_2>0$ 相互�
 \begin{equation}
   f_Y(y)=\int_{-\infty}^\infty f(x,y)\mathrm{d}x>0
 \end{equation} 
-所以称
+则称
 \begin{equation}
   f_{X|Y=y}(x|y)=\frac{f(x,y)}{f_Y(y)}
 \end{equation}
@@ -730,7 +693,7 @@ $\hat{F}_X(s)$ 与 $F_X(x)$ 也有一一对应关系, 且对 $X_1,X_2>0$ 相互�
 
 条件分布函数为
 \begin{equation}
-  F_{X|Y=y}(x|y)=P(X\leqslant x|Y=y)=\int_{-\infty}^x\frac{f(u,y)}{f_Y(y)}\mathrm{d}u,
+  F_{X|Y=y}(x|y)=\mathbb{P}(X\leqslant x|Y=y)=\int_{-\infty}^x\frac{f(u,y)}{f_Y(y)}\mathrm{d}u,
 \end{equation}
 
 条件数学期望为
@@ -738,18 +701,18 @@ $\hat{F}_X(s)$ 与 $F_X(x)$ 也有一一对应关系, 且对 $X_1,X_2>0$ 相互�
   \mathbb{E}(X|Y=y)=\int_{-\infty}^\infty xf_{X|Y=y}(x|y)\mathrm{d}x=\int_{-\infty}^\infty x\frac{f(x,y)}{f_Y(y)}\mathrm{d}x
 \end{equation}
 
-考虑 $D\in\mathcal{B}_{\mathbb{R}}$, 给定 $Y\in D$, 若 $P(Y\in D)>0$, $X$ 的条件分布函数为
+考虑 $D\in\mathcal{B}_{\mathbb{R}}$, 给定 $Y\in D$, 若 $\mathbb{P}(Y\in D)>0$, $X$ 的条件分布函数为
 \begin{equation}
   \begin{aligned}
     F_{X|Y\in D}(x|D)
-    &=P(X\leqslant x|Y\in D)\\
-    &=\frac{P(X\leqslant x,Y\in D)}{P(Y\in D)}\\
+    &=\mathbb{P}(X\leqslant x|Y\in D)\\
+    &=\frac{\mathbb{P}(X\leqslant x,Y\in D)}{\mathbb{P}(Y\in D)}\\
     &=\frac{\displaystyle\int_{-\infty}^x\int_{y\in D}f(x,y)\mathrm{d}y\mathrm{d}x}{\displaystyle\int_{y\in D}f_Y(y)\mathrm{d}y}
   \end{aligned}
 \end{equation}
 所以给定 $Y\in D$, $X$ 的条件概率密度函数为
 \begin{equation}
-  f_{X|Y\in D}(x|D)=\frac{\displaystyle\int_{y\in D}f(x,y)\mathrm{d}y}{\displaystyle\int_{y\in D}f_Y(y)\mathrm{d}y}=\frac{\displaystyle\int_{y\in D}f(x,y)\mathrm{d}y}{P(Y\in D)}
+  f_{X|Y\in D}(x|D)=\frac{\displaystyle\int_{y\in D}f(x,y)\mathrm{d}y}{\displaystyle\int_{y\in D}f_Y(y)\mathrm{d}y}=\frac{\displaystyle\int_{y\in D}f(x,y)\mathrm{d}y}{\mathbb{P}(Y\in D)}
 \end{equation}
 
 于是给定 $Y\in D$, $X$ 的条件数学期望为
@@ -757,10 +720,10 @@ $\hat{F}_X(s)$ 与 $F_X(x)$ 也有一一对应关系, 且对 $X_1,X_2>0$ 相互�
   \begin{aligned}
     \mathbb{E}(X|Y\in D)
     &=\int_{-\infty}^\infty xf_{X|Y\in D}(x|D)\mathrm{d}x\\
-    &=\int_{-\infty}^\infty x\frac{\displaystyle\int_{y\in D}f(x,y)\mathrm{d}y}{P(Y\in D)}\mathrm{d}x\\
-    &=\frac{1}{P(Y\in D)}\int_{-\infty}^\infty\int_{y\in D}xf(x,y)\mathrm{d}y\mathrm{d}x\\
-    &=\frac{1}{P(Y\in D)}\int_{y\in D}\int_{-\infty}^\infty\frac{xf(x,y)}{f_Y(y)}f_Y(y)\mathrm{d}x\mathrm{d}y\\
-    &=\frac{1}{P(Y\in D)}\int_{y\in D}\mathbb{E}(X|Y=y)f_Y(y)\mathrm{d}y\\
+    &=\int_{-\infty}^\infty x\frac{\displaystyle\int_{y\in D}f(x,y)\mathrm{d}y}{\mathbb{P}(Y\in D)}\mathrm{d}x\\
+    &=\frac{1}{\mathbb{P}(Y\in D)}\int_{-\infty}^\infty\int_{y\in D}xf(x,y)\mathrm{d}y\mathrm{d}x\\
+    &=\frac{1}{\mathbb{P}(Y\in D)}\int_{y\in D}\int_{-\infty}^\infty\frac{xf(x,y)}{f_Y(y)}f_Y(y)\mathrm{d}x\mathrm{d}y\\
+    &=\frac{1}{\mathbb{P}(Y\in D)}\int_{y\in D}\mathbb{E}(X|Y=y)f_Y(y)\mathrm{d}y\\
     &=\mathbb{E}[\mathbb{E}(X|Y)|Y\in D]\\
   \end{aligned}
 \end{equation}
@@ -784,42 +747,42 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 \begin{equation}
   \mathbb{E}[\mathbb{E}(X|Y)|Y\in D]=\mathbb{E}[X|Y\in D]
 \end{equation}
-所以称随机变量 $\mathbb{E}(X|Y)$ 为 $X$ 关于 $Y$ 的条件数学期望.
+则称随机变量 $\mathbb{E}(X|Y)$ 为 $X$ 关于 $Y$ 的条件数学期望.
 
 \subsection{一般随机变量}
 
-设 $(X,Y)$ 为一般随机变量, 其联合分布函数为 $P(X\leqslant x,~Y\leqslant y)$. 以下假设 $\mathbb{E}|X|<\infty$, 分两种情况讨论.
+设 $(X,Y)$ 为一般随机变量, 其联合分布函数为 $\mathbb{P}(X\leqslant x,~Y\leqslant y)$. 以下假设 $\mathbb{E}|X|<\infty$, 分两种情况讨论.
 
 \textbf{定义}：一般随机变量条件数学期望
 
-设 $D\in\mathcal{B}_{\mathbb{R}}$, $P(Y\in D)>0$. $\forall x\in\mathbb{R}$, 称 
+设 $D\in\mathcal{B}_{\mathbb{R}}$, $\mathbb{P}(Y\in D)>0$. $\forall x\in\mathbb{R}$, 称 
 \begin{equation}
-  P(X\leqslant x|Y\in D)=\frac{P(X\leqslant x,Y\in D)}{P(Y\in D)}
+  \mathbb{P}(X\leqslant x|Y\in D)=\frac{\mathbb{P}(X\leqslant x,Y\in D)}{\mathbb{P}(Y\in D)}
 \end{equation} 
 
 为 $X$ 关于事件 $\{\omega:Y(\omega)\in D\}$ 的条件分布函数. 
 
 称
 \begin{equation}
-  \mathbb{E}(X|Y\in D)=\int_{-\infty}^\infty x\mathrm{d}P(X\leqslant x|Y\in D)
+  \mathbb{E}(X|Y\in D)=\int_{-\infty}^\infty x\mathrm{d}\mathbb{P}(X\leqslant x|Y\in D)
 \end{equation}
 
 为 $X$ 关于事件 $\{\omega:Y(\omega)\in D\}$ 的条件数学期望.
 
-在许多问题中常常需要考虑 $D$ 为单点集 $\{y\}$ 的情形. 若 $P(Y=y)>0$, 这时定义条件分布同上. 当 $P(Y=y)=0$ 时, 定义 $P(X\leqslant x|Y=y)$ 如下.
+在许多问题中常常需要考虑 $D$ 为单点集 $\{y\}$ 的情形. 若 $\mathbb{P}(Y=y)>0$, 这时定义条件分布同上. 当 $\mathbb{P}(Y=y)=0$ 时, 定义 $\mathbb{P}(X\leqslant x|Y=y)$ 如下.
 
 \textbf{定义}：一般随机变量单点概率为零时条件数学期望
 
-设 $(x,y)\in\mathbb{R}^2$, 对充分小的 $h>0$, 有 $P(y<Y\leqslant y+h)>0$. 若
+设 $(x,y)\in\mathbb{R}^2$, 对充分小的 $h>0$, 有 $\mathbb{P}(y<Y\leqslant y+h)>0$. 若
 \begin{equation}
-  P(X\leqslant x|Y=y)\triangleq\lim_{h\to0}P(X\leqslant x|y<Y\leqslant y+h)
+  \mathbb{P}(X\leqslant x|Y=y):=\lim_{h\to0}\mathbb{P}(X\leqslant x|y<Y\leqslant y+h)
 \end{equation}
 
-存在, 则称 $P(X\leqslant x|Y=y)$ 为 $X$ 关于事件 $\{\omega:Y(\omega)=y\}$ 的条件分布函数. 
+存在, 则称 $\mathbb{P}(X\leqslant x|Y=y)$ 为 $X$ 关于事件 $\{\omega:Y(\omega)=y\}$ 的条件分布函数. 
 
 称
 \begin{equation}
-  \mathbb{E}(X|Y=y)=\int_{-\infty}^\infty x\mathrm{d}P(X\leqslant x|Y=y)
+  \mathbb{E}(X|Y=y)=\int_{-\infty}^\infty x\mathrm{d}\mathbb{P}(X\leqslant x|Y=y)
 \end{equation}
 
 为 $X$ 关于事件 $\{\omega:Y(\omega)=y\}$ 的条件数学期望.
@@ -828,19 +791,20 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 
 若随机变量 $\mathbb{E}(X|Y)$ 满足
 
-$\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 $\mathbb{E}(X|Y=y)$
+(1) $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 $\mathbb{E}(X|Y=y)$;
 
-对任意 $D\in\mathcal{B}_{\mathbb{R}}$, 有
+(2) 对任意 $D\in\mathcal{B}_{\mathbb{R}}$, 有
 \begin{equation}
-  \mathbb{E}[\mathbb{E}(X|Y)|Y\in D]=\mathbb{E}[X|Y\in D]
+  \mathbb{E}[\mathbb{E}(X|Y)|Y\in D]=\mathbb{E}[X|Y\in D].
 \end{equation}
-所以称随机变量 $\mathbb{E}(X|Y)$ 为 $X$ 关于 $Y$ 的条件数学期望.
+
+则称随机变量 $\mathbb{E}(X|Y)$ 为 $X$ 关于 $Y$ 的条件数学期望.
 
 \textbf{定理}： 全期望公式
 
 设随机变量 $\mathbb{E}(X|Y)$ 为 $X$ 关于 $Y$ 的条件数学期望, 则有
 \begin{equation}
-  \mathbb{E}X=\mathbb{E}[\mathbb{E}(X|Y)]=\int_{-\infty}^\infty \mathbb{E}(X|Y=y)\mathrm{d}P(Y\leqslant y),
+  \mathbb{E}X=\mathbb{E}[\mathbb{E}(X|Y)]=\int_{-\infty}^\infty \mathbb{E}(X|Y=y)\mathrm{d}\mathbb{P}(Y\leqslant y).
 \end{equation}
 
 上式可看作是数学期望形式的全概率公式, 即全期望公式.
@@ -851,48 +815,46 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 
 由示性函数的定义有
 \begin{equation}
-  P(B)=\mathbb{E}[\mathbb{I}_B(\omega)],
+  \mathbb{P}(B)=\mathbb{E}[\mathbb{I}_B(\omega)],
 \end{equation}
 
 称
 \begin{equation}
-  \mathbb{E}[\mathbb{I}_B(\omega)|Y]=P(B|Y)
+  \mathbb{E}[\mathbb{I}_B(\omega)|Y]=\mathbb{P}(B|Y)
 \end{equation}
 
-为事件 $B$ 关于随机变量 $Y$ 的条件概率, 此时 $P(B|Y)$ 是随机变量且是 $Y$ 的函数.
+为事件 $B$ 关于随机变量 $Y$ 的条件概率, 此时 $\mathbb{P}(B|Y)$ 是随机变量且是 $Y$ 的函数.
 
 对于 $\forall x\in\mathbb{R}$, 取 $B=(\omega:X(\omega)\leqslant x)$, 称
 \begin{equation}
-  F(x|Y)\triangleq P(X\leqslant x|Y)=\mathbb{E}[\mathbb{I}_{\{X(\omega)\leqslant x\}}(\omega)|Y]
+  F(x|Y):= \mathbb{P}(X\leqslant x|Y)=\mathbb{E}[\mathbb{I}_{\{X(\omega)\leqslant x\}}(\omega)|Y]
 \end{equation}
 
 为 $X$ 关于 $Y$ 的条件分布函数.
 
 \subsection{条件数学期望的基本性质}
 
-两个随机变量 $Z_1,Z_2$, 如果 $P(Z_1=Z_2)=1$, 则称 $Z_1,Z_2$ 几乎处处 (almost everywhere) 或几乎必然 (almost surely) 相等, 记作 $Z_1=Z_2$ a.e. 或 a.s.
+两个随机变量 $Z_1,Z_2$, 如果 $\mathbb{P}(Z_1=Z_2)=1$, 则称 $Z_1,Z_2$ 几乎处处 (almost everywhere) 或几乎必然 (almost surely) 相等, 记作 $Z_1=Z_2$ a.e. 或 a.s.
 
 \textbf{定理}： 条件数学期望的基本性质
 
-设 $X,Y,X_i,~1\leqslant i\leqslant n$ 为随机变量, $g(x),h(y)$ 为一般函数, 且 $\mathbb{E}|X|<\infty, \mathbb{E}|X_i|<\infty, 1\leqslant i\leqslant n, \mathbb{E}|g(X)h(Y)|<\infty, \mathbb{E}|g(X)|<\infty$. 则有
+设 $X,Y,X_i$, $1\leqslant i\leqslant n$ 为随机变量, $g(x),h(y)$ 为一般函数, 且 $\mathbb{E}|X|<\infty$, $\mathbb{E}|X_i|<\infty$, $1\leqslant i\leqslant n$, $\mathbb{E}|g(X)h(Y)|<\infty$, $\mathbb{E}|g(X)|<\infty$. 则有
 
 全期望公式:
 \begin{equation}
   \mathbb{E}X=\mathbb{E}[\mathbb{E}(X|Y)]
 \end{equation}
 
-
 线性: $\forall \alpha_i\in\mathbb{R},~1\leqslant i\leqslant n$, 有
 \begin{equation}
   \mathbb{E}\left(\sum_{i=1}^n\alpha_iX_i\Big|Y\right)=\sum_{i=1}^n\alpha_i\mathbb{E}(X_i|Y)
 \end{equation}
 
-
 条件期望平滑性:
 \begin{equation}
   \mathbb{E}[g(X)h(Y)|Y]=h(Y)\mathbb{E}[g(X)|Y]
 \end{equation}
- 特别地, 有
+特别地, 有
 \begin{equation}
   \mathbb{E}(X|X)=X
 \end{equation}
@@ -901,29 +863,27 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
   \mathbb{E}[g(X)h(Y)]=\mathbb{E}\{\mathbb{E}[g(X)h(Y)|Y]\}=\mathbb{E}\{h(Y)\mathbb{E}[g(X)|Y]\}
 \end{equation}
 
-
 独立性: 若 $X$ 与 $Y$ 相互独立, 则
 \begin{equation}
   \mathbb{E}(X|Y)=\mathbb{E}X
 \end{equation}
 
-
 \subsection{多元随机变量的条件数学期望}
 
 离散型随机变量
+
 设三个随机变量 $(X,Y,Z)$, 其中 $(Y,Z)$ 为离散型随机变量, 称随机变量 $\mathbb{E}(X|Y,Z)$ 是 $X$ 关于 $Y,Z$ 的条件数学期望, 若它满足
 
- $\mathbb{E}(X|Y,Z)$ 是 $(Y,Z)$ 的二元函数, 当 $Y=y_j,Z=z_k$ 时, $\mathbb{E}(X|Y,Z)$ 的取值为 $\mathbb{E}(X|Y=y_j,Z=z_k)$
+(1) $\mathbb{E}(X|Y,Z)$ 是 $(Y,Z)$ 的二元函数, 当 $Y=y_j$, $Z=z_k$ 时, $\mathbb{E}(X|Y,Z)$ 的取值为 $\mathbb{E}(X|Y=y_j,Z=z_k)$
 
- 对任意 $D_j\in\mathcal{B}_{\mathbb{R}}$, $D_k\in\mathcal{B}_{\mathbb{R}}$, 有
+(2) 对任意 $D_j\in\mathcal{B}_{\mathbb{R}}$, $D_k\in\mathcal{B}_{\mathbb{R}}$, 有
 \begin{equation}
   \mathbb{E}[\mathbb{E}(X|Y,Z)|Y\in D_j,Z\in D_k]=\mathbb{E}(X|Y\in D_j,Z\in D_k)
 \end{equation}
- 用示性函数表示, 即
+用示性函数表示, 即
 \begin{equation}
-  \mathbb{E}(X|Y,Z)\triangleq\sum_{j,k}\mathbb{I}_{\{Y(\omega)=y_j,Z(\omega)=z_k\}}(\omega)\mathbb{E}(X|Y=y_j,Z=z_k)
+  \mathbb{E}(X|Y,Z):=\sum_{j,k}\mathbb{I}_{\{Y(\omega)=y_j,Z(\omega)=z_k\}}(\omega)\mathbb{E}(X|Y=y_j,Z=z_k)
 \end{equation}
-
 
 当 $\mathbb{E}|X|<\infty$ 时, 由对 $Z$ 的全期望公式和条件期望平滑性有 
 \begin{equation}
@@ -931,6 +891,7 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 \end{equation}
 
 连续型随机变量
+
 如 $(X,Y,Z)$ 为连续型随机变量, 联合概率密度函数为 $f(x,y,z)$, $(Y,Z)$ 的联合概率密度函数为 $f_{Y,Z}(y,z)$, $X$ 关于 $Y=y,Z=z$ 的条件概率密度函数为
 \begin{equation}
   f_{X|(Y,Z)=(y,z)}(x|y,z)=\frac{f(x,y,z)}{f_{Y,Z}(y,z)},
@@ -938,11 +899,10 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 
  $\mathbb{E}(X|Y,Z)$ 是 $(Y,Z)$ 的二元函数, 当 $Y=y,Z=z$ 时, $\mathbb{E}(X|Y,Z)$ 的取值为 $\mathbb{E}(X|Y=y,Z=z)$
 
- 对任意 $D_1\in\mathcal{B}_{\mathbb{R}}$, $D_2\in\mathcal{B}_{\mathbb{R}}$, 有
+对任意 $D_1\in\mathcal{B}_{\mathbb{R}}$, $D_2\in\mathcal{B}_{\mathbb{R}}$, 有
 \begin{equation}
   \mathbb{E}[\mathbb{E}(X|Y,Z)|Y\in D_1,Z\in D_2]=\mathbb{E}(X|Y\in D_1,Z\in D_2)
 \end{equation}
- 
 
 称随机变量 $\mathbb{E}(X|Y,Z)$ 是 $X$ 关于 $Y,Z$ 的条件数学期望.
 
@@ -955,24 +915,20 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
   \mathbb{E}X=\mathbb{E}[\mathbb{E}(X|Y_1,Y_2,\cdots,Y_n)]
 \end{equation}
 
-
 线性: $\forall \alpha_i\in\mathbb{R},~1\leqslant i\leqslant n$, 有
 \begin{equation}
   \mathbb{E}\left(\sum_{i=1}^n\alpha_iX_i\Big|Y_1,Y_2,\cdots,Y_n\right)=\sum_{i=1}^n\alpha_i\mathbb{E}(X_i|Y_1,Y_2,\cdots,Y_n)
 \end{equation}
-
 
 条件期望平滑性:
 \begin{equation}
   \mathbb{E}[g(X)h(Y_1,Y_2,\cdots,Y_n)|Y_1,Y_2,\cdots,Y_n]=h(Y_1,Y_2,\cdots,Y_n)\mathbb{E}[g(X)|Y_1,Y_2,\cdots,Y_n]
 \end{equation}
 
-
 独立性: 若 $X$ 与 $Y_1,Y_2,\cdots,Y_n$ 独立, 则
 \begin{equation}
   \mathbb{E}(X|Y_1,Y_2,\cdots,Y_n)=\mathbb{E}X
 \end{equation}
-
 
 \subsection{条件乘法公式与条件独立性}
 
@@ -982,43 +938,43 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 
 设 $A,B$ 为两个随机事件, 由条件概率的定义可知
 \begin{equation}
-  P(AB)=P(A)P(B|A)
+  \mathbb{P}(AB)=\mathbb{P}(A)\mathbb{P}(B|A)
 \end{equation}
 
-与上面的概率乘法公式类似, 条件概率测度 $P(\cdot|A)$ 的乘法公式如下. 
+与上面的概率乘法公式类似, 条件概率测度 $\mathbb{P}(\cdot|A)$ 的乘法公式如下. 
 
 \textbf{定义}：条件概率测度下的乘法公式
 
 设 $A,B,C$ 为随机事件, 则
 \begin{equation}
-  P(BC|A)=P(B|A)P(C|AB)
+  \mathbb{P}(BC|A)=\mathbb{P}(B|A)\mathbb{P}(C|AB)
 \end{equation}
 
 条件独立性
 
-当两个随机事件 $A,B$ 独立时, 有 $P(AB)=P(A)P(B)$, 即 $P(A|B)=P(A)$. 与上面的独立性概念类似, 条件独立性的定义如下. 
+当两个随机事件 $A,B$ 独立时, 有 $\mathbb{P}(AB)=\mathbb{P}(A)\mathbb{P}(B)$, 即 $\mathbb{P}(A|B)=\mathbb{P}(A)$. 与上面的独立性概念类似, 条件独立性的定义如下. 
 
 \textbf{定义}：条件独立
 
-设 $A,B,C$ 为随机事件, 称事件 $A,B$ 关于事件 $C$ 条件独立, 即在条件概率测度 $P(\cdot|C)$ 下独立, 若满足 
+设 $A,B,C$ 为随机事件, 称事件 $A,B$ 关于事件 $C$ 条件独立, 即在条件概率测度 $\mathbb{P}(\cdot|C)$ 下独立, 若满足 
 \begin{equation}
-  P(A|BC)=P(A|C).
+  \mathbb{P}(A|BC)=\mathbb{P}(A|C).
 \end{equation}
 
 \textbf{命题}：条件独立的充要条件
 
 设 $A,B,C$ 为随机事件, 则事件 $A,B$ 关于事件 $C$ 条件独立的充要条件为
 \begin{equation}
-  P(AB|C)=P(A|C)P(B|C),
+  \mathbb{P}(AB|C)=\mathbb{P}(A|C)\mathbb{P}(B|C),
 \end{equation}
 
-此即事件独立定义在条件概率测度 $P(\cdot|C)$ 下的自然推广.
+此即事件独立定义在条件概率测度 $\mathbb{P}(\cdot|C)$ 下的自然推广.
 
 \subsection{全概率公式}
 
 设 $\{B_k\},~k=1,2,\cdots$ 为 $\Omega$ 的一个分割, 则有全概率公式
 \begin{equation}
-  P(A)=\sum_{k=1}^\infty P(B_k)P(A|B_k).
+  \mathbb{P}(A)=\sum_{k=1}^\infty \mathbb{P}(B_k)\mathbb{P}(A|B_k).
 \end{equation}
 
 \section{随机过程的概念}
@@ -1029,7 +985,7 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 
 \textbf{定义}：随机过程
 
-设 $T$ 是一个指标集, 如 $T=\mathbb{Z},\mathbb{Z}^+,\mathbb{R},\mathbb{R}^+,[0,t]$ 等. $\forall t\in T$, $X_t$ 是定义在概率空间 $(\Omega,\mathcal{F},P)$ 上取值与 $S$ 的随机变量, 则称 $X=\{X_t:t\in T\}$ 是定义在 $(\Omega,\mathcal{F},P)$ 上以 $S$ 为状态空间的随机过程.
+设 $T$ 是一个指标集, 如 $T=\mathbb{Z},\mathbb{Z}^+,\mathbb{R},\mathbb{R}^+,[0,t]$ 等. $\forall t\in T$, $X_t$ 是定义在概率空间 $(\Omega,\mathcal{F},\mathbb{P})$ 上取值与 $S$ 的随机变量, 则称 $X=\{X_t:t\in T\}$ 是定义在 $(\Omega,\mathcal{F},\mathbb{P})$ 上以 $S$ 为状态空间的随机过程.
 
 当 $T=\mathbb{Z},\mathbb{Z}^+$ 或其子集时, 称 $X$ 是离散参数随机过程, 当 $T=\mathbb{R},\mathbb{R}^+$ 或其子区间时, 称 $X$ 是连续参数随机过程. 
 
@@ -1045,7 +1001,7 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 
 随机过程的概率特性由其有限维分布族决定. 设 $S=\mathbb{R}$, $\forall n\geqslant1$, $t_1,t_2,\cdots,t_n\in T$, 记
 \begin{equation}
-  F(t_1,t_2,\cdots,t_n;x_1,x_2,\cdots,x_n)=P(X_{t_1}\leqslant x_1,X_{t_2}\leqslant x_2,\cdots,X_{t_n}\leqslant x_n)
+  F(t_1,t_2,\cdots,t_n;x_1,x_2,\cdots,x_n)=\mathbb{P}(X_{t_1}\leqslant x_1,X_{t_2}\leqslant x_2,\cdots,X_{t_n}\leqslant x_n)
 \end{equation}
 
 为 $X_{t_1},X_{t_2},\cdots,X_{t_n}$ 的联合分布函数, 其全体
@@ -1072,39 +1028,38 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 点过程或计数过程
 一个随机过程 $\{N(A),A\subset T\}$ 是点过程, 若 $N(A)$ 表示在集合 $A$ 中事件发生的总数, 即它满足
 
- 对 $\forall A\subset T$, $N(A)$ 是一取值非负整数的随机变量, $N(\varnothing)=0$
+对 $\forall A\subset T$, $N(A)$ 是一取值非负整数的随机变量, $N(\varnothing)=0$
 
- 对$\forall A_1,A_2\subset T$, 若 $A_1A_2=\varnothing$, 则对每一个样本有
+对$\forall A_1,A_2\subset T$, 若 $A_1A_2=\varnothing$, 则对每一个样本有
 \begin{equation}
   N(A_1\cup A_2)=N(A_1)+N(A_2)
 \end{equation}
 
+参数集 $T$ 可以是 $\mathbb{R}^n$, 也可以是任意一抽象非空集
 
- 参数集 $T$ 可以是 $\mathbb{R}^n$, 也可以是任意一抽象非空集
-
- 泊松过程是简单的点过程
+泊松过程是简单的点过程
 
 独立与平稳增量过程
 
- 对 $t_1<t_2<\cdots<t_n,~t_i\in T,~1\leqslant i\leqslant n$, 若增量
+对 $t_1<t_2<\cdots<t_n,~t_i\in T,~1\leqslant i\leqslant n$, 若增量
 \begin{equation}
   X_{t_1},X_{t_2}-X_{t_1},\cdots,X_{t_n}-X_{t_{n-1}}
 \end{equation}
- 相互独立, 则称 $X$ 为独立增量过程
+相互独立, 则称 $X$ 为独立增量过程
 
- 若 $\forall0\leqslant s<t$, 增量 $X_t-X_s$ 的分布只依赖与 $t-s$, 则称 $X$ 有平稳增量
+若 $\forall0\leqslant s<t$, 增量 $X_t-X_s$ 的分布只依赖与 $t-s$, 则称 $X$ 有平稳增量
 
- 有平稳增量的独立増量过程简称为独立平稳增量过程
+有平稳增量的独立増量过程简称为独立平稳增量过程
 
- 泊松过程和维纳过程或称布朗运动是两个最简单也是最重要的独立平稳增量过程
+泊松过程和维纳过程或称布朗运动是两个最简单也是最重要的独立平稳增量过程
 
 马尔可夫过程与扩散过程
 
 对 $t_1<t_2<\cdots<t_n<t,~t_i\in T,~x_i,~1\leqslant i\leqslant n$, 及 $A\subset\mathbb{R}$, 若总有
 \begin{equation}
-  P(X_t\in A|X_{t_1}=x_1,X_{t_2}=x_2,\cdots,X_{t_n}=x_n)=P(X_t\in A|X_{t_n}=x_n)
+  \mathbb{P}(X_t\in A|X_{t_1}=x_1,X_{t_2}=x_2,\cdots,X_{t_n}=x_n)=\mathbb{P}(X_t\in A|X_{t_n}=x_n)
 \end{equation}
- 则称此过程为马尔可夫过程
+则称此过程为马尔可夫过程
 
 离散状态马尔可夫过程称为马尔可夫链
 
@@ -1116,51 +1071,51 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 
 鞅
 
- 若 $\forall t\in T,~\mathbb{E}|X_t|<\infty$, 且对 $\forall t_1<t_2<\cdots<t_n<t_{n+1}$ 有
+若 $\forall t\in T,~\mathbb{E}|X_t|<\infty$, 且对 $\forall t_1<t_2<\cdots<t_n<t_{n+1}$ 有
 \begin{equation}
   \mathbb{E}(X_{t_{n+1}}|X_{t_1},X_{t_2},\cdots,X_{t_n})=X_{t_n}
 \end{equation}
- 则称 $X$ 为鞅.
+则称 $X$ 为鞅.
 
- 布朗运动关于自身是鞅
+布朗运动关于自身是鞅
 
- Ito 积分关于布朗运动是鞅
+ It\"o 积分关于布朗运动是鞅
 
 二阶矩过程
 
- 若对 $\forall t\in T,~\mathbb{E}|X_t|^2<\infty$, 则称 $X$ 为二阶矩过程
+若对 $\forall t\in T,~\mathbb{E}|X_t|^2<\infty$, 则称 $X$ 为二阶矩过程
 
- 均方分析中针对的均为二阶矩过程
+均方分析中针对的均为二阶矩过程
 
 更新过程
 
- 设 $\{X_k:k\geqslant1\}$ 为独立同分布的正的随机变量序列, 对 $t>0$, 令 $S_0=0, S_n=\sum_{k=1}^nX_k$, 并定义
+设 $\{X_k:k\geqslant1\}$ 为独立同分布的正的随机变量序列, 对 $t>0$, 令 $S_0=0, S_n=\sum_{k=1}^nX_k$, 并定义
 \begin{equation}
   N_t=\max\{n:n\geqslant0,S_n\leqslant t\},
 \end{equation}
- 称 $\{N_t:t\geqslant0\}$ 为更新过程
+称 $\{N_t:t\geqslant0\}$ 为更新过程
 
- 更新过程可以解释为 $[0,t]$ 内更换零件的个数, 或系统来的信号数, 或服务站来的顾客数等
+更新过程可以解释为 $[0,t]$ 内更换零件的个数, 或系统来的信号数, 或服务站来的顾客数等
 
 宽平稳过程或协方差平稳过程
 
- 若对 $\forall\tau,t\in Y$, $DX_t<\infty$, 且
+若对 $\forall\tau,t\in Y$, $DX_t<\infty$, 且
 \begin{equation}
   \mathbb{E}X_t=m,\quad\mathrm{Cov}(X_t,X_{t+\tau})=R(\tau)
 \end{equation}
- 仅依赖 $\tau$, 则称 $X$ 为宽平稳过程, 即它的协方差不随时间推移而改变
+仅依赖 $\tau$, 则称 $X$ 为宽平稳过程, 即它的协方差不随时间推移而改变
 
 严平稳过程
 
- 若对 $\forall t_1,t_2,\cdots,t_n\in T$, 及 $h>0$,
+若对 $\forall t_1,t_2,\cdots,t_n\in T$, 及 $h>0$,
 \begin{equation}
   (X_{t_1},X_{t_2},\cdots,X_{t_n})\overset{d}{=}(X_{t_1+h},X_{t_2+h},\cdots,X_{t_n+h})
 \end{equation}
- 则称该过程为严平稳过程
+则称该过程为严平稳过程
 
- 严平稳过程的一切有限维分布对时间的推移保持不变
+严平稳过程的一切有限维分布对时间的推移保持不变
 
- 特别地, $(X_t,X_s)$ 的二维分布只依赖于 $(t-s)$
+特别地, $(X_t,X_s)$ 的二维分布只依赖于 $(t-s)$
 
 \chapter{泊松过程}
 
@@ -1170,29 +1125,29 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
   
   随机过程 $\{N_t:t\geqslant0\}$ 称为时齐泊松过程, 若满足
 
- 计数过程, 且初值为 $0$
+计数过程, 且初值为 $0$
 \begin{equation}
     N_0=0
 \end{equation}
   
 
- 独立增量过程, 即 $\forall~0< t_1 < t_2< \cdots < t_n$, 
+独立增量过程, 即 $\forall~0< t_1 < t_2< \cdots < t_n$, 
 \begin{equation}
     N_{t_1},N_{t_2}-N_{t_1},\cdots,N_{t_n}-N_{t_{n-1}}
 \end{equation} 相互独立
   
 
- 增量平稳性, 即 $\forall~s,t\geqslant0,~n\geqslant0$, 
+增量平稳性, 即 $\forall~s,t\geqslant0,~n\geqslant0$, 
 \begin{equation}
-    P(N_{s+t}-N_s=n)=P(N_t=n)
+    \mathbb{P}(N_{s+t}-N_s=n)=\mathbb{P}(N_t=n)
 \end{equation}
   
 
- 增 $1$ 同 $\lambda$ 阶
+增 $1$ 同 $\lambda$ 阶
 \begin{equation}
     \begin{aligned}
-      P(N_{t+\Delta t}-N_t=1)&=\lambda\Delta t+o(\Delta t)\\
-      P(N_{t+\Delta t}-N_t=2)&=o(\Delta t)\\
+      \mathbb{P}(N_{t+\Delta t}-N_t=1)&=\lambda\Delta t+o(\Delta t)\\
+      \mathbb{P}(N_{t+\Delta t}-N_t=2)&=o(\Delta t)\\
     \end{aligned}
 \end{equation}
   
@@ -1200,26 +1155,26 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
   
   若 $\{N_t:t\geqslant0\}$ 为泊松过程, 则 $\forall~s,t\geqslant0$, 有
 \begin{equation}
-    P(N_{s+t}-N_s=k)=P(N_t=k)=\frac{(\lambda t)^k}{k!}\mathrm{e}^{-\lambda t}
+    \mathbb{P}(N_{s+t}-N_s=k)=\mathbb{P}(N_t=k)=\frac{(\lambda t)^k}{k!}\mathrm{e}^{-\lambda t}
 \end{equation}
   
-  即 $N_{s+t}-N_s\overset{d}{=}N_t\sim P(\lambda t)$.
+  即 $N_{s+t}-N_s\overset{d}{=}N_t\sim \mathbb{P}(\lambda t)$.
   
 \textbf{定义}：泊松过程
   
   计数过程 $\{N_t:t\geqslant0\}$ 称为参数是 $\lambda$ 的泊松过程, 若满足
 
- 初值为 $0$
+初值为 $0$
 \begin{equation}
     N_0=0
 \end{equation}
   
 
- 独立增量过程
+独立增量过程
 
- 增量是参数为 $\lambda t$ 的泊松分布, 即 $\forall~s,t\geqslant0$, 
+增量是参数为 $\lambda t$ 的泊松分布, 即 $\forall~s,t\geqslant0$, 
 \begin{equation}
-    N_{s+t}-N_s\sim P(\lambda t)
+    N_{s+t}-N_s\sim \mathbb{P}(\lambda t)
 \end{equation}
   
 \section{相邻事件的时间间隔}
@@ -1245,7 +1200,7 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
   
   因此 $S_n$ 的分布函数为
 \begin{equation}
-    P(S_n\leqslant t)=P(N_t\geqslant n)=1-P(N_t\leqslant n-1)=1-\sum_{k=0}^{n-1}\frac{(\lambda t)^k}{k!}\mathrm{e}^{-\lambda t},\quad t\geqslant0
+    \mathbb{P}(S_n\leqslant t)=\mathbb{P}(N_t\geqslant n)=1-\mathbb{P}(N_t\leqslant n-1)=1-\sum_{k=0}^{n-1}\frac{(\lambda t)^k}{k!}\mathrm{e}^{-\lambda t},\quad t\geqslant0
 \end{equation}
   
   则 $S_n$ 的概率密度函数为
@@ -1294,7 +1249,7 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
   得
 \begin{equation}
     \begin{aligned}
-      P\left(t_1-\frac{h}{2}< S_1 \leqslant t_1 + \frac{h}{2} < t_2-\frac{h}{2} < S_2 \leqslant t_2 + \frac{h}{2}\right)
+      \mathbb{P}\left(t_1-\frac{h}{2}< S_1 \leqslant t_1 + \frac{h}{2} < t_2-\frac{h}{2} < S_2 \leqslant t_2 + \frac{h}{2}\right)
       &=(\lambda h)^2\mathrm{e}^{-\lambda(t_2+h/2)}+o(h^2)\\
       &=\lambda^2h^2\mathrm{e}^{-\lambda t_2}+o(h^2),\\
     \end{aligned}
@@ -1364,34 +1319,34 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
   
   则
 
- 年龄: $V_t=t-S_{N_t}\in[0,t]$
+年龄: $V_t=t-S_{N_t}\in[0,t]$
 
- 剩余寿命: $W_t=S_{N_t+1}-t\geqslant0$
+剩余寿命: $W_t=S_{N_t+1}-t\geqslant0$
   
 \textbf{定理}：剩余寿命与年龄的分布
   
-  设 $\{N_t:t\geqslant0\}\sim PP(\lambda)$ 是参数为 $\lambda$ 的泊松过程, 则
+设 $\{N_t:t\geqslant0\}\sim PP(\lambda)$ 是参数为 $\lambda$ 的泊松过程, 则
 
- 剩余寿命分布: $W_t$ 与 $\{X_n:n\geqslant1\}$ 同分布, 即
+剩余寿命分布: $W_t$ 与 $\{X_n:n\geqslant1\}$ 同分布, 即
 \begin{equation}
     \begin{aligned}
-      P(W_t\leqslant x)
-      &=1-P(W_t>x)\\
-      &=1-P(N_{t+x}-N_t=0)\\
-      &=1-P(N_x=0)\\
+      \mathbb{P}(W_t\leqslant x)
+      &=1-\mathbb{P}(W_t>x)\\
+      &=1-\mathbb{P}(N_{t+x}-N_t=0)\\
+      &=1-\mathbb{P}(N_x=0)\\
       &=1-\frac{(\lambda x)^0}{0!}\mathrm{e}^{-\lambda x}\\
       &=1-\mathrm{e}^{-\lambda x},\quad x\geqslant0\\
     \end{aligned}
 \end{equation}
   
 
- 年龄分布: $V_t$ 是截尾的指数分布, 即对 $x < t$ 有
+年龄分布: $V_t$ 是截尾的指数分布, 即对 $x < t$ 有
 \begin{equation}
     \begin{aligned}
-      P(V_t\leqslant x)
-      &=1-P(V_t>x)\\
-      &=1-P(N_t-N_{t-x}=0)\\
-      &=1-P(N_x=0)\\
+      \mathbb{P}(V_t\leqslant x)
+      &=1-\mathbb{P}(V_t>x)\\
+      &=1-\mathbb{P}(N_t-N_{t-x}=0)\\
+      &=1-\mathbb{P}(N_x=0)\\
       &=1-\frac{(\lambda x)^0}{0!}\mathrm{e}^{-\lambda x}\\
       &=1-\mathrm{e}^{-\lambda x}, \quad 0 \leqslant x < t\\
     \end{aligned}  
@@ -1399,7 +1354,7 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
   
   故
 \begin{equation}
-    P(V_t\leqslant x)=
+    \mathbb{P}(V_t\leqslant x)=
     \begin{cases}
       1-\mathrm{e}^{-\lambda x}, &\text{if}~ 0 \leqslant x < t\\
       1, & \text{if}~x\geqslant t
@@ -1418,16 +1373,16 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 \textbf{定理}：  
   设 $\{N_t:t\geqslant0\}$ 是泊松过程, 则对 $\forall~0 < s < t$, 有
 \begin{equation}
-    P(X_1\leqslant s|N_t=1)=\frac{s}{t}.
+    \mathbb{P}(X_1\leqslant s|N_t=1)=\frac{s}{t}.
 \end{equation}
   
   证明: 
 \begin{equation}
     \begin{aligned}
-      P(X_1\leqslant s|N_t=1)
-      &=\frac{P(X_1\leqslant s,N_t=1)}{P(N_t=1)}\\
-      &=\frac{P(N_s=1,N_t-N_s=0)}{P(N_t=1)}\\
-      &=\frac{P(N_s=1)P(N_t-N_s=0)}{P(N_t=1)}\\
+      \mathbb{P}(X_1\leqslant s|N_t=1)
+      &=\frac{\mathbb{P}(X_1\leqslant s,N_t=1)}{\mathbb{P}(N_t=1)}\\
+      &=\frac{\mathbb{P}(N_s=1,N_t-N_s=0)}{\mathbb{P}(N_t=1)}\\
+      &=\frac{\mathbb{P}(N_s=1)\mathbb{P}(N_t-N_s=0)}{\mathbb{P}(N_t=1)}\\
       &=\frac{\dfrac{(\lambda s)^1}{1!}\mathrm{e}^{-\lambda s}\dfrac{(\lambda (t-s))^0}{0!}\mathrm{e}^{-\lambda (t-s)}}{\dfrac{(\lambda t)^1}{1!}\mathrm{e}^{-\lambda t}}\\
       &=\frac{s}{t}.
     \end{aligned}
@@ -1466,12 +1421,12 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 \textbf{定理}：  
   设 $\{N_t:t\geqslant0\}$ 是计数过程, $X_n$ 为第 $n$ 个时间与第 $n-1$ 个时间的时间间隔, $\{X_n:n\geqslant\}$ 独立同分布且 
 \begin{equation}
-    F(x)=P(X_n\leqslant x),
+    F(x)=\mathbb{P}(X_n\leqslant x),
 \end{equation}
   
   若 $F(0)=0$, 且对 $\forall~0 \leqslant s \leqslant t$, 有
 \begin{equation}
-    P(X_1\leqslant s|N_t=1)=\frac{s}{t},
+    \mathbb{P}(X_1\leqslant s|N_t=1)=\frac{s}{t},
 \end{equation}
   
   则 $\{N_t:t\geqslant0\}$ 是泊松过程.
@@ -1479,12 +1434,12 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 \textbf{定理}：  
   设 $\{N_t:t\geqslant0\}$ 是计数过程, $X_n$ 为第 $n$ 个时间与第 $n-1$ 个时间的时间间隔, $\{X_n:n\geqslant\}$ 独立同分布且 
 \begin{equation}
-    F(x)=P(X_n\leqslant x),
+    F(x)=\mathbb{P}(X_n\leqslant x),
 \end{equation}
   
   若 $\mathbb{E}X_n < \infty,~F(0)=0$, 且对 $\forall~0 \leqslant s \leqslant t,~n\geqslant1$, 有
 \begin{equation}
-    P(S_n\leqslant s|N_t=n)=\left(\frac{s}{t}\right)^n,
+    \mathbb{P}(S_n\leqslant s|N_t=n)=\left(\frac{s}{t}\right)^n,
 \end{equation}
   
   则 $\{N_t:t\geqslant0\}$ 是泊松过程.
@@ -1492,7 +1447,7 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 \textbf{定理}：  
   设 $\{N_t:t\geqslant0\}\sim PP(\lambda)$ 是参数为 $\lambda$ 的泊松过程, $S_k,~k\geqslant1$ 为其到达时刻, 则对任意 $[0,\infty)$ 上的可积函数 $f$ 有
 \begin{equation}
-    \mathbb{E}\left[f(S_n)\right]=\lambda\int_0^\infty f(t)\mathrm{d}t.
+  \mathbb{E}\left[f(S_n)\right]=\lambda\int_0^\infty f(t)\mathrm{d}t.
 \end{equation}
   
 \section{复合泊松过程}
@@ -1507,11 +1462,11 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 
 \textbf{定义}：马尔可夫链
 
-若随机序列 $\{X_n:n\geqslant 0\}$ 对任意 $i_0,i_1,\ldots,i_n,i_{n+1}\in S,\ n\in\mathbb{N}_0$ 及 $P(X_0=i_0,X_1=i_1,\cdots,X_n=i_n)>0$, 有
+若随机序列 $\{X_n:n\geqslant 0\}$ 对任意 $i_0,i_1,\ldots,i_n,i_{n+1}\in S,\ n\in\mathbb{N}_0$ 及 $\mathbb{P}(X_0=i_0,X_1=i_1,\cdots,X_n=i_n)>0$, 有
 \begin{equation}
-  P(X_{n+1}=i_{n+1}|X_0=i_0,X_1=i_1,\cdots,X_n=i_n)=P(X_{n+1}=i_{n+1}|X_n=i_n)
+  \mathbb{P}(X_{n+1}=i_{n+1}|X_0=i_0,X_1=i_1,\cdots,X_n=i_n)=\mathbb{P}(X_{n+1}=i_{n+1}|X_n=i_n)
 \end{equation}
- 则称其为马尔可夫链 (Markov chain).
+则称其为马尔可夫链 (Markov chain).
 
 \textbf{注释}：
 
@@ -1519,11 +1474,11 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 
 \textbf{定义}：一步转移概率与转移矩阵
 
-$\forall i,j\in S,\ P(X_{n+1}=j|X_n=i):=p_{ij}(n)$ 称为时刻 $n$ 从 $i$ 到 $j$ 的一步转移概率. 若 $\forall i,j\in S,\ p_{ij}(n)=p_{ij}$ 不依赖于 $n$, 则称 $X=\{X_n,n\geqslant 0\}$ 为时齐马氏链 (HMC, Homogeneous Markov Chain). 记 $\bm{P}=(p_{ij})_{i,j\in S}$, 则称 $\bm{P}$ 为 $X$ 的一步转移概率矩阵, 简称为转移矩阵 (transition matrix).
+$\forall i,j\in S,\ \mathbb{P}(X_{n+1}=j|X_n=i):=p_{ij}(n)$ 称为时刻 $n$ 从 $i$ 到 $j$ 的一步转移概率. 若 $\forall i,j\in S,\ p_{ij}(n)=p_{ij}$ 不依赖于 $n$, 则称 $X=\{X_n,n\geqslant 0\}$ 为时齐马氏链 (HMC, Homogeneous Markov Chain). 记 $\bm{P}=(p_{ij})_{i,j\in S}$, 则称 $\bm{P}$ 为 $X$ 的一步转移概率矩阵, 简称为转移矩阵 (transition matrix).
 
 \textbf{定义}：转移图
 
-转移图是一个有向图 $G=(V,\mathbb{E}),\ V=S,\ \mathbb{E}=\Big\{\overrightarrow{ij}~|~i,j\in S,~p_{ij}>0\Big\}$.
+转移图是一个有向图 $G=(V,E)$, $V=S$, $E=\Big\{\overrightarrow{ij} \mid i,j\in S,~p_{ij}>0\Big\}$.
 
 \textbf{例}：随机游动
 
@@ -1531,48 +1486,48 @@ $\forall i,j\in S,\ P(X_{n+1}=j|X_n=i):=p_{ij}(n)$ 称为时刻 $n$ 从 $i$ 到 
 \begin{equation}
   X_n=X_0+\sum_{k=1}^n\xi_k,\ \forall n\geqslant1
 \end{equation}
- 则 $\{X_n,n\geqslant0\}$ 是时齐马氏链.
+则 $\{X_n,n\geqslant0\}$ 是时齐马氏链.
 
 证明: $\forall n\in\mathbb{N},\ i_0,i_1,\ldots,i_{n-1},i,j\in \mathbb{Z}$, 
 \begin{equation}
   \begin{aligned}
-    & P(X_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
-    =& P(X_n+\xi_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
-    =& P(i+\xi_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
-    =& P(\xi_{n+1}=j-i)\\
+    & \mathbb{P}(X_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
+    =& \mathbb{P}(X_n+\xi_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
+    =& \mathbb{P}(i+\xi_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
+    =& \mathbb{P}(\xi_{n+1}=j-i)\\
   \end{aligned} 
 \end{equation} 另一方面 
 \begin{equation}
-  P(X_{n+1}=j|X_n=i)=P(i+\xi_{n+1}=j|X_n=i)=P(\xi_{n+1}=j-i) 
+  \mathbb{P}(X_{n+1}=j|X_n=i)=\mathbb{P}(i+\xi_{n+1}=j|X_n=i)=\mathbb{P}(\xi_{n+1}=j-i) 
 \end{equation} 则 
 \begin{equation}
-  P(X_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)=P(X_{n+1}=j|X_n=i) 
+  \mathbb{P}(X_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)=\mathbb{P}(X_{n+1}=j|X_n=i) 
 \end{equation} 所以 $\{X_n,n\geqslant0\}$ 是时齐马氏链.
 
 \textbf{定理}： 由当前事件和独立序列生成的马氏链
 
-独立同分布随机变量序列 $\{\xi_n,n\geqslant1\}$ 均取值于 $S$, $f:S\times S\to S,\ X_n=f(X_{n-1},\xi_n)$, $X_0$ 与 $\{\xi_n,n\geqslant1\}$ 相互独立, 则 $X=\{X_n,n\geqslant0\}$ 是时齐马氏链, 转移概率 $p_{ij}=P(f(i,\xi_1)=j)$.
+独立同分布随机变量序列 $\{\xi_n,n\geqslant1\}$ 均取值于 $S$, $f:S\times S\to S,\ X_n=f(X_{n-1},\xi_n)$, $X_0$ 与 $\{\xi_n,n\geqslant1\}$ 相互独立, 则 $X=\{X_n,n\geqslant0\}$ 是时齐马氏链, 转移概率 $p_{ij}=\mathbb{P}(f(i,\xi_1)=j)$.
 
 证明: $\forall i_0,i_1,\ldots,i_{n-1},i,j\in S$,
 \begin{equation}
   \begin{aligned}
-    & P(X_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
-    =& P(f(X_n,\xi_{n+1})=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
-    =& P(f(i,\xi_{n+1})=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
-    =& P(f(i,\xi_{n+1})=j)\\
-    =& P(f(i,\xi_1)=j)
+    & \mathbb{P}(X_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
+    =& \mathbb{P}(f(X_n,\xi_{n+1})=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
+    =& \mathbb{P}(f(i,\xi_{n+1})=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)\\
+    =& \mathbb{P}(f(i,\xi_{n+1})=j)\\
+    =& \mathbb{P}(f(i,\xi_1)=j)
   \end{aligned}
 \end{equation} 另一方面 
 \begin{equation}
-  P(X_{n+1}=j|X_n=i)=P(f(i,\xi_{n+1})=j|X_n=i)=P(f(i,\xi_{n+1})=j) 
+  \mathbb{P}(X_{n+1}=j|X_n=i)=\mathbb{P}(f(i,\xi_{n+1})=j|X_n=i)=\mathbb{P}(f(i,\xi_{n+1})=j) 
 \end{equation} 则 
 \begin{equation}
-  P(X_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)=P(X_{n+1}=j|X_n=i) 
+  \mathbb{P}(X_{n+1}=j|X_0=i_0,X_1=i_1,\cdots,X_{n-1}=i_{n-1},X_n=i)=\mathbb{P}(X_{n+1}=j|X_n=i) 
 \end{equation} 所以 $\{X_n,n\geqslant0\}$ 是时齐马氏链.
 
 \section{转移概率矩阵}
 
-设 $X=\{X_n,n\geqslant0\}$ 是时齐马氏链, 一步转移概率矩阵 $\bm{P}=(p_{ij})_{i,j\in S}$, $p_{ij}=P(X_{n+1}=j|X_n=i)=P(X_1=j|X_0=i)$, 则显然有 $p_{ij}\geqslant0,\sum_{j\in S}p_{ij}=1$, 这两条来自条件概率测度 $P(\cdot|X_n=i)$ 的基本性质.
+设 $X=\{X_n,n\geqslant0\}$ 是时齐马氏链, 一步转移概率矩阵 $\bm{P}=(p_{ij})_{i,j\in S}$, $p_{ij}=\mathbb{P}(X_{n+1}=j|X_n=i)=\mathbb{P}(X_1=j|X_0=i)$, 则显然有 $p_{ij}\geqslant0,\sum_{j\in S}p_{ij}=1$, 这两条来自条件概率测度 $\mathbb{P}(\cdot|X_n=i)$ 的基本性质.
 
 \textbf{定义}：转移矩阵
 
@@ -1581,8 +1536,7 @@ $\forall i,j\in S,\ P(X_{n+1}=j|X_n=i):=p_{ij}(n)$ 称为时刻 $n$ 从 $i$ 到 
   \sum_{j\in S}a_{ij}=1.
 \end{equation}
 
-
-记 $\pi_i(n)=P(X_n=i)$,
+记 $\pi_i(n)=\mathbb{P}(X_n=i)$,
 \begin{equation}
   \bm{\pi}(n)=(\pi_1(n),\pi_2(n),\cdots,\pi_i(n),\cdots)
 \end{equation}
@@ -1595,7 +1549,7 @@ $\forall i,j\in S,\ P(X_{n+1}=j|X_n=i):=p_{ij}(n)$ 称为时刻 $n$ 从 $i$ 到 
 证明: 由全概率公式可知
 \begin{equation}
   \begin{aligned}
-    P(X_{n+1}=j)&=\sum_{i\in S}P(X_n=i)P(X_{n+1}=j|X_n=i)\\
+    \mathbb{P}(X_{n+1}=j)&=\sum_{i\in S}\mathbb{P}(X_n=i)\mathbb{P}(X_{n+1}=j|X_n=i)\\
     &=\sum_{i\in S} \pi_i(n)p_{ij}
   \end{aligned}
 \end{equation} 写成向量形式为
@@ -1612,7 +1566,7 @@ $\forall i,j\in S,\ P(X_{n+1}=j|X_n=i):=p_{ij}(n)$ 称为时刻 $n$ 从 $i$ 到 
 
 \textbf{定理}： Kolmogorov-Chapman 方程 多步转移的全概率公式
 
-记 $p_{ij}^{(m)}=P(X_{n+m}=j|X_n=i)$ 为 $m$ 步转移概率, $\bm{P}^{(m)}=\{p_{ij}^{(m)}\}$ 为 $m$ 步转移概率矩阵, 则 
+记 $p_{ij}^{(m)}=\mathbb{P}(X_{n+m}=j|X_n=i)$ 为 $m$ 步转移概率, $\bm{P}^{(m)}=\{p_{ij}^{(m)}\}$ 为 $m$ 步转移概率矩阵, 则 
 \begin{equation}
   p_{ij}^{(m+n)}=\sum_{k\in S}p_{ik}^{(m)}p_{kj}^{(n)},\quad \bm{P}^{(m+n)}=\bm{P}^{(m)}\bm{P}^{(n)},\quad \bm{P}^{(n)}=\bm{P}^n
 \end{equation}
@@ -1620,9 +1574,9 @@ $\forall i,j\in S,\ P(X_{n+1}=j|X_n=i):=p_{ij}(n)$ 称为时刻 $n$ 从 $i$ 到 
 证明: 由条件概率形式的全概率公式可知
 \begin{equation}
   \begin{aligned}
-    p_{ij}^{(m+n)}&=P(X_{m+n}=j|X_0=i)\\
-    &=\sum_{k\in S}P(X_m=k|X_0=i)P(X_{m+n}=j|X_0=i,X_m=k)\\
-    &=\sum_{k\in S}P(X_m=k|X_0=i)P(X_{m+n}=j|X_m=k)\\
+    p_{ij}^{(m+n)}&=\mathbb{P}(X_{m+n}=j|X_0=i)\\
+    &=\sum_{k\in S}\mathbb{P}(X_m=k|X_0=i)\mathbb{P}(X_{m+n}=j|X_0=i,X_m=k)\\
+    &=\sum_{k\in S}\mathbb{P}(X_m=k|X_0=i)\mathbb{P}(X_{m+n}=j|X_m=k)\\
     &=\sum_{k\in S} p_{ik}^{(m)}p_{kj}^{(n)}
   \end{aligned}
 \end{equation} 写成向量形式为
@@ -1664,18 +1618,17 @@ $\forall i,j\in S,\ P(X_{n+1}=j|X_n=i):=p_{ij}(n)$ 称为时刻 $n$ 从 $i$ 到 
 \begin{equation}
   T_{ij}=\min_{n\geqslant1}\{n:X_n=j,~X_0=i\}
 \end{equation}
- 若右侧为空集, 则令 $T_{ij}=\infty$
+若右侧为空集, 则令 $T_{ij}=\infty$
 
 首达概率: 从 $i$ 出发经 $n$ 步首次到达 $j$ 的概率定义为 
 \begin{equation}
-  f_{ij}^{(n)}=P(T_{ij}=n|X_0=i)=P(X_n=j,~X_k\neq j,1\leqslant k\leqslant n-1|X_0=i)
+  f_{ij}^{(n)}=\mathbb{P}(T_{ij}=n|X_0=i)=\mathbb{P}(X_n=j,~X_k\neq j,1\leqslant k\leqslant n-1|X_0=i)
 \end{equation}
 
 有限步首达概率: 从 $i$ 出发经有限步首次到达 $j$ 的概率定义为
 \begin{equation}
   f_{ij}=\sum_{n=1}^\infty f_{ij}^{(n)}
 \end{equation}
-
 
 \textbf{定义}：常返与非常返
 
@@ -1687,7 +1640,7 @@ $\forall i,j\in S,\ P(X_{n+1}=j|X_n=i):=p_{ij}(n)$ 称为时刻 $n$ 从 $i$ 到 
 
 当 $f_{ii}=1$ 时, $\Big\{f_{ii}^{(n)}:n\geqslant1\Big\}$ 是一个概率分布. 记 $\mu_i$ 表示从 $i$ 出发再回到 $i$ 的平均回转时间 $\mathbb{E}T_{ii}$, 即
 \begin{equation}
-  \mu_i=\mathbb{E}T_{ii}=\sum_{n=1}^\infty n P(T_{ii}=n|X_0=i)=\sum_{n=1}^\infty nf_{ii}^{(n)}.
+  \mu_i=\mathbb{E}T_{ii}=\sum_{n=1}^\infty n \mathbb{P}(T_{ii}=n|X_0=i)=\sum_{n=1}^\infty nf_{ii}^{(n)}.
 \end{equation}
 
 正常返状态: 称状态 $i$ 为正常返状态, 若 $\mu_i=\mathbb{E}T_{ii}<\infty$, 此时平均返回频率
@@ -1706,7 +1659,7 @@ $\forall i,j\in S,\ P(X_{n+1}=j|X_n=i):=p_{ij}(n)$ 称为时刻 $n$ 从 $i$ 到 
 \begin{equation}
   \Big\{n:n\geqslant1,~p_{ii}^{(n)}>0\Big\}\neq\varnothing,
 \end{equation} 
-所以称该集合的最大公约数 $d(i)$ 为状态 $i$ 的周期
+则称该集合的最大公约数 $d(i)$ 为状态 $i$ 的周期
 
 周期状态: $d(i)>1$
 
@@ -1737,7 +1690,7 @@ $n$ 步首达概率
 
 状态 $i$ 为常返状态, $f_{ii}=1$, 当且仅当
 \begin{equation}
-  G_{ii}\triangleq\sum_{n=0}^\infty p_{ii}^{(n)}=\infty,
+  G_{ii}:=\sum_{n=0}^\infty p_{ii}^{(n)}=\infty,
 \end{equation}
 
 状态 $i$ 为非常返状态, $f_{ii}<1$, 当且仅当
@@ -1747,16 +1700,16 @@ $n$ 步首达概率
 
 证明: 约定 $p_{ii}^{(0)}=1,~f_{ii}^{(0)}=0$. 记生成函数
 \begin{equation}
-  P(\rho)=\sum_{n=0}^\infty p_{ii}^{(n)}\rho^n,\quad F(\rho)=\sum_{n=0}^\infty f_{ii}^{(n)}\rho^n,
+  \mathbb{P}(\rho)=\sum_{n=0}^\infty p_{ii}^{(n)}\rho^n,\quad F(\rho)=\sum_{n=0}^\infty f_{ii}^{(n)}\rho^n,
 \end{equation}
 
 通过交换求和次序可知
 \begin{equation}
-  P(\rho)-1=P(\rho)F(\rho),
+  \mathbb{P}(\rho)-1=\mathbb{P}(\rho)F(\rho),
 \end{equation}
 即
 \begin{equation}
-  P(\rho)=\frac{1}{1-F(\rho)},\quad0\leqslant\rho<1,
+  \mathbb{P}(\rho)=\frac{1}{1-F(\rho)},\quad0\leqslant\rho<1,
 \end{equation}
 
 两边令 $\rho\uparrow1$ 可得
@@ -1802,7 +1755,7 @@ $i$ 与 $j$ 或有相同的周期, 或同为非周期
 \begin{equation}
   p_{ij}=0,
 \end{equation}
- 则称 $C$ 为闭集, 即闭集之内不可能走出去. 若闭集 $C$ 的状态相通, 则称 $C$ 为不可约的.
+则称 $C$ 为闭集, 即闭集之内不可能走出去. 若闭集 $C$ 的状态相通, 则称 $C$ 为不可约的.
 
 \textbf{引理}： 闭集的充要条件
 
@@ -1984,10 +1937,10 @@ $C$ 是闭集的充要条件为: 对 $\forall~i\in C,~j\notin C$, $n\geqslant1$,
 
 设
 \begin{equation}
-  P(X_0=1)=\frac{1}{3},P(X_0=2)=\frac{1}{3},P(X_0=3)=\frac{1}{3},P(X_0=4)=0
+  \mathbb{P}(X_0=1)=\frac{1}{3},\mathbb{P}(X_0=2)=\frac{1}{3},\mathbb{P}(X_0=3)=\frac{1}{3},\mathbb{P}(X_0=4)=0
 \end{equation}
 
-求 $\lim_{n\to\infty}P(X_n=i),~i=1,2,3,4$
+求 $\lim_{n\to\infty}\mathbb{P}(X_n=i),~i=1,2,3,4$
 
 解:
 
@@ -2040,7 +1993,7 @@ $C$ 是闭集的充要条件为: 对 $\forall~i\in C,~j\notin C$, $n\geqslant1$,
 \end{equation}
 故
 \begin{equation}
-  \lim_{n\to\infty}P(X_n=i)=\pi_i,\quad i=1,2,3,4.
+  \lim_{n\to\infty}\mathbb{P}(X_n=i)=\pi_i,\quad i=1,2,3,4.
 \end{equation}
 
 \textbf{例}：首达概率与正常返
@@ -2049,20 +2002,19 @@ $C$ 是闭集的充要条件为: 对 $\forall~i\in C,~j\notin C$, $n\geqslant1$,
 \begin{equation}
   p_{n,n+1}=p\in(0,1),\quad p_{n,0}=1-p,\quad n=0,1,2,\cdots,
 \end{equation}
- 其他元素为 $0$, 设
+其他元素为 $0$, 设
 \begin{equation}
   T_0=\inf\{n>0:X_n=0\}.
 \end{equation}
 
-
-求 $P(T_0=n|X_0=0)$
+求 $\mathbb{P}(T_0=n|X_0=0)$
 
 该马氏链是否为正常返链, 说明理由
 
 解: 由转移图可知
 
 \begin{equation}
-  P(T_0=n|X_0=0)=f_{00}^{(n)}=p^{n-1}(1-p),
+  \mathbb{P}(T_0=n|X_0=0)=f_{00}^{(n)}=p^{n-1}(1-p),
 \end{equation}
 所以 $T_0|_{X_0=0}$ 服从几何分布, 即
 \begin{equation}
@@ -2232,7 +2184,7 @@ $X_n=M_n+Z_n,~\forall~n\geqslant0$
 \begin{equation}
   \{\omega:T(\omega)=n\}\in\mathcal{F}_n
 \end{equation}
- 则称 $T$ 是关于 $\{Y_n:n\geqslant0\}$ 的停时.
+则称 $T$ 是关于 $\{Y_n:n\geqslant0\}$ 的停时.
 
 \textbf{注释}： 停时
 
@@ -2267,14 +2219,14 @@ $T=k,~k\in\mathbb{N}$ 是停时, 即常数是停时
 
 \textbf{引理}：
 
-设 $X$ 是随机变量满足 $\mathbb{E}|X|<\infty$, $T$ 是关于 $\{Y_n:n\geqslant0\}$ 的停时, 且 $P(Y<\infty)=1$, 则
+设 $X$ 是随机变量满足 $\mathbb{E}|X|<\infty$, $T$ 是关于 $\{Y_n:n\geqslant0\}$ 的停时, 且 $\mathbb{P}(Y<\infty)=1$, 则
 \begin{equation}
   \lim_{n\to\infty}\mathbb{E}(X\mathbb{I}_{\{T>n\}})=0,\quad \lim_{n\to\infty}\mathbb{E}(X\mathbb{I}_{\{T\leqslant n\}})=1
 \end{equation}
 
 \textbf{定理}： 停时定理
 
-设 $\{X_n:n\geqslant0\}$ 关于 $\{Y_n:n\geqslant0\}$ 是鞅, $T$ 是关于 $\{Y_n:n\geqslant0\}$ 的停时, $P(T<\infty)=1$, 且 
+设 $\{X_n:n\geqslant0\}$ 关于 $\{Y_n:n\geqslant0\}$ 是鞅, $T$ 是关于 $\{Y_n:n\geqslant0\}$ 的停时, $\mathbb{P}(T<\infty)=1$, 且 
 \begin{equation}
   \mathbb{E}\left(\sup_{n\geqslant0}|X_{T\wedge n}|\right)<\infty,
 \end{equation}
@@ -2298,7 +2250,7 @@ $T=k,~k\in\mathbb{N}$ 是停时, 即常数是停时
 
 设 $\{X_n:n\geqslant0\}$ 关于 $\{Y_n:n\geqslant0\}$ 是鞅, $T$ 是关于 $\{Y_n:n\geqslant0\}$ 的停时, 若
 
-$P(T<\infty)=1$
+$\mathbb{P}(T<\infty)=1$
 
 $\mathbb{E}|X_T|<\infty$
 
@@ -2312,7 +2264,7 @@ $\lim_{n\to\infty}\mathbb{E}|X_n\mathbb{I}_{\{T>n\}}|=0$
 
 设 $\{X_n:n\geqslant0\}$ 关于 $\{Y_n:n\geqslant0\}$ 是鞅, $T$ 是关于 $\{Y_n:n\geqslant0\}$ 的停时, 若
 
-$P(T<\infty)=1$
+$\mathbb{P}(T<\infty)=1$
 
 对某个 $k<\infty,~\forall~n\geqslant0,~\mathbb{E}(X_{T\wedge n}^2)\leqslant k$
 所以 
@@ -2346,7 +2298,7 @@ $P(T<\infty)=1$
 \end{equation}
 所以存在随机变量 $X_\infty$, 使得
 \begin{equation}
-  P\left(\lim_{n\to\infty}X_n=X_\infty\right)=1,
+  \mathbb{P}\left(\lim_{n\to\infty}X_n=X_\infty\right)=1,
 \end{equation}
 
 且 $\mathbb{E}|X_\infty|<\infty$.
@@ -2374,7 +2326,7 @@ $P(T<\infty)=1$
 
 因此
 \begin{equation}
-  P(V(a,b)<\infty)=1,
+  \mathbb{P}(V(a,b)<\infty)=1,
 \end{equation}
 即当 $n\to\infty$ 时, $X_n(\omega)$ 以概率1存在极限, 设
 \begin{equation}
@@ -2382,7 +2334,7 @@ $P(T<\infty)=1$
 \end{equation}
 所以
 \begin{equation}
-  P\left(\lim_{n\to\infty}X_n=X_\infty\right)=1.
+  \mathbb{P}\left(\lim_{n\to\infty}X_n=X_\infty\right)=1.
 \end{equation}
 
 另外, 由 Fatou 引理
@@ -2398,12 +2350,12 @@ $P(T<\infty)=1$
 
 设 $\{Y_k:k\geqslant0\}$ 独立同分布, $\mathbb{E}Y_k=0$, $\mathbb{E}Y_k^2=\sigma^2<\infty$, $X_0=0$, $X_n=\sum_{k=1}^nY_k$, 则由 Chebyshev 不等式有
 \begin{equation}
-  \varepsilon^2P(|X_n|>\varepsilon)\leqslant n\sigma^2,
+  \varepsilon^2\mathbb{P}(|X_n|>\varepsilon)\leqslant n\sigma^2,
 \end{equation}
 
 由 Kolmogorov 不等式有
 \begin{equation}
-  \varepsilon^2P\left(\max_{0\leqslant k\leqslant n}|X_k|>\varepsilon\right)\leqslant n\sigma^2.
+  \varepsilon^2\mathbb{P}\left(\max_{0\leqslant k\leqslant n}|X_k|>\varepsilon\right)\leqslant n\sigma^2.
 \end{equation}
 
 由
@@ -2413,21 +2365,21 @@ $P(T<\infty)=1$
 
 可知
 \begin{equation}
-  \varepsilon^2P\left(\max_{0\leqslant k\leqslant n}|X_k|>\varepsilon\right)=\varepsilon^2P\left(\max_{0\leqslant k\leqslant n}X_k^2>\varepsilon^2\right)\leqslant \mathbb{E}X_n^2.
+  \varepsilon^2\mathbb{P}\left(\max_{0\leqslant k\leqslant n}|X_k|>\varepsilon\right)=\varepsilon^2\mathbb{P}\left(\max_{0\leqslant k\leqslant n}X_k^2>\varepsilon^2\right)\leqslant \mathbb{E}X_n^2.
 \end{equation}
 
 \textbf{定理}： 最大值不等式
 
 设 $\{X_n:n\geqslant0\}$ 关于 $\{Y_n:n\geqslant0\}$ 是下鞅, 且 $\forall~n\geqslant0$ 有 $X_n\geqslant0$, 则对 $\forall~\lambda>0$ 有
 \begin{equation}
-  \lambda P\left(\max_{0\leqslant k\leqslant n}X_k>\lambda\right)\leqslant \mathbb{E}X_n.
+  \lambda \mathbb{P}\left(\max_{0\leqslant k\leqslant n}X_k>\lambda\right)\leqslant \mathbb{E}X_n.
 \end{equation}
 
 \textbf{推论}：
 
 设 $\{X_n:n\geqslant0\}$ 关于 $\{Y_n:n\geqslant0\}$ 是鞅, 则对 $\forall~\lambda>0$ 有
 \begin{equation}
-  \lambda P\left(\max_{0\leqslant k\leqslant n}|X_k|>\lambda\right)\leqslant \mathbb{E}|X_n|.
+  \lambda \mathbb{P}\left(\max_{0\leqslant k\leqslant n}|X_k|>\lambda\right)\leqslant \mathbb{E}|X_n|.
 \end{equation}
 
 证明: 易知 $\forall~n\geqslant0$ 有 $|X_n|\geqslant0$ 且是下鞅, 则由最大值不等式立即可得.
@@ -2436,7 +2388,7 @@ $P(T<\infty)=1$
 
 设 $\{X_n:n\geqslant0\}$ 关于 $\{Y_n:n\geqslant0\}$ 是鞅, 且存在常数 $k$ 使得 $\forall~n\geqslant0$ 有 $\mathbb{E}X_n^2\leqslant k<\infty$, 则存在有限随机变量 $X_\infty$, 使得 $\{X_n:n\geqslant0\}$ 不仅依概率收敛
 \begin{equation}
-  P\left(\lim_{n\to\infty}X_n=X_\infty\right)=1,
+  \mathbb{P}\left(\lim_{n\to\infty}X_n=X_\infty\right)=1,
 \end{equation}
 
 而且均方收敛
@@ -2448,7 +2400,7 @@ $P(T<\infty)=1$
 
 设 $\forall~n\geqslant1$, $\mathbb{E}X_n^2\leqslant k<\infty$. 令 $S_n=\sum_{k=1}^nX_k$, 已知 $\{S_n:n\geqslant1\}$ 是鞅, 证明 $\forall~\varepsilon>0$, 有
 \begin{equation}
-  \lim_{n\to\infty}P\left(\left|\frac{S_n}{n}\right|>\varepsilon\right)=0.
+  \lim_{n\to\infty}\mathbb{P}\left(\left|\frac{S_n}{n}\right|>\varepsilon\right)=0.
 \end{equation}
 
 证明: 易知 $X_i=S_i-S_{i-1}$, 则对 $\forall~i< j$ 由全期望公式, 条件期望平滑性以及鞅的降序性有
@@ -2468,15 +2420,15 @@ $P(T<\infty)=1$
 \end{equation}
 所以由最大值不等式可得
 \begin{equation}
-  P\left(\left|\frac{S_n}{n}\right|>\varepsilon\right)=P(|S_n|>n\varepsilon)=P\left(S_n^2>n^2\varepsilon^2\right)\leqslant\frac{\mathbb{E}S_n^2}{n^2\varepsilon^2}\leqslant\frac{nk}{n^2\varepsilon^2}=\frac{k}{n\varepsilon^2},
+  \mathbb{P}\left(\left|\frac{S_n}{n}\right|>\varepsilon\right)=\mathbb{P}(|S_n|>n\varepsilon)=\mathbb{P}\left(S_n^2>n^2\varepsilon^2\right)\leqslant\frac{\mathbb{E}S_n^2}{n^2\varepsilon^2}\leqslant\frac{nk}{n^2\varepsilon^2}=\frac{k}{n\varepsilon^2},
 \end{equation}
 所以
 \begin{equation}
-  \lim_{n\to\infty}P\left(\left|\frac{S_n}{n}\right|>\varepsilon\right)\leqslant\lim_{n\to\infty}\frac{k}{n\varepsilon^2}=0,
+  \lim_{n\to\infty}\mathbb{P}\left(\left|\frac{S_n}{n}\right|>\varepsilon\right)\leqslant\lim_{n\to\infty}\frac{k}{n\varepsilon^2}=0,
 \end{equation}
 故
 \begin{equation}
-  \lim_{n\to\infty}P\left(\left|\frac{S_n}{n}\right|>\varepsilon\right)=0.
+  \lim_{n\to\infty}\mathbb{P}\left(\left|\frac{S_n}{n}\right|>\varepsilon\right)=0.
 \end{equation}
 
 \textbf{例}：最大值不等式
@@ -2490,9 +2442,9 @@ $P(T<\infty)=1$
 \begin{equation}
   \begin{aligned}
     \mathbb{E}\left(\max_{0\leqslant k\leqslant n}|X_k|\right)
-    &=\int_0^\infty P\left(\max_{0\leqslant k\leqslant n}|X_k|>t\right)\mathrm{d}t\\
-    &=\int_0^\infty P\left(\max_{0\leqslant k\leqslant n}|X_k|^\alpha>t^\alpha\right)\mathrm{d}t\\
-    &\leqslant\int_0^{(\mathbb{E}|X_n|^\alpha)^{1/\alpha}}1\mathrm{d}t+\int_{(\mathbb{E}|X_n|^\alpha)^{1/\alpha}}^\infty P\left(\max_{0\leqslant k\leqslant n}|X_k|^\alpha>t^\alpha\right)\mathrm{d}t\\
+    &=\int_0^\infty \mathbb{P}\left(\max_{0\leqslant k\leqslant n}|X_k|>t\right)\mathrm{d}t\\
+    &=\int_0^\infty \mathbb{P}\left(\max_{0\leqslant k\leqslant n}|X_k|^\alpha>t^\alpha\right)\mathrm{d}t\\
+    &\leqslant\int_0^{(\mathbb{E}|X_n|^\alpha)^{1/\alpha}}1\mathrm{d}t+\int_{(\mathbb{E}|X_n|^\alpha)^{1/\alpha}}^\infty \mathbb{P}\left(\max_{0\leqslant k\leqslant n}|X_k|^\alpha>t^\alpha\right)\mathrm{d}t\\
     &\leqslant(\mathbb{E}|X_n|^\alpha)^{1/\alpha}+\int_{(\mathbb{E}|X_n|^\alpha)^{1/\alpha}}^\infty\frac{\mathbb{E}|X_n|^\alpha}{t^\alpha}\mathrm{d}t\\
     &=(\mathbb{E}|X_n|^\alpha)^{1/\alpha}+\frac{1}{-\alpha+1}\mathbb{E}|X_n|^\alpha t^{-\alpha+1}\Big|_{(\mathbb{E}|X_n|^\alpha)^{1/\alpha}}^\infty\\
     &=(\mathbb{E}|X_n|^\alpha)^{1/\alpha}+\frac{1}{\alpha-1}(\mathbb{E}|X_n|^\alpha)^{1/\alpha}\\
@@ -2521,9 +2473,9 @@ $\forall~0\leqslant  t_1<\cdots< t_n< t_{n+1}$, 有
 
 设 $\{X_t:t\geqslant0\}$ 是鞅, $T$ 是停时, 若
 \begin{equation}
-  P(T<\infty)=1,
+  \mathbb{P}(T<\infty)=1,
 \end{equation}
- 且 
+且 
 \begin{equation}
   \mathbb{E}\left(\sup_{t\geqslant0}|X_{T\wedge t}|\right)<\infty,
 \end{equation} 
@@ -2554,21 +2506,19 @@ $X_t$ 是独立增量过程
   X_{s+t}-X_s\sim N(0,c^2t)
 \end{equation}
 
-
 $X_t$ 关于 $t$ 是连续函数
-所以称 $\{X_t:t\geqslant0\}$ 是布朗运动或维纳过程.
+则称 $\{X_t:t\geqslant0\}$ 是布朗运动或维纳过程.
 
 当 $c=1$ 时, 称 $\{X_t:t\geqslant0\}$ 为标准布朗运动, 此时若 $X_0=0$, 则称为零初值标准布朗运动, 此时
 \begin{equation}
   X_t\sim N(0,t).
 \end{equation}
 
-
 本章仅讨论标准布朗运动, 记为 $\{B_t:t\geqslant0\}$, 其在 $t$ 时刻的概率密度为
 \begin{equation}
   p(x;t)=\frac{1}{\sqrt{2\pi t}}\exp\left(-\frac{x^2}{2t}\right),
 \end{equation}
- 即固定 $t$ 时, 布朗运动 $X_t$ 就是一个遵循正态分布 $N(0,t)$ 的随机变量.
+即固定 $t$ 时, 布朗运动 $X_t$ 就是一个遵循正态分布 $N(0,t)$ 的随机变量.
 
 \subsection{布朗运动矩母函数}
 
@@ -2614,11 +2564,10 @@ $\forall~t_1<t_2<\cdots<t_n$, 在给定 $B_{t_1},\cdots,B_{t_{i-1}},B_{t_{i+1}},
 \begin{equation}
   a+\frac{(b-a)(t-t_1)}{t_2-t_1},
 \end{equation}
- 方差为
+方差为
 \begin{equation}
   \frac{(t_2-t)(t-t_1)}{t_2-t_1}.
 \end{equation}
-
 
 证明: 条件概率密度函数即为 $(B_{t_1},B_t,B_{t_2})$ 联合密度与 $(B_{t_1},B_{t_2})$ 联合密度的直接相除, 通过化简和配方即可得到期望与方差.
 
@@ -2634,7 +2583,7 @@ $\forall~t_1<t_2<\cdots<t_n$, 在给定 $B_{t_1},\cdots,B_{t_{i-1}},B_{t_{i+1}},
 \begin{equation}
   \mathbb{E}B_t=0,\quad \mathbb{E}[B_sB_t]=s\wedge t,
 \end{equation}
- 则 $\{B_t:t\geqslant0\}$ 为布朗运动, 反之亦然.
+则 $\{B_t:t\geqslant0\}$ 为布朗运动, 反之亦然.
 
 \textbf{定理}： 由正态过程导出的布朗运动
 
@@ -2644,7 +2593,7 @@ $\{B_{t+\tau}-B_\tau:t\geqslant0\}$, $\forall \tau\geqslant0$
 
 $\displaystyle\left\{\frac{1}{\sqrt{\lambda}}B_{\lambda t}:t\geqslant0\right\}$, $\lambda>0$
 
-$\displaystyle\left\{tB\left(\frac{1}{t}\right):t\geqslant0\right\}$, 其中 $\displaystyle tB\left(\frac{1}{t}\right)\bigg|_{t=0}\triangleq0$
+$\displaystyle\left\{tB\left(\frac{1}{t}\right):t\geqslant0\right\}$, 其中 $\displaystyle tB\left(\frac{1}{t}\right)\bigg|_{t=0}:=0$
 
 $\{B_{t_0+s}-B_{t_0}:0\leqslant s\leqslant t_0\}$, $t_0>0$
 
@@ -2725,7 +2674,7 @@ $\{\exp(\lambda B_t-\lambda^2t/2):t\geqslant0\}$
 
 对给定的 $t>0$, 有
 \begin{equation}
-  P\left(\lim_{n\to\infty}\sum_{k=1}^{2^n}\left(B_{\frac{kt}{2^n}}-B_{\frac{(k-1)t}{2^n}}\right)^2=t\right)=1.
+  \mathbb{P}\left(\lim_{n\to\infty}\sum_{k=1}^{2^n}\left(B_{\frac{kt}{2^n}}-B_{\frac{(k-1)t}{2^n}}\right)^2=t\right)=1.
 \end{equation}
 
 \textbf{引理}：
@@ -2735,13 +2684,13 @@ $\{\exp(\lambda B_t-\lambda^2t/2):t\geqslant0\}$
 \end{equation}
 所以
 \begin{equation}
-  P\left(\lim_{n\to\infty}Y_n=0\right)=1.
+  \mathbb{P}\left(\lim_{n\to\infty}Y_n=0\right)=1.
 \end{equation}
 
 \textbf{定理}： 布朗运动非有限变差
 
 \begin{equation}
-  P\left(\lim_{n\to\infty}\sum_{k=1}^{2^n}\left|B_{\frac{kt}{2^n}}-B_{\frac{(k-1)t}{2^n}}\right|=\infty\right)=1.
+  \mathbb{P}\left(\lim_{n\to\infty}\sum_{k=1}^{2^n}\left|B_{\frac{kt}{2^n}}-B_{\frac{(k-1)t}{2^n}}\right|=\infty\right)=1.
 \end{equation}
 
 \textbf{定理}： 均方收敛
@@ -2750,7 +2699,7 @@ $\{\exp(\lambda B_t-\lambda^2t/2):t\geqslant0\}$
 \begin{equation}
   \lambda=\max_{1\leqslant k\leqslant n}(t_k-t_{k-1}),
 \end{equation}
- 则布朗运动差值平方和均方收敛到 $t$
+则布朗运动差值平方和均方收敛到 $t$
 \begin{equation}
   \lim_{\lambda\to0}\sum_{k=1}^n(B_{t_k}-B_{t_{k-1}})^2\overset{\text{m.s.}}{=}t,
 \end{equation}
@@ -2763,11 +2712,10 @@ $\{\exp(\lambda B_t-\lambda^2t/2):t\geqslant0\}$
 \begin{equation}
   \mathbb{E}Y_k^2=t_k-t_{k-1},\quad \mathbb{E}Y_k^4=3(t_k-t_{k-1})^2,
 \end{equation}
- 又 $Y_k^2$ 相互独立, 故当 $k\neq l$ 时, 有
+又 $Y_k^2$ 相互独立, 故当 $k\neq l$ 时, 有
 \begin{equation}
   \mathbb{E}(Y_k^2Y_l^2)=\mathbb{E}Y_k^2\mathbb{E}Y_l^2=(t_k-t_{k-1})(t_l-t_{l-1}).
 \end{equation}
-
 
 因此
 \begin{equation}
@@ -2840,11 +2788,11 @@ $\{\exp(\lambda B_t-\lambda^2t/2):t\geqslant0\}$
 
 设 $\{B_t:t\geqslant0\}$ 为标准布朗运动, 则对任意固定的 $t\geqslant0$ 和 $h>0$, 有
 \begin{equation}
-  P\left(\limsup_{h\downarrow0}\frac{B_{t+h}-B_t}{h}=+\infty\right)=1,
+  \mathbb{P}\left(\limsup_{h\downarrow0}\frac{B_{t+h}-B_t}{h}=+\infty\right)=1,
 \end{equation}
 
 \begin{equation}
-  P\left(\liminf_{h\downarrow0}\frac{B_{t+h}-B_t}{h}=-\infty\right)=1,
+  \mathbb{P}\left(\liminf_{h\downarrow0}\frac{B_{t+h}-B_t}{h}=-\infty\right)=1,
 \end{equation}
 
 可知布朗运动对几乎所有轨道 $\omega$ 都没有有限的导数.
@@ -2857,13 +2805,13 @@ $\{\exp(\lambda B_t-\lambda^2t/2):t\geqslant0\}$
 \begin{equation}
   T_a=\inf_{t>0}\{t:B_t=a\},
 \end{equation}
- 则 $T_a$ 表示首次到达 $a$ 的时间.
+则 $T_a$ 表示首次到达 $a$ 的时间.
 
 对 $\forall~t>0$,
 \begin{equation}
   M_t=\max_{0\leqslant u\leqslant t}B_u\geqslant0
 \end{equation}
- 表示 $[0,t]$ 上布朗运动达到的最大值.
+表示 $[0,t]$ 上布朗运动达到的最大值.
 
 当 $a>0$ 时, 有下列事件等价关系
 \begin{equation}
@@ -2871,20 +2819,20 @@ $\{\exp(\lambda B_t-\lambda^2t/2):t\geqslant0\}$
 \end{equation}
 即到达 $a$ 的时间若想要小于等于 $t$, 则布朗运动在 $[0,t]$ 上到达的最大值必须大于等于 $a$.
 
-因此有 $P(T_a\leqslant t)=P(M_t\geqslant a)$, 又由全概率公式有
+因此有 $\mathbb{P}(T_a\leqslant t)=\mathbb{P}(M_t\geqslant a)$, 又由全概率公式有
 \begin{equation}
-  P(B_t\geqslant a)=P(T_a\leqslant t)P(B_t\geqslant a|T_a\leqslant t)+P(T_a>t)P(B_t\geqslant a|T_a>t),
+  \mathbb{P}(B_t\geqslant a)=\mathbb{P}(T_a\leqslant t)\mathbb{P}(B_t\geqslant a|T_a\leqslant t)+\mathbb{P}(T_a>t)\mathbb{P}(B_t\geqslant a|T_a>t),
 \end{equation}
 
-显然可知 $P(B_t\geqslant a|T_a>t)=0$, 又由布朗运动的对称性可知, 在 $T_a\leqslant t$ 的条件下, 即 $B_{T_a}=a$ 时, $\{B_t\geqslant a\}$ 与 $\{B_t<a\}$ 是等可能的, 即
+显然可知 $\mathbb{P}(B_t\geqslant a|T_a>t)=0$, 又由布朗运动的对称性可知, 在 $T_a\leqslant t$ 的条件下, 即 $B_{T_a}=a$ 时, $\{B_t\geqslant a\}$ 与 $\{B_t<a\}$ 是等可能的, 即
 \begin{equation}
-  P(B_t\geqslant a|T_a\leqslant t)=P(B_t<a|T_a\leqslant t)=\frac{1}{2},
+  \mathbb{P}(B_t\geqslant a|T_a\leqslant t)=\mathbb{P}(B_t<a|T_a\leqslant t)=\frac{1}{2},
 \end{equation}
-故 $P(T_a\leqslant t)=2P(B_t\geqslant a)$. 于是 $a>0$ 时有
+故 $\mathbb{P}(T_a\leqslant t)=2\mathbb{P}(B_t\geqslant a)$. 于是 $a>0$ 时有
 \begin{equation}
   \begin{aligned}
-    P(T_a\leqslant t)
-    &=2P(B_t\geqslant a)\\
+    \mathbb{P}(T_a\leqslant t)
+    &=2\mathbb{P}(B_t\geqslant a)\\
     &=2\frac{1}{\sqrt{2\pi t}}\int_a^\infty\exp\left(-\frac{u^2}{2t}\right)\mathrm{d}u\\
     &=2\left[1-\Phi\left(\frac{a}{\sqrt{t}}\right)\right]\\
   \end{aligned}
@@ -2893,8 +2841,8 @@ $\{\exp(\lambda B_t-\lambda^2t/2):t\geqslant0\}$
 因此也有
 \begin{equation}
   \begin{aligned}
-    P(M_t\leqslant a)
-    &=1-P(M_t>a)\\
+    \mathbb{P}(M_t\leqslant a)
+    &=1-\mathbb{P}(M_t>a)\\
     &=1-2\left[1-\Phi\left(\frac{a}{\sqrt{t}}\right)\right]\\
     &=2\Phi\left(\frac{a}{\sqrt{t}}\right)-1\\
   \end{aligned}
@@ -2913,21 +2861,21 @@ $\{\exp(\lambda B_t-\lambda^2t/2):t\geqslant0\}$
   p(a)=\frac{2}{\sqrt{2\pi t}}\exp\left(-\frac{a^2}{2t}\right)\mathbb{I}_{\{a>0\}}.
 \end{equation}
 
-当 $a<0$ 时, 由布朗运动的对称性有 $P(T_{-a}\leqslant t)=P(T_a\leqslant t)$, 所以对一般的 $a\in\mathbb{R}$ 有
+当 $a<0$ 时, 由布朗运动的对称性有 $\mathbb{P}(T_{-a}\leqslant t)=\mathbb{P}(T_a\leqslant t)$, 所以对一般的 $a\in\mathbb{R}$ 有
 \begin{equation}
-  P(T_a\leqslant t)=2\left[1-\Phi\left(\frac{|a|}{\sqrt{t}}\right)\right].
+  \mathbb{P}(T_a\leqslant t)=2\left[1-\Phi\left(\frac{|a|}{\sqrt{t}}\right)\right].
 \end{equation}
 
 $T_a$ 几乎处处有限, 因
 \begin{equation}
-  P(T_a<\infty)=\lim_{t\to\infty}P(T_a\leqslant t)=2[1-\Phi(0)]=1
+  \mathbb{P}(T_a<\infty)=\lim_{t\to\infty}\mathbb{P}(T_a\leqslant t)=2[1-\Phi(0)]=1
 \end{equation}
 
 $T_a$ 期望为无穷, 通过累次积分换序并截断积分进行放缩有
 \begin{equation}
   \begin{aligned}
     \mathbb{E}T_a
-    &=\int_0^\infty P(T_a>t)\mathrm{d}t\\
+    &=\int_0^\infty \mathbb{P}(T_a>t)\mathrm{d}t\\
     &=\frac{2}{\sqrt{2\pi}}\int_0^\infty \int_0^{|a|/\sqrt{t}}\exp\left(-\frac{x^2}{2}\right)\mathrm{d}x\mathrm{d}t\\
     &=\frac{2}{\sqrt{2\pi}}\int_0^\infty \int_0^{a^2/x^2}1\mathrm{d}t\exp\left(-\frac{x^2}{2}\right)\mathrm{d}x\\
     &=\frac{2}{\sqrt{2\pi}}\int_0^\infty \frac{a^2}{x^2}\exp\left(-\frac{x^2}{2}\right)\mathrm{d}x\\
@@ -2940,13 +2888,13 @@ $T_a$ 期望为无穷, 通过累次积分换序并截断积分进行放缩有
 \begin{equation}
   T=\inf\{t:B_t=-r~\text{or}~B_t=2r\},
 \end{equation}
- 由于 $T$ 是停时, 故可用鞅 $\{Z_t=B_t^2-t:t\geqslant0\}$ 的停时定理来求取 $\mathbb{E}T$.
+由于 $T$ 是停时, 故可用鞅 $\{Z_t=B_t^2-t:t\geqslant0\}$ 的停时定理来求取 $\mathbb{E}T$.
 
 记 $\forall a\in\mathbb{R},~T_a=\inf\{t:B_t=a\}$, 由 $T_{2r}\subset T$ 有
 \begin{equation}
-  1\geqslant P(T<\infty)\geqslant P(T_{2r}<\infty)=1,
+  1\geqslant \mathbb{P}(T<\infty)\geqslant \mathbb{P}(T_{2r}<\infty)=1,
 \end{equation}
-故 $P(T<\infty)=1$, 所以 $\sup_{t\geqslant0}|T\wedge t|<\infty$, 又 $|B_{T\wedge t}|\leqslant 2r$, 则
+故 $\mathbb{P}(T<\infty)=1$, 所以 $\sup_{t\geqslant0}|T\wedge t|<\infty$, 又 $|B_{T\wedge t}|\leqslant 2r$, 则
 \begin{equation}
   \mathbb{E}\left(\sup_{t\geqslant0}|Z_{T\wedge t}|\right)=\mathbb{E}\left(\sup_{t\geqslant0}|B_{T\wedge t}^2-{T\wedge t}|\right)\leqslant 4r^2+\sup_{t\geqslant0}|T\wedge t|<\infty,
 \end{equation}
@@ -2958,14 +2906,14 @@ $T_a$ 期望为无穷, 通过累次积分换序并截断积分进行放缩有
 \begin{equation}
   \begin{aligned}
     \mathbb{E}T&=\mathbb{E}B_T^2\\
-    &=(-r)^2P(T_{-r}<T_{2r})+(2r)^2P(T_{2r}\leqslant T_{-r})\\
+    &=(-r)^2\mathbb{P}(T_{-r}<T_{2r})+(2r)^2\mathbb{P}(T_{2r}\leqslant T_{-r})\\
     &=r^2\cdot\frac{2}{3}+4r^2\cdot\frac{1}{3}\\
     &=2r^2.
   \end{aligned}
 \end{equation}
 
-其中, $P(T_{-a}<T_{b})$ 这种概率可由5.6节定理取 $\mu\to0$ 极限得到, 也可由鞅的停时定理求得. 
-令 $T=\inf\{t:B_t=-a~\text{or}~B_t=b\}$, $a,b>0$, 易知 $T$ 关于 $B_t$ 是停时, $P(T<\infty)=1$, 且
+其中, $\mathbb{P}(T_{-a}<T_{b})$ 这种概率可由5.6节定理取 $\mu\to0$ 极限得到, 也可由鞅的停时定理求得. 
+令 $T=\inf\{t:B_t=-a~\text{or}~B_t=b\}$, $a,b>0$, 易知 $T$ 关于 $B_t$ 是停时, $\mathbb{P}(T<\infty)=1$, 且
 \begin{equation}
   \mathbb{E}\left(\sup_{t\geqslant0}|B_{T\wedge t}|\right)\leqslant \max\{a,b\}<\infty,
 \end{equation}
@@ -2975,11 +2923,11 @@ $T_a$ 期望为无穷, 通过累次积分换序并截断积分进行放缩有
 \end{equation}
 即
 \begin{equation}
-  \mathbb{E}B_T=(-a)P(T_{-a}<T_b)+b[1-P(T_{-a}<T_b)],
+  \mathbb{E}B_T=(-a)\mathbb{P}(T_{-a}<T_b)+b[1-\mathbb{P}(T_{-a}<T_b)],
 \end{equation}
 所以
 \begin{equation}
-  P(T_{-a}<T_b)=\frac{b}{a+b}.
+  \mathbb{P}(T_{-a}<T_b)=\frac{b}{a+b}.
 \end{equation}
 
 \section{布朗桥}
@@ -2998,27 +2946,27 @@ $T_a$ 期望为无穷, 通过累次积分换序并截断积分进行放缩有
 其分布函数为
 \begin{equation}
   \begin{cases}
-    P(Z_t\leqslant y)=1,&\text{if}~y>x,\\
-    P(Z_t=y)=P(T_y\leqslant t),&\text{if}~y=x,\\
-    P(Z_t\leqslant y)=P(B_t\leqslant y,M_t<x),&\text{if}~y<x,\\
+    \mathbb{P}(Z_t\leqslant y)=1,&\text{if}~y>x,\\
+    \mathbb{P}(Z_t=y)=\mathbb{P}(T_y\leqslant t),&\text{if}~y=x,\\
+    \mathbb{P}(Z_t\leqslant y)=\mathbb{P}(B_t\leqslant y,M_t<x),&\text{if}~y<x,\\
   \end{cases}
 \end{equation}
 
 其中 
 \begin{equation}
   \begin{aligned}
-    P(B_t\leqslant y,M_t<x)
-    &=P(B_t\leqslant y)-P(M_t\geqslant x,B_t\leqslant y)\\
-    &=P(B_t\leqslant y)-P(B_t\geqslant x+x-y)\\
-    &=P(B_t\leqslant y)-P(B_t\leqslant y-2x)\\
-    &=P(y-2x\leqslant B_t\leqslant y).
+    \mathbb{P}(B_t\leqslant y,M_t<x)
+    &=\mathbb{P}(B_t\leqslant y)-\mathbb{P}(M_t\geqslant x,B_t\leqslant y)\\
+    &=\mathbb{P}(B_t\leqslant y)-\mathbb{P}(B_t\geqslant x+x-y)\\
+    &=\mathbb{P}(B_t\leqslant y)-\mathbb{P}(B_t\leqslant y-2x)\\
+    &=\mathbb{P}(y-2x\leqslant B_t\leqslant y).
   \end{aligned}
 \end{equation}
 
 \subsection{在原点反射的布朗运动}
-令 $Y_t=|B_t|$, 则称 $\{Y_t:t\geqslant0\}$ 为在原点反射的布朗运动. 当 $y<0$ 时, $P(Y_t\leqslant y)=0$. 当 $y\geqslant0$ 时, 
+令 $Y_t=|B_t|$, 则称 $\{Y_t:t\geqslant0\}$ 为在原点反射的布朗运动. 当 $y<0$ 时, $\mathbb{P}(Y_t\leqslant y)=0$. 当 $y\geqslant0$ 时, 
 \begin{equation}
-  P(Y_t\leqslant y)=P(|B_t|\leqslant y)=P(-y\leqslant B_t\leqslant y)=2P(B_t\leqslant y)-1.
+  \mathbb{P}(Y_t\leqslant y)=\mathbb{P}(|B_t|\leqslant y)=\mathbb{P}(-y\leqslant B_t\leqslant y)=2\mathbb{P}(B_t\leqslant y)-1.
 \end{equation}
 
 \subsection{几何布朗运动}
@@ -3051,19 +2999,19 @@ $T_a$ 期望为无穷, 通过累次积分换序并截断积分进行放缩有
 \begin{equation}
   T_a=\min\{t:t>0,X_t=a\},\quad T_{-b}=\min\{t:t>0,X_t=-b\}
 \end{equation}
- 有
+有
 \begin{equation}
-  f(x)=P(T_a<T_{-b}<\infty|X_0=x)=\frac{\mathrm{e}^{2\mu b}-\mathrm{e}^{-2\mu x}}{\mathrm{e}^{2\mu b}-\mathrm{e}^{-2\mu a}},
+  f(x)=\mathbb{P}(T_a<T_{-b}<\infty|X_0=x)=\frac{\mathrm{e}^{2\mu b}-\mathrm{e}^{-2\mu x}}{\mathrm{e}^{2\mu b}-\mathrm{e}^{-2\mu a}},
 \end{equation}
 
 特别地, 当 $\mu=0$ 时, 有
 \begin{equation}
-  f(x)=P(T_a<T_{-b}<\infty|X_0=x)=\frac{2\mu b+2\mu x}{2\mu b+2\mu a}=\frac{b+x}{b+a}.
+  f(x)=\mathbb{P}(T_a<T_{-b}<\infty|X_0=x)=\frac{2\mu b+2\mu x}{2\mu b+2\mu a}=\frac{b+x}{b+a}.
 \end{equation}
 
 当 $x=0,~\mu=0$ 时, 有
 \begin{equation}
-  P(T_a<\infty|X_0=0)=\frac{b}{b+a},
+  \mathbb{P}(T_a<\infty|X_0=0)=\frac{b}{b+a},
 \end{equation}
 
 上式与用鞅的停时定理求出的概率相同.
@@ -3072,17 +3020,17 @@ $T_a$ 期望为无穷, 通过累次积分换序并截断积分进行放缩有
 
 设 $\{X_t=B_t+\mu t:t\geqslant0\}$ 是漂移系数为 $\mu$ 的布朗运动, 若 $\mu<0$, 则
 \begin{equation}
-  P(T_a<\infty|X_0=x)=\lim_{b\to\infty}\frac{\mathrm{e}^{2\mu b}-\mathrm{e}^{-2\mu x}}{\mathrm{e}^{2\mu b}-\mathrm{e}^{-2\mu a}}=\frac{0-\mathrm{e}^{-2\mu x}}{0-\mathrm{e}^{-2\mu a}}=\mathrm{e}^{2\mu (a-x)}.
+  \mathbb{P}(T_a<\infty|X_0=x)=\lim_{b\to\infty}\frac{\mathrm{e}^{2\mu b}-\mathrm{e}^{-2\mu x}}{\mathrm{e}^{2\mu b}-\mathrm{e}^{-2\mu a}}=\frac{0-\mathrm{e}^{-2\mu x}}{0-\mathrm{e}^{-2\mu a}}=\mathrm{e}^{2\mu (a-x)}.
 \end{equation}
 
 特别地, 当 $x=0$ 时, 有
 \begin{equation}
-  P(T_a<\infty|X_0=0)=\mathrm{e}^{2\mu a}.
+  \mathbb{P}(T_a<\infty|X_0=0)=\mathrm{e}^{2\mu a}.
 \end{equation}
 
 当 $x=0,~\mu=0$ 时, 有
 \begin{equation}
-  P(T_a<\infty|X_0=0)=1,
+  \mathbb{P}(T_a<\infty|X_0=0)=1,
 \end{equation}
 
 上式再次验证了 $T_a$ 几乎处处有限的事实.
@@ -3101,22 +3049,22 @@ $T_a$ 期望为无穷, 通过累次积分换序并截断积分进行放缩有
 
 设随机过程 $X=\{X_t:t\geqslant0\}$ 对 $\forall~0\leqslant t_0 < t_1 < \cdots < t_n < t_{n+1},~i_k\in S,~0\leqslant k\leqslant n+1$, 若
 \begin{equation}
-  P(X_{t_0}=i_0,X_{t_1}=i_1,\cdots,X_{t_n}=i_n)>0,
+  \mathbb{P}(X_{t_0}=i_0,X_{t_1}=i_1,\cdots,X_{t_n}=i_n)>0,
 \end{equation}
 
 有
 \begin{equation}
-  P(X_{t_{n+1}}=i_{n+1}|X_{t_0}=i_0,X_{t_1}=i_1,\cdots,X_{t_n}=i_n)=P(X_{t_{n+1}}=i_{n+1}|X_{t_n}=i_n),
+  \mathbb{P}(X_{t_{n+1}}=i_{n+1}|X_{t_0}=i_0,X_{t_1}=i_1,\cdots,X_{t_n}=i_n)=\mathbb{P}(X_{t_{n+1}}=i_{n+1}|X_{t_n}=i_n),
 \end{equation}
-所以称 $X$ 为连续时间参数马氏链. 若对 $\forall~s,t\geqslant0,~i,j\in S$, 有
+则称 $X$ 为连续时间参数马氏链. 若对 $\forall~s,t\geqslant0,~i,j\in S$, 有
 \begin{equation}
-  P(X_{s+t}=j|X_s=i)=P(X_t=j|X_0=i)\triangleq P_{ij}(t),
+  \mathbb{P}(X_{s+t}=j|X_s=i)=\mathbb{P}(X_t=j|X_0=i):= P_{ij}(t),
 \end{equation}
 即增量转移概率只与时间增量有关, 则称 $X$ 为时齐马氏链. 称
 \begin{equation}
   \bm{P}(t)=[P_{ij}(t)],~i,j\in S
 \end{equation}
- 为转移概率矩阵, 易知它满足
+为转移概率矩阵, 易知它满足
 
 非负性: 
 \begin{equation}
@@ -3166,10 +3114,9 @@ $\forall~t\geqslant0,~i\in S$,
   P_{ii}(t)>0
 \end{equation}
 
-
 \textbf{定义}：概率分布
 
-记 $\pi_i(t)=P(X_t=i),~\forall~t\geqslant0,~i\in S$, 称 
+记 $\pi_i(t)=\mathbb{P}(X_t=i),~\forall~t\geqslant0,~i\in S$, 称 
 \begin{equation}
   \bm{\pi}(t)=(\pi_i(t),~i\in S)
 \end{equation}
@@ -3204,7 +3151,7 @@ $\forall~t\geqslant0,~i\in S$,
 \begin{equation}
   \lim_{n\to\infty}P_{ij}(nh)=\pi_{ij}
 \end{equation}
- 总存在. 所以对连续时间的马尔可夫链就无需引入周期的概念, 而且利用 $P_{ij}(t)$ 在$[0,\infty)$ 上一致连续性及 $\lim_{n\to\infty}P_{ij}(nh)=\pi_{ij}$ 总存在, 可以证明 $P_{ij}(t)$ 在 $t\to\infty$ 时极限总存在.
+总存在. 所以对连续时间的马尔可夫链就无需引入周期的概念, 而且利用 $P_{ij}(t)$ 在$[0,\infty)$ 上一致连续性及 $\lim_{n\to\infty}P_{ij}(nh)=\pi_{ij}$ 总存在, 可以证明 $P_{ij}(t)$ 在 $t\to\infty$ 时极限总存在.
 
 \textbf{命题}
 
@@ -3238,7 +3185,7 @@ $\forall~i,j\in S$, 下述极限总存在
   \lim_{n\to\infty}\pi_i(t)=\pi_i^*
 \end{equation} 存在, 则称
 \begin{equation}
-  \bm{\pi}^*\triangleq\{\pi_i^*:i\in S\}
+  \bm{\pi}^*:=\{\pi_i^*:i\in S\}
 \end{equation} 为马氏链的极限分布
 
 可总结离散参数马氏链与连续参数马氏链常返与正常返相关判断依据如下.
@@ -3304,11 +3251,11 @@ $\forall~i,j\in S$, 下述极限总存在
         P_{00}(t) & P_{01}(t) & P_{02}(t)-1 & \cdots \\
         \vdots & \vdots & \vdots & \ddots \\
       \end{bmatrix}_t'\\
-    &\triangleq
+    &:=
     \begin{bmatrix}
-        -q_0\triangleq q_{00} & q_{01} & q_{02} & \cdots \\
-        q_{10} & -q_1\triangleq q_{11} & q_{12} & \cdots \\
-        q_{20} & q_{21} & -q_2\triangleq q_{22} & \cdots \\
+        -q_0:= q_{00} & q_{01} & q_{02} & \cdots \\
+        q_{10} & -q_1:= q_{11} & q_{12} & \cdots \\
+        q_{20} & q_{21} & -q_2:= q_{22} & \cdots \\
         \vdots & \vdots & \vdots & \ddots \\
     \end{bmatrix}
   \end{aligned}
@@ -3320,7 +3267,7 @@ $\forall~i,j\in S$, 下述极限总存在
 
 对 $\forall~i\in S$, 极限
 \begin{equation}
-  q_i=-q_{ii}\triangleq\lim_{t\to0}\frac{1-P_{ii}(t)}{t}
+  q_i=-q_{ii}:=\lim_{t\to0}\frac{1-P_{ii}(t)}{t}
 \end{equation}
 
 存在, 但可能是无限.
@@ -3329,7 +3276,7 @@ $\forall~i,j\in S$, 下述极限总存在
 
 对 $\forall~i,j\in S,~j\neq i$, 极限
 \begin{equation}
-  q_{ij}\triangleq P_{ij}'(0)=\lim_{t\to0}\frac{P_{ij}(t)}{t}
+  q_{ij}:= P_{ij}'(0)=\lim_{t\to0}\frac{P_{ij}(t)}{t}
 \end{equation}
 
 存在且有限.
@@ -3355,7 +3302,7 @@ $\forall~i,j\in S$, 下述极限总存在
 \begin{equation}
   q_i=\sum_{j\neq i}q_{ij}<\infty,
 \end{equation}
-所以称 $\bm{Q}$ 为保守 Q 矩阵. 易知当 $S$ 为有限状态空间时, $\bm{Q}$ 必保守.
+则称 $\bm{Q}$ 为保守 Q 矩阵. 易知当 $S$ 为有限状态空间时, $\bm{Q}$ 必保守.
 
 \textbf{定义}：逗留时间
 令 $\tau_1$ 表示马氏链逗留在初始状态的时间, 即
@@ -3367,12 +3314,12 @@ $\forall~i,j\in S$, 下述极限总存在
 
 设马尔可夫链 $X=\{X_t:t\geqslant0\}$ 轨道右连续, 则对 $\forall~i\in S,~t\geqslant0$, 有
 \begin{equation}
-  P(\tau_1>t|X_0=i)=\mathrm{e}^{-q_it},
+  \mathbb{P}(\tau_1>t|X_0=i)=\mathrm{e}^{-q_it},
 \end{equation}
 
 这说明系统逗留在 $X_0=i$ 状态的时间 $\tau_1$ 服从参数为 $q_i$ 的指数分布, 其期望为
 \begin{equation}
-  \mathbb{E}[\tau_1|X_0=i]=\int_0^\infty P(\tau_1>t|X_0=i)\mathrm{d}t=\int_0^\infty\mathrm{e}^{-q_it}\mathrm{d}t=\frac{1}{q_i}.
+  \mathbb{E}[\tau_1|X_0=i]=\int_0^\infty \mathbb{P}(\tau_1>t|X_0=i)\mathrm{d}t=\int_0^\infty\mathrm{e}^{-q_it}\mathrm{d}t=\frac{1}{q_i}.
 \end{equation}
 
 \textbf{定义}：吸收状态, 瞬时状态与逗留状态
@@ -3387,11 +3334,11 @@ $\forall~i,j\in S$, 下述极限总存在
 
 设马尔可夫链 $X=\{X_t:t\geqslant0\}$ 轨道右连续, 且 $0 < q_i < \infty$, 则对 $\forall~t\geqslant0,~j\neq i$, 有
 \begin{equation}
-  P(\tau_1\leqslant t,~X_{\tau_1}=j|X_0=i)=\frac{q_{ij}}{q_i}(1-\mathrm{e}^{-q_it}),
+  \mathbb{P}(\tau_1\leqslant t,~X_{\tau_1}=j|X_0=i)=\frac{q_{ij}}{q_i}(1-\mathrm{e}^{-q_it}),
 \end{equation}
 
 \begin{equation}
-  P(X_{\tau_1}=j|X_0=i)=\frac{q_{ij}}{q_i}.
+  \mathbb{P}(X_{\tau_1}=j|X_0=i)=\frac{q_{ij}}{q_i}.
 \end{equation}
 
 \textbf{推论}：
@@ -3429,7 +3376,7 @@ $\forall~i,j\in S$, 下述极限总存在
 
 已知
 \begin{equation}
-  P(\tau_1>t|X_0=0)=\mathrm{e}^{-\lambda t},\quad P(\tau_1>t|X_0=1)=\mathrm{e}^{-\mu t}
+  \mathbb{P}(\tau_1>t|X_0=0)=\mathrm{e}^{-\lambda t},\quad \mathbb{P}(\tau_1>t|X_0=1)=\mathrm{e}^{-\mu t}
 \end{equation}
 
 写出关于 $p_{00}(t),~p_{11}(t)$ 的 Kolmogorov 向前微分方程, 并求解得到表达式.
@@ -3537,7 +3484,7 @@ $\forall~i,j\in S$, 下述极限总存在
 
 \textbf{定义}：H 空间
 
-$H\triangleq\{X:\mathbb{E}|X|^2<\infty\}$, 即 $H$ 是由二阶矩存在的随机变量全体构成的集合, 称作 $H$ 空间.
+$H:=\{X:\mathbb{E}|X|^2<\infty\}$, 即 $H$ 是由二阶矩存在的随机变量全体构成的集合, 称作 $H$ 空间.
 
 H 空间性质
 
@@ -3603,15 +3550,15 @@ $\forall X,Y\in H$, 定义内积为 $\langle X,Y\rangle=\mathbb{E}(XY)$.
 \begin{equation}
   \lim_{n\to\infty}d(X_n,X)=\lim_{n\to\infty}\|X_n-X\|=\lim_{n\to\infty}\sqrt{\mathbb{E}|X_n-X|^2}=0,
 \end{equation}
- 则称 $X$ 为序列 $\{X_n,n\geqslant1\}$ 的均方极限, 记作
+则称 $X$ 为序列 $\{X_n,n\geqslant1\}$ 的均方极限, 记作
 \begin{equation}
   \lim_{n\to\infty}X_n\overset{\mathrm{m.s.}}{=}X,
 \end{equation}
- 其中 m.s. 表示 mean square, 简记为
+其中 m.s. 表示 mean square, 简记为
 \begin{equation}
   \lim_{n\to\infty}X_n=X,\quad X_n\overset{\mathrm{m.s.}}{\rightarrow}X,
 \end{equation}
- 即序列 $\{X_n,n\geqslant1\}$ 均方收敛于 $X$.
+即序列 $\{X_n,n\geqslant1\}$ 均方收敛于 $X$.
 
 \textbf{定义}：Cauchy 序列
 
@@ -3619,7 +3566,7 @@ $\forall X,Y\in H$, 定义内积为 $\langle X,Y\rangle=\mathbb{E}(XY)$.
 \begin{equation}
   \lim_{m,~n\to\infty}d(X_m,X_n)=0,
 \end{equation}
- 则称 $\{X_n,n\geqslant1\}$ 是Cauchy 序列.
+则称 $\{X_n,n\geqslant1\}$ 是Cauchy 序列.
 
 \textbf{命题}：完备的赋范线性空间
 
@@ -3627,7 +3574,6 @@ $\forall X,Y\in H$, 定义内积为 $\langle X,Y\rangle=\mathbb{E}(XY)$.
 \begin{equation}
   X_n\overset{\mathrm{m.s.}}{\rightarrow}X.
 \end{equation}
-
 
 \textbf{命题}：均方极限的运算法则
 
@@ -3638,18 +3584,15 @@ $\forall X,Y\in H$, 定义内积为 $\langle X,Y\rangle=\mathbb{E}(XY)$.
   \lim_{n\to\infty}\mathbb{E}X_n=\mathbb{E}X=\mathbb{E}\lim_{n\to\infty}X_n,~\lim_{n\to\infty}\mathbb{E}|X_n|^2=\mathbb{E}|X|^2
 \end{equation}
 
-
 极限与内积可交换:
 \begin{equation}
   \lim_{m,~n\to\infty}\langle X_m,Y_n\rangle=\langle X,Y\rangle
 \end{equation}
 
-
 线性:
 \begin{equation}
   \lim_{n\to\infty}(\alpha X_n+\beta Y_n)=\alpha X+\beta Y,~\forall \alpha,\beta\in\mathbb{R}
 \end{equation}
-
 
 \textbf{命题}：收敛的充要条件
 
@@ -3658,30 +3601,27 @@ $\forall X,Y\in H$, 定义内积为 $\langle X,Y\rangle=\mathbb{E}(XY)$.
   \lim_{m,~n\to\infty}\langle X_m,X_n\rangle=C=\mathbb{E}|X|^2=\|X\|^2
 \end{equation}
 
-
 \textbf{命题}：均方收敛与依概率、分布收敛的关系
 
 若序列 $\{X_n,n\geqslant1\}$ 均方收敛
 \begin{equation}
   \lim_{n\to\infty}X_n\overset{\mathrm{m.s.}}{=}X
 \end{equation}
- 则
+则
 
 依概率收敛:
 \begin{equation}
   \lim_{n\to\infty}X_n\overset{P}{=}X
 \end{equation}
 
-
 依分布收敛:
 \begin{equation}
-  \lim_{n\to\infty}P(X_n\leqslant x)=P(X\leqslant x)
+  \lim_{n\to\infty}\mathbb{P}(X_n\leqslant x)=\mathbb{P}(X\leqslant x)
 \end{equation}
- 其中 $x\in\mathbb{R}$ 是 $P(X\leqslant x)$ 的连续点, 即
+其中 $x\in\mathbb{R}$ 是 $\mathbb{P}(X\leqslant x)$ 的连续点, 即
 \begin{equation}
   X_n\overset{d}{\to}X~(n\to\infty)
 \end{equation}
-
 
 \section{均方分析}
 
@@ -3699,11 +3639,11 @@ $\forall X,Y\in H$, 定义内积为 $\langle X,Y\rangle=\mathbb{E}(XY)$.
 \begin{equation}
   \lim_{t\to t_0}X_t\overset{\mathrm{m.s.}}{=}X_{t_0},
 \end{equation}
- 即
+即
 \begin{equation}
   \quad\lim_{t\to t_0}X_t-X_{t_0}\overset{\mathrm{m.s.}}{=}0
 \end{equation}
- 则称 $X_t$ 在 $t_0$ 点均方连续.
+则称 $X_t$ 在 $t_0$ 点均方连续.
 
 若 $X_t$ 对 $\forall t\in T$ 都均方连续, 则称 $\{X_t:t\in T\}$ 在 $T$ 上均方连续.
 
@@ -3727,7 +3667,7 @@ $\{X_t:t\in T\}$ 在 $T$ 上均方连续的充要条件为 $R(s,t)$ 在 $\{(t,t)
 \begin{equation}
   \lim_{h\to0}\frac{X_{t_0+h}-X_{t_0}}{h}\overset{\mathrm{m.s.}}{=}X_{t_0}'
 \end{equation}
- 存在, 此时称 $X_{t_0}'$ 与 $X_{t_0}'\mathrm{d}t$ 分别为 $X_t$ 在 $t_0$ 点的均方导数与均方微分.
+存在, 此时称 $X_{t_0}'$ 与 $X_{t_0}'\mathrm{d}t$ 分别为 $X_t$ 在 $t_0$ 点的均方导数与均方微分.
 
 若 $X_t$ 对 $\forall t\in T$ 均方可导, 则称 $\{X_t:t\in T\}$ 在 $T$ 上是均方可导的, 此时记
 \begin{equation}
@@ -3741,7 +3681,7 @@ $\{X_t:t\in T\}$ 在 $T$ 上均方连续的充要条件为 $R(s,t)$ 在 $\{(t,t)
 \begin{equation}
   \lim_{h,~l\to0}\frac{R(t+h,t+l)-R(t+h,t)-R(t,t+l)+R(t,t)}{hl}
 \end{equation}
- 存在, 即要求函数 $R(s,t)$ 在 $(t,t)$ 点广义二次可微.
+存在, 即要求函数 $R(s,t)$ 在 $(t,t)$ 点广义二次可微.
 
 \textbf{定理}： 均方可导的性质
 
@@ -3754,24 +3694,20 @@ $\{X_t:t\in T\}$ 在 $T$ 上均方连续的充要条件为 $R(s,t)$ 在 $\{(t,t)
   (c_1X_{1,t}+c_2X_{2,t})'=c_1X_{1,t}'+c_2X_{2,t}',\quad\forall c_1,c_2\in\mathbb{R}
 \end{equation}
 
-
 乘积求导公式:
 \begin{equation}
   [f(t)X_t]'=f'(t)X_t+f(t)X_t'
 \end{equation}
-
 
 期望与求导换序:
 \begin{equation}
   \mathbb{E}X_t'=(\mathbb{E}X_t)'
 \end{equation}
 
-
 内积与求导换序:
 \begin{equation}
   \langle X_s',X_t'\rangle=\frac{\partial^2R(s,t)}{\partial s\partial t}
 \end{equation}
-
 
 \subsection{均方积分}
 
@@ -3788,7 +3724,7 @@ $\{X_t:t\in T\}$ 在 $T$ 上均方连续的充要条件为 $R(s,t)$ 在 $\{(t,t)
 \begin{equation}
   \lim_{m,~n\to\infty}\int_a^bf(t)X_t\mathrm{d}t\overset{\mathrm{m.s.}}{=}\int_{-\infty}^\infty f(t)X_t\mathrm{d}t
 \end{equation}
- 均方极限存在, 则称上述极限为 $f(t)X_t$ 在 $(-\infty,\infty)$ 上的 Riemann 均方积分.
+均方极限存在, 则称上述极限为 $f(t)X_t$ 在 $(-\infty,\infty)$ 上的 Riemann 均方积分.
 
 \textbf{定理}： 均方可积的充分条件
 
@@ -3796,11 +3732,11 @@ $\{X_t:t\in T\}$ 在 $T$ 上均方连续的充要条件为 $R(s,t)$ 在 $\{(t,t)
 \begin{equation}
   \int_a^b\int_a^bf(s)f(t)R(s,t)\mathrm{d}s\mathrm{d}t
 \end{equation}
- 存在, 则
+存在, 则
 \begin{equation}
   \int_a^bf(t)X_t\mathrm{d}t
 \end{equation}
- 也存在.
+也存在.
 
 \textbf{推论}： 无穷区间均方可积的充分条件
 
@@ -3808,11 +3744,11 @@ $\{X_t:t\in T\}$ 在 $T$ 上均方连续的充要条件为 $R(s,t)$ 在 $\{(t,t)
 \begin{equation}
   \int_{-\infty}^\infty\int_{-\infty}^\infty f(s)f(t)R(s,t)\mathrm{d}s\mathrm{d}t
 \end{equation}
- 存在, 则
+存在, 则
 \begin{equation}
   \int_{-\infty}^\infty f(t)X_t\mathrm{d}t
 \end{equation}
- 也存在.
+也存在.
 
 \textbf{定理}： 均方积分的性质
 
@@ -3820,25 +3756,22 @@ $\{X_t:t\in T\}$ 在 $T$ 上均方连续的充要条件为 $R(s,t)$ 在 $\{(t,t)
 
 期望与积分换序:
 \begin{equation}
-  \mathbb{E}\int_a^bf(t)X_t\mathrm{d}t=\int_a^bf(t)\mathbb{E}X_t\mathrm{d}t
+  \mathbb{E}\left[\int_a^bf(t)X_t\mathrm{d}t\right]=\int_a^bf(t)\mathbb{E}X_t\mathrm{d}t
 \end{equation}
 
 \begin{equation}
-  \mathbb{E}\left(\int_a^bf(s)X_s\mathrm{d}s\int_a^bf(t)X_t\mathrm{d}t\right)=\int_a^b\int_a^bf(s)f(t)R(s,t)\mathrm{d}s\mathrm{d}t
+  \mathbb{E}\left[\int_a^bf(s)X_s\mathrm{d}s\int_a^bf(t)X_t\mathrm{d}t\right]=\int_a^b\int_a^bf(s)f(t)R(s,t)\mathrm{d}s\mathrm{d}t
 \end{equation}
-
 
 求和与积分换序, 线性:
 \begin{equation}
   \int_a^b\sum_kc_kf_k(t)X_{k,t}\mathrm{d}t=\sum_k\int_a^bc_kf_k(t)X_{k,t}\mathrm{d}t,\quad\forall c_k\in\mathbb{R}
 \end{equation}
 
-
 分段积分:
 \begin{equation}
   \int_a^cf(t)X_t\mathrm{d}t+\int_c^bf(t)X_t\mathrm{d}t=\int_a^bf(t)X_t\mathrm{d}t,\quad\forall c\in[a,b]
 \end{equation}
-
 
 \textbf{定理}： 均方连续与均方积分的关系
 
@@ -3851,12 +3784,11 @@ $\{X_t:t\in T\}$ 在 $T$ 上均方连续的充要条件为 $R(s,t)$ 在 $\{(t,t)
   \left\|\int_a^bf(t)X_t\mathrm{d}t\right\|\leqslant\int_a^bf(s)\|X_s\|\mathrm{d}s
 \end{equation}
 
-
 变上限积分均方连续可导: 记
 \begin{equation}
   Y_t=\int_a^tf(u)X_u\mathrm{d}u
 \end{equation}
- 则 $\{Y_t:t\geqslant0\}$ 在 $[a,b]$ 上均方连续, 均方可导且 $Y_t'=X_t$
+则 $\{Y_t:t\geqslant0\}$ 在 $[a,b]$ 上均方连续, 均方可导且 $Y_t'=X_t$
 
 \textbf{推论}： 均方积分 Newton-Leibniz 公式
 
@@ -3865,8 +3797,7 @@ $\{X_t:t\in T\}$ 在 $T$ 上均方连续的充要条件为 $R(s,t)$ 在 $\{(t,t)
   X_t-X_a=\int_a^tX_s'\mathrm{d}s,\quad\forall t\in[a,b]
 \end{equation}
 
-
-\section{Ito 随机积分}
+\section{It\"o 随机积分}
 
 \textbf{定义}：$\sigma$ 域流
 
@@ -3884,7 +3815,7 @@ $\sigma$ 域流可看作信息流, 即 $t$ 时刻前随机过程的全部信息.
 
 \textbf{定义}：布朗运动
 
-若概率空间$(\Omega,\mathcal{F},P)$ 上连续轨道适应过程 $\{B_t,\mathcal{F}_t:t\geqslant0\}$ 满足
+若概率空间$(\Omega,\mathcal{F},\mathbb{P})$ 上连续轨道适应过程 $\{B_t,\mathcal{F}_t:t\geqslant0\}$ 满足
 
 $B_0=0$
 
@@ -3893,7 +3824,7 @@ $\forall0\leqslant s<t$, $B_t-B_s$ 与 $\mathcal{F}_s$ 独立, 即 $\forall A\in
   B_t-B_s\sim N(0,t-s)
 \end{equation}
 
-所以称 $B=\{B_t:t\geqslant0\}$ 为 $\{\mathcal{F}_t\}$ 布朗运动. 
+则称 $B=\{B_t:t\geqslant0\}$ 为 $\{\mathcal{F}_t\}$ 布朗运动. 
 
 \textbf{注释}：
 
@@ -3905,11 +3836,11 @@ $\forall t\geqslant0$, $\mathcal{F}_t^B=\sigma(B_s:\forall0\leqslant s\leqslant 
 \begin{equation}
   [0,T]\times\Omega=\{(t,\omega):0\leqslant t\leqslant T,\omega\in\Omega\},
 \end{equation}
- 乘积 $\sigma$ 域流定义为
+乘积 $\sigma$ 域流定义为
 \begin{equation}
   \mathcal{B}_{[0,T]}\times\mathcal{F}_t=\sigma(\{B\times A:B\in\mathcal{B}_{[0,T]},A\in\mathcal{F}_t\})
 \end{equation}
- 事实上, 乘积 $\sigma$ 域流为包含所有可测矩形的 $\sigma$ 域流.
+事实上, 乘积 $\sigma$ 域流为包含所有可测矩形的 $\sigma$ 域流.
 
 \textbf{定义}：循序可测过程
 
@@ -3917,31 +3848,30 @@ $\forall t\geqslant0$, $\mathcal{F}_t^B=\sigma(B_s:\forall0\leqslant s\leqslant 
 \begin{equation}
   X:([0,t]\times\Omega,\mathcal{B}_{[0,T]}\times\mathcal{F}_t)\to(\mathbb{R},\mathcal{B}_{\mathbb{R}})
 \end{equation}
- 可测, 则称 $X$ 是 $\{\mathcal{F}_t\}$ 循序可测过程.
+可测, 则称 $X$ 是 $\{\mathcal{F}_t\}$ 循序可测过程.
 
 \textbf{定义}：平方可积循序过程空间
 
-$\forall T>0$, 记 $\mathcal{L}_T^2\triangleq\bigg\{(\Omega,\mathcal{F})$ 上循序可测过程 $g(t,\omega): \displaystyle\int_0^T\mathbb{E}[g^2(t,\omega)]\mathrm{d}t<\infty\bigg\}=L^2([0,T]\times\Omega,\mathcal{P}_g,\lambda\times P)$, $\lambda\times P(B\times A)=\lambda(B)\times P(A)$, $\lambda$ 为 Lebesgue 测度, 定义里的积分也可写为
+$\forall T>0$, 记 $\mathcal{L}_T^2:=\bigg\{(\Omega,\mathcal{F})$ 上循序可测过程 $g(t,\omega): \displaystyle\int_0^T\mathbb{E}[g^2(t,\omega)]\mathrm{d}t<\infty\bigg\}=L^2([0,T]\times\Omega,\mathcal{P}_g,\lambda\times \mathbb{P})$, $\lambda\times \mathbb{P}(B\times A)=\lambda(B)\times \mathbb{P}(A)$, $\lambda$ 为 Lebesgue 测度, 定义里的积分也可写为
 \begin{equation}
   \int_0^T\mathbb{E}[g^2(t,\omega)]\mathrm{d}t=\int_\Omega\int_0^Tg^2(t,\omega)\mathrm{d}t\mathrm{d}P
 \end{equation}
- 记 $\mathcal{L}_2\triangleq\bigcap\limits_{T>0}\mathcal{L}_T^2=\bigg\{(\Omega,\mathcal{F})$ 上循序可测过程 $g(t,\omega): \forall T>0, \displaystyle\int_0^T\mathbb{E}[g^2(t,\omega)]\mathrm{d}t<\infty\bigg\}$.
+记 $\mathcal{L}_2:=\bigcap\limits_{T>0}\mathcal{L}_T^2=\bigg\{(\Omega,\mathcal{F})$ 上循序可测过程 $g(t,\omega): \forall T>0, \displaystyle\int_0^T\mathbb{E}[g^2(t,\omega)]\mathrm{d}t<\infty\bigg\}$.
 
 \textbf{定义}：准范数
 
 $\forall g\in\mathcal{L}_2$, 定义准范数
 \begin{equation}
-  \|g\|_2\triangleq\frac{\|g\|_{2,n}\wedge1}{2^n}
+  \|g\|_2:=\frac{\|g\|_{2,n}\wedge1}{2^n}
 \end{equation}
- 其中
+其中
 \begin{equation}
   \|g\|_{2,n}^2=\int_0^n\mathbb{E}[g^2(t,\omega)]\mathrm{d}t
 \end{equation}
 
-
 \textbf{定义}：L0
 
-\textbf{定义}：\begin{equation}\begin{aligned}\mathcal{L}_0\triangleq\Bigg\{g(t,\omega)&=g_0(t,\omega)\mathbb{I}_{\{0\}}(t)+\sum_{k=0}^\infty g_k(t,\omega)\mathbb{I}_{(t_k,t_{k-1}]}(t)\\&:0=t_0<t_1<\cdots<t_n\uparrow\infty,g_0\in\mathcal{F}_0,g_k\in\mathcal{F}_{t_k},\mathbb{E}g_0^2<\infty,\mathbb{E}g_k^2<\infty\Bigg\}\end{aligned}\end{equation} $\mathcal{L}_0$ 在 $\|\cdot\|_2$ 下是 $\mathcal{L}_2$ 线性稠密子集.
+\textbf{定义}：\begin{equation}\begin{aligned}\mathcal{L}_0:=\Bigg\{g(t,\omega)&=g_0(t,\omega)\mathbb{I}_{\{0\}}(t)+\sum_{k=0}^\infty g_k(t,\omega)\mathbb{I}_{(t_k,t_{k-1}]}(t)\\&:0=t_0<t_1<\cdots<t_n\uparrow\infty,g_0\in\mathcal{F}_0,g_k\in\mathcal{F}_{t_k},\mathbb{E}g_0^2<\infty,\mathbb{E}g_k^2<\infty\Bigg\}\end{aligned}\end{equation} $\mathcal{L}_0$ 在 $\|\cdot\|_2$ 下是 $\mathcal{L}_2$ 线性稠密子集.
 
 \textbf{定义}：简单过程的随机积分
 
@@ -3949,21 +3879,20 @@ $\forall g\in\mathcal{L}_2$, 定义准范数
 \begin{equation}
   g(t,\omega)=g_0(t,\omega)\mathbb{I}_{\{0\}}(t)+\sum_{k=0}^\infty g_k(t,\omega)\mathbb{I}_{(t_k,t_{k-1}]}(t)
 \end{equation}
- 定义 Ito 随机积分为
+定义 It\"o 随机积分为
 \begin{equation}
-  I_g(t)\triangleq\int_0^tg_s\mathrm{d}B_s=\sum_{k=0}^\infty g_k(B_{t_{k+1}\wedge t}-B_{t_{k}\wedge t})
+  I_g(t):=\int_0^tg_s\mathrm{d}B_s=\sum_{k=0}^\infty g_k(B_{t_{k+1}\wedge t}-B_{t_{k}\wedge t})
 \end{equation}
- 给定 $t>0$, 不妨将 $t$ 加入序列 $\{t_k\}$, 则 $\forall~ 0=t_0<t_1<\cdots<t_n=t$, $\forall~ 0\leqslant s\leqslant t$,
+给定 $t>0$, 不妨将 $t$ 加入序列 $\{t_k\}$, 则 $\forall~ 0=t_0<t_1<\cdots<t_n=t$, $\forall~ 0\leqslant s\leqslant t$,
 \begin{equation}
   g(s,\omega)=g_0(s,\omega)\mathbb{I}_{\{0\}}(s)+\sum_{k=0}^{n-1} g_k(s,\omega)\mathbb{I}_{(t_k,t_{k-1}]}(s),
 \end{equation}
- 则 Ito 随机积分
+则 It\"o 随机积分
 \begin{equation}
   I_g(t)=\int_0^tg_s\mathrm{d}B_s=\sum_{k=0}^{n-1}g_k(B_{t_{k+1}}-B_{t_k})
 \end{equation}
 
-
-Ito 积分性质-L0
+It\"o 积分性质-L0
 
 设 $g\in\mathcal{L}_0$, 则有
 
@@ -3972,7 +3901,6 @@ Ito 积分性质-L0
   \int_0^t(\alpha_1g_{1,s}+\alpha_2g_{2,s})\mathrm{d}B_s=\alpha_1\int_0^tg_{1,s}\mathrm{d}B_s+\alpha_2\int_0^tg_{2,s}\mathrm{d}B_s
 \end{equation}
 
-
 期望: $\mathbb{E}I_g(t)=0$
 
 二阶矩:
@@ -3980,8 +3908,7 @@ Ito 积分性质-L0
   \mathbb{E}I_g^2(t)=\int_0^t\mathbb{E}g_s^2\mathrm{d}s
 \end{equation}
 
-
-鞅: $\displaystyle\left\{I_g(t)\triangleq\int_0^tg_s\mathrm{d}B_s:t\geqslant0\right\}$ 关于 $\{\mathcal{F}_t\}$ 是鞅
+鞅: $\displaystyle\left\{I_g(t):=\int_0^tg_s\mathrm{d}B_s:t\geqslant0\right\}$ 关于 $\{\mathcal{F}_t\}$ 是鞅
 
 \textbf{定义}：L2 随机积分
 
@@ -3989,24 +3916,23 @@ $\forall g\in\mathcal{L}_2$, 因 $\mathcal{L}_0$ 在 $\|\cdot\|_2$ 下是 $\math
 \begin{equation}
   \lim_{n\to\infty}\|g_n-g\|_2=0
 \end{equation}
- 从而
+从而
 \begin{equation}
   \lim_{m,~n\to\infty}\|g_n-g_m\|_2=0
 \end{equation}
- 而 $g_n-g_m\in\mathcal{L}_0$, 
+而 $g_n-g_m\in\mathcal{L}_0$, 
 \begin{equation}
   \begin{aligned}
     \|g_n-g_m\|_{2,t}^2&=\int_0^t\mathbb{E}|g_{n,u}-g_{m,u}|^2\mathrm{d}u\\
     &=\mathbb{E}\left[\int_0^t(g_{n,u}-g_{m,u})\mathrm{d}B_u\right]^2\\
     &=\mathbb{E}\left(\int_0^tg_{n,u}\mathrm{d}B_u-\int_0^tg_{m,u}\mathrm{d}B_u\right)^2
   \end{aligned}
-\end{equation} 可见 $\forall t\geqslant0$, $\{I_{g_n}(t):n\geqslant0\}$ 是 $H=L_2(\Omega,\mathcal{F},P)$ 中的 Cauchy 列, $\exists I_g(t)$ 使得
+\end{equation} 可见 $\forall t\geqslant0$, $\{I_{g_n}(t):n\geqslant0\}$ 是 $H=L_2(\Omega,\mathcal{F},\mathbb{P})$ 中的 Cauchy 列, $\exists I_g(t)$ 使得
 \begin{equation}
   I_g(t)=L_2\text{-}\lim_{n\to\infty}I_{g_n}(t)=L_2\text{-}\lim_{n\to\infty}\int_0^tg_{n,u}\mathrm{d}B_u
 \end{equation}
 
-
-Ito 积分性质-L2
+It\"o 积分性质-L2
 
 设 $g\in\mathcal{L}_2$, 则有
 
@@ -4015,14 +3941,12 @@ Ito 积分性质-L2
   \int_0^t(\alpha_1g_{1,s}+\alpha_2g_{2,s})\mathrm{d}B_s=\alpha_1\int_0^tg_{1,s}\mathrm{d}B_s+\alpha_2\int_0^tg_{2,s}\mathrm{d}B_s
 \end{equation}
 
-
 期望: $\mathbb{E}I_g(t)=0$
 
 二阶矩:
 \begin{equation}
   \mathbb{E}I_g^2(t)=\int_0^t\mathbb{E}g_s^2\mathrm{d}s
 \end{equation}
-
 
 内积:
 \begin{equation}
@@ -4033,20 +3957,17 @@ Ito 积分性质-L2
   \langle I_{g}(s),I_{g}(t)\rangle=\mathbb{E}\left[\int_0^sg_{u}\mathrm{d}B_u\int_0^tg_{u}\mathrm{d}B_u\right]=\int_0^s \mathbb{E}g_u^2\mathrm{d}u,\quad\forall~0\leqslant s\leqslant t
 \end{equation}
 
-
 分段积分:
 \begin{equation}
   \int_0^tg_u\mathrm{d}B_u=\int_0^sg_u\mathrm{d}B_u+\int_s^tg_u\mathrm{d}B_u,\quad\forall s\in[0,t]
 \end{equation}
 
-
-鞅性: $\displaystyle\left\{I_g(t)\triangleq\int_0^tg_s\mathrm{d}B_s:t\geqslant0\right\}$ 关于 $\{\mathcal{F}_t\}$ 是鞅
+鞅性: $\displaystyle\left\{I_g(t):=\int_0^tg_s\mathrm{d}B_s:t\geqslant0\right\}$ 关于 $\{\mathcal{F}_t\}$ 是鞅
 
 Doob 极大值不等式: 记 $\displaystyle X_t=\int_0^tg_u\mathrm{d}B_u$, 则 $\forall t\geqslant0,~\lambda>0,p\geqslant1$ 有
 \begin{equation}
-  P\left(\max_{0\leqslant u\leqslant t}|X_u|>\lambda\right)\leqslant\frac{\mathbb{E}|X_t|^p}{\lambda^p}
+  \mathbb{P}\left(\max_{0\leqslant u\leqslant t}|X_u|>\lambda\right)\leqslant\frac{\mathbb{E}|X_t|^p}{\lambda^p}
 \end{equation}
-
 
 \textbf{定理}： 鞅表示定理
 
@@ -4055,60 +3976,58 @@ Doob 极大值不等式: 记 $\displaystyle X_t=\int_0^tg_u\mathrm{d}B_u$, 则 $
   X_t-X_0=\int_0^tg_s\mathrm{d}B_s.
 \end{equation}
 
-
-\textbf{例}：均方连续循序可测过程的 Ito 积分
+\textbf{例}：均方连续循序可测过程的 It\"o 积分
 
 设 $\{\phi_t:t\geqslant0\}$ 均方连续, 关于 $\{\mathcal{F}_t\}$ 适应且循序可测, 定义
 \begin{equation}
-  \phi_t^{(n)}\triangleq\sum_{k=0}^{n-1}\phi_{t_k^{(n)}}\mathbb{I}_{(t_k^{(n)},t_{k+1}^{(n)}]}(t)+\phi_0\mathbb{I}_{\{0\}}(t)\overset{\mathrm{\mathcal{L}_2}}{\to}\phi_t~(n\to\infty)
+  \phi_t^{(n)}:=\sum_{k=0}^{n-1}\phi_{t_k^{(n)}}\mathbb{I}_{(t_k^{(n)},t_{k+1}^{(n)}]}(t)+\phi_0\mathbb{I}_{\{0\}}(t)\overset{\mathrm{\mathcal{L}_2}}{\to}\phi_t~(n\to\infty)
 \end{equation}
- 其中 $\left\{t_k^{(n)}:0\leqslant k\leqslant n\right\}$ 是 $[0,t]$ 的分割, 令
+其中 $\left\{t_k^{(n)}:0\leqslant k\leqslant n\right\}$ 是 $[0,t]$ 的分割, 令
 \begin{equation}
-  \lambda_n\triangleq\max_{0\leqslant k\leqslant n-1}\left\{t_{k+1}^{(n)}-t_{k}^{(n)}\right\}\to0~(n\to\infty)
+  \lambda_n:=\max_{0\leqslant k\leqslant n-1}\left\{t_{k+1}^{(n)}-t_{k}^{(n)}\right\}\to0~(n\to\infty)
 \end{equation}
- 从而
+从而
 \begin{equation}
   \int_0^t\phi_u\mathrm{d}B_u=L_2\text{-}\lim_{n\to\infty}\sum_{k=0}^{n-1}\phi_{t_k^{(n)}}\left(B_{t_{k+1}^{(n)}}-B_{t_{k}^{(n)}}\right).
 \end{equation}
- 上式也可以理解为 Ito 积分的定义.
+上式也可以理解为 It\"o 积分的定义.
 
-\section{Ito 过程与 Ito 公式}
+\section{It\"o 过程与 It\"o 公式}
 
-\textbf{定义}：Ito 过程
+\textbf{定义}：It\"o 过程
 
-设随机过程 $X=\{X_t:t\geqslant0\}$ 满足如下的 Ito 随机积分方程: 对 $\forall~0\leqslant t_0<t<T$, 有
+设随机过程 $X=\{X_t:t\geqslant0\}$ 满足如下的 It\"o 随机积分方程: 对 $\forall~0\leqslant t_0<t<T$, 有
 \begin{equation}
   X_t-X_{t_0}=\int_{t_0}^tb(s,X_s)\mathrm{d}s+\int_{t_0}^t\sigma(s,X_s)\mathrm{d}B_s,
 \end{equation}
- 或等价地写作 Ito 随机微分方程
+或等价地写作 It\"o 随机微分方程
 \begin{equation}
   \mathrm{d}X_t=b(t,X_t)\mathrm{d}t+\sigma(t,X_t)\mathrm{d}B_t,
 \end{equation}
- 其中 $b(t,X_t),~\sigma(t,X_t)$ 是二元连续函数, 且对 $\forall x\in\mathbb{R}$,
+其中 $b(t,X_t),~\sigma(t,X_t)$ 是二元连续函数, 且对 $\forall x\in\mathbb{R}$,
 \begin{equation}
   b(t,X_t)\in\mathcal{L}_T^1,~ \sigma(t,X_t)\in\mathcal{L}_T^2,
 \end{equation}
- 则称 $X$ 为 Ito 过程.
+则称 $X$ 为 It\"o 过程.
 
-\textbf{注释}： Ito 过程与扩散过程
+\textbf{注释}： It\"o 过程与扩散过程
 
-Ito 过程在 $b(t,X_t),~\sigma(t,X_t)$ 具有比较好的性质的情况下也是扩散过程, 其中 $b(t,X_t)$ 称为漂移系数, $\sigma(t,X_t)$ 称为扩散系数.
+It\"o 过程在 $b(t,X_t),~\sigma(t,X_t)$ 具有比较好的性质的情况下也是扩散过程, 其中 $b(t,X_t)$ 称为漂移系数, $\sigma(t,X_t)$ 称为扩散系数.
 
-\textbf{定理}： Ito 公式
+\textbf{定理}： It\"o 公式
 
-设随机过程 $X=\{X_t:t\geqslant0\}$ 是 Ito 过程, $y=f(t,x)$ 是二元函数, 且具有连续偏导数
+设随机过程 $X=\{X_t:t\geqslant0\}$ 是 It\"o 过程, $y=f(t,x)$ 是二元函数, 且具有连续偏导数
 \begin{equation}
   \frac{\partial f}{\partial t},~\frac{\partial f}{\partial x},\frac{\partial^2 f}{\partial x^2}.
 \end{equation}
- 令 $Y_t\triangleq f(t,X_t)$, 则过程 $Y=\{Y_t:t\geqslant0\}$ 也是随机过程, 且对 $\forall0\leqslant t_0<t$ 满足如下的 Ito 积分方程
+令 $Y_t:= f(t,X_t)$, 则过程 $Y=\{Y_t:t\geqslant0\}$ 也是随机过程, 且对 $\forall0\leqslant t_0<t$ 满足如下的 It\"o 积分方程
 \begin{equation}
   Y_t-Y_{t_0}=\int_{t_0}^t\left[\frac{\partial f}{\partial t}+\frac{\partial f}{\partial x}b+\frac{1}{2}\frac{\partial^2 f}{\partial x^2}\sigma^2\right](s,X_s)\mathrm{d}s+\int_{t_0}^t\left(\frac{\partial f}{\partial x}\sigma\right)(s,X_s)\mathrm{d}B_s,
 \end{equation}
- 或等价的 Ito 微分方程
+或等价的 It\"o 微分方程
 \begin{equation}
   \mathrm{d}Y_t=\left[\frac{\partial f}{\partial t}+\frac{\partial f}{\partial x}b+\frac{1}{2}\frac{\partial^2 f}{\partial x^2}\sigma^2\right](t,X_t)\mathrm{d}t+\left[\frac{\partial f}{\partial x}\sigma\right](t,X_t)\mathrm{d}B_t~~(\text{a.e.}).
 \end{equation}
-
 
 \textbf{定理}： 重对数律
 
@@ -4130,16 +4049,16 @@ Ito 过程在 $b(t,X_t),~\sigma(t,X_t)$ 具有比较好的性质的情况下也�
 
 粗略地说, $B_{s+\Delta t}-B_s\sim\sqrt{\Delta t}$, 即 $\mathrm{d}B_t\sim\sqrt{\mathrm{d}t}$.
 
-Ito 公式理解
+It\"o 公式理解
 
-由 Ito 过程定义可知
+由 It\"o 过程定义可知
 
 \begin{equation}
   \mathrm{d}X_t=b(t,X_t)\mathrm{d}t+\sigma(t,X_t)\mathrm{d}B_t,
 \end{equation}
-令 $Y_t\triangleq f(t,X_t)$, 欲求其关于 $\mathrm{d}t,~\mathrm{d}B_t$ 的全微分, 由 $\mathrm{d}B_t\sim\sqrt{\mathrm{d}t}$ 可知 $f(t,x)$ 对 $x$ 的偏导需要展开到二阶来获取那个与 $\mathrm{d}t$ 同阶的 $\mathrm{d}B_t^2$ 项.
+令 $Y_t:= f(t,X_t)$, 欲求其关于 $\mathrm{d}t,~\mathrm{d}B_t$ 的全微分, 由 $\mathrm{d}B_t\sim\sqrt{\mathrm{d}t}$ 可知 $f(t,x)$ 对 $x$ 的偏导需要展开到二阶来获取那个与 $\mathrm{d}t$ 同阶的 $\mathrm{d}B_t^2$ 项.
 
-简记 $f=f(t,X_t)$, 则 Ito 公式微分形式可以粗略理解为
+简记 $f=f(t,X_t)$, 则 It\"o 公式微分形式可以粗略理解为
 
 \begin{equation}
   \begin{aligned}
@@ -4153,13 +4072,12 @@ Ito 公式理解
   \end{aligned}
 \end{equation}
 
-\textbf{例}：使用 Ito 公式求解 Ito 积分
+\textbf{例}：使用 It\"o 公式求解 It\"o 积分
 
 求证
 \begin{equation}
   \int_0^tB_s^2\mathrm{d}B_s=\frac{B_t^3}{3}-\int_0^tB_s\mathrm{d}s.
 \end{equation}
-
 
 证明: 与该积分方程对应的微分方程为
 \begin{equation}
@@ -4170,13 +4088,13 @@ Ito 公式理解
   \mathrm{d}\left(\frac{B_t^3}{3}\right)=B_t\mathrm{d}t+B_t^2\mathrm{d}B_t
 \end{equation}
 
-对比上式与 Ito 公式可猜测函数 $f(t,x)=x^3/3$, 下面证明之.
+对比上式与 It\"o 公式可猜测函数 $f(t,x)=x^3/3$, 下面证明之.
 
-布朗运动本身即是 Ito 过程, 满足 Ito 微分方程 
+布朗运动本身即是 It\"o 过程, 满足 It\"o 微分方程 
 \begin{equation}
   \mathrm{d}B_t=0\times\mathrm{d}t+1\times\mathrm{d}B_t
 \end{equation} 
-令 $f(t,x)=x^3/3$, 则 $Y_t=f(t,B_t)=B_t^3/3$, 所以由 Ito 公式可得
+令 $f(t,x)=x^3/3$, 则 $Y_t=f(t,B_t)=B_t^3/3$, 所以由 It\"o 公式可得
 \begin{equation}
   \begin{aligned}
   \mathrm{d}Y_t&=\mathrm{d}\left(\frac{B_t^3}{3}\right)\\
@@ -4190,19 +4108,18 @@ Ito 公式理解
   \frac{B_t^3}{3}=\int_0^tB_s\mathrm{d}s+\int_0^tB_s^2\mathrm{d}B_s
 \end{equation}
 
-\textbf{例}：求解布朗运动自身的 $n$ 次 Ito 积分
+\textbf{例}：求解布朗运动自身的 $n$ 次 It\"o 积分
 
 $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \int_0^tB_s^n\mathrm{d}B_s.
 \end{equation}
 
-
-解: 布朗运动本身即是 Ito 过程, 满足 Ito 微分方程 
+解: 布朗运动本身即是 It\"o 过程, 满足 It\"o 微分方程 
 \begin{equation}
   \mathrm{d}B_t=0\times\mathrm{d}t+1\times\mathrm{d}B_t
 \end{equation} 
-令 $f(t,x)=x^{n+1}/(n+1)$, 则 $Y_t=f(t,B_t)=B_t^{n+1}/(n+1)$, 所以由 Ito 公式可得 
+令 $f(t,x)=x^{n+1}/(n+1)$, 则 $Y_t=f(t,B_t)=B_t^{n+1}/(n+1)$, 所以由 It\"o 公式可得 
 \begin{equation}
   \begin{aligned}
   \mathrm{d}Y_t&=\mathrm{d}\left(\frac{B_t^{n+1}}{n+1}\right)\\
@@ -4220,9 +4137,9 @@ $\forall n\geqslant1$, 求下面积分
   \int_0^tB_s^n\mathrm{d}B_s=\frac{B_t^{n+1}}{n+1}-\int_0^t\frac{n}{2}B_s^{n-1}\mathrm{d}s.
 \end{equation}
 
-\textbf{例}：求随机过程满足的 Ito 微分方程
+\textbf{例}：求随机过程满足的 It\"o 微分方程
 
-利用 Ito 公式, 求以下随机过程满足的 Ito 微分方程:
+利用 It\"o 公式, 求以下随机过程满足的 It\"o 微分方程:
 \begin{equation}X_t=\exp(ut+\alpha B_t),\quad Y_t=\exp(t/2)\cos B_t.\end{equation}
 
 解:  令 $f(t,x)=\exp(ut+\alpha x)$, $g(t,x)=\exp(t/2)\cos x$, 它们的相应偏导数为
@@ -4233,7 +4150,7 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \frac{\partial g}{\partial t}=\frac{1}{2}\exp(t/2)\cos x,~\frac{\partial g}{\partial x}=-\exp(t/2)\sin x,\frac{\partial^2 g}{\partial x^2}=-\exp(t/2)\cos x
 \end{equation}
-所以由 Ito 公式可知
+所以由 It\"o 公式可知
 \begin{equation}
   \begin{aligned}
     \mathrm{d}X_t&=\left[u\exp(ut+\alpha B_t)+0+\frac{1}{2}\alpha^2\exp(ut+\alpha B_t)\right]\mathrm{d}t+\alpha\exp(ut+\alpha B_t)\mathrm{d}B_t\\
@@ -4249,13 +4166,13 @@ $\forall n\geqslant1$, 求下面积分
   \end{aligned}
 \end{equation}
 
-\textbf{定义}：多元 Ito 过程
+\textbf{定义}：多元 It\"o 过程
 
-设随机过程 $\bm{X}=\{\bm{X}_t=(X_{1,t},X_{2,t},\cdots,X_{n,t}):t\geqslant0\}$ 满足如下的多元 Ito 随机微分方程
+设随机过程 $\bm{X}=\{\bm{X}_t=(X_{1,t},X_{2,t},\cdots,X_{n,t}):t\geqslant0\}$ 满足如下的多元 It\"o 随机微分方程
 \begin{equation}
   \mathrm{d}\bm{X}_t=\bm{b}(t,\bm{X}_t)\mathrm{d}t+\bm{\Sigma}(t,\bm{X}_t)\mathrm{d}\bm{B}_t,
 \end{equation}
- 其中
+其中
 \begin{equation}
   \bm{b}(t,\bm{X}_t)=[b_1(t,\bm{X}_t),b_2(t,\bm{X}_t),\cdots,b_n(t,\bm{X}_t)]^T,
 \end{equation}
@@ -4263,29 +4180,29 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \bm{\Sigma}(t,\bm{X}_t)=[\sigma_{ij}(t,\bm{X}_t)]_{n\times m},
 \end{equation}
- 且 $b_i(t,\bm{X}_t)\in\mathcal{L}_T^1$, $\sigma_{ij}(t,\bm{X}_t)\in\mathcal{L}_T^2$,
+且 $b_i(t,\bm{X}_t)\in\mathcal{L}_T^1$, $\sigma_{ij}(t,\bm{X}_t)\in\mathcal{L}_T^2$,
 \begin{equation}
   \bm{B}_t=\left[B_{1,t},B_{2,t},\cdots,B_{m,t}\right]^T,
 \end{equation}
- 则称 $X$ 为 $n$ 维 Ito 过程.
+则称 $X$ 为 $n$ 维 It\"o 过程.
 
-\textbf{定理}： 多元 Ito 公式
+\textbf{定理}： 多元 It\"o 公式
 
-设随机过程 $\bm{X}=\{\bm{X}_t:t\geqslant0\}$ 是 $n$ 维 Ito 过程,
+设随机过程 $\bm{X}=\{\bm{X}_t:t\geqslant0\}$ 是 $n$ 维 It\"o 过程,
 \begin{equation}
   \bm{f}(t,\bm{x})=[f_1(t,\bm{x}),f_2(t,\bm{x}),\cdots,f_d(t,\bm{x})]^T
 \end{equation}
- 是 $[0,\infty)\times\mathbb{R}^n\to\mathbb{R}^d$ 上的函数, 其中 $\bm{x}=(x_1,x_2,\cdots,x_n)$, 且具有连续偏导数
+是 $[0,\infty)\times\mathbb{R}^n\to\mathbb{R}^d$ 上的函数, 其中 $\bm{x}=(x_1,x_2,\cdots,x_n)$, 且具有连续偏导数
 \begin{equation}
   \frac{\partial f_k}{\partial t},~\frac{\partial f_k}{\partial x_i},\frac{\partial^2 f_k}{\partial x_i\partial x_j}.
 \end{equation}
- 令 $\bm{Y}_t\triangleq \bm{f}(t,\bm{X}_t)$, 则过程 $\bm{Y}=\{\bm{Y}_t:t\geqslant0\}$ 是 $d$ 维 Ito 过程, 且对 $\forall 1\leqslant k\leqslant d$ 满足如下的 多元 Ito 微分方程
+令 $\bm{Y}_t:= \bm{f}(t,\bm{X}_t)$, 则过程 $\bm{Y}=\{\bm{Y}_t:t\geqslant0\}$ 是 $d$ 维 It\"o 过程, 且对 $\forall 1\leqslant k\leqslant d$ 满足如下的 多元 It\"o 微分方程
 \begin{equation}
   \mathrm{d}\bm{Y}_{k,t}=\left[\frac{\partial f_k}{\partial t}+\frac{\partial f_k}{\partial x_i}b_i+\frac{1}{2}\frac{\partial^2 f_k}{\partial x_i\partial x_j}\sigma_{il}\sigma_{jl}\right](t,\bm{X}_t)\mathrm{d}t+\left[\frac{\partial f_k}{\partial x_i}\sigma_{il}\right](t,\bm{X}_t)\mathrm{d}B_{l,t}.
 \end{equation}
- 需要指出的是上式使用了 Einstein 求和约定, 即重复指标自动求和.
+需要指出的是上式使用了 Einstein 求和约定, 即重复指标自动求和.
 
-\section{Ito 随机微分方程}
+\section{It\"o 随机微分方程}
 
 \subsection{常系数的线性随机微分方程}
 
@@ -4302,7 +4219,7 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \mathrm{e}^{b t}\mathrm{d}X_t+b\mathrm{e}^{b t} X_t\mathrm{d}t=\sigma\mathrm{e}^{b t}\mathrm{d}B_t,
 \end{equation}
-令 $f(t,x)=\mathrm{e}^{b t}x$, 由 Ito 公式可知
+令 $f(t,x)=\mathrm{e}^{b t}x$, 由 It\"o 公式可知
 \begin{equation}
   \begin{aligned}
   \mathrm{d}(\mathrm{e}^{b t}X_t)
@@ -4337,7 +4254,7 @@ $\forall n\geqslant1$, 求下面积分
   \frac{\mathrm{d}X_t}{X_t}=b \mathrm{d}t+\sigma \mathrm{d}B_t.
 \end{equation}
 
-遂令 $f(t,x)=\ln x$, 则 $Y_t=\ln X_t$, 由 Ito 公式可知
+遂令 $f(t,x)=\ln x$, 则 $Y_t=\ln X_t$, 由 It\"o 公式可知
 \begin{equation}
   \begin{aligned}
     \mathrm{d}Y_t
@@ -4370,7 +4287,7 @@ $\forall n\geqslant1$, 求下面积分
 
 求解 $X_t$.
 
-解: 在求解一般线性非齐次随机微分方程之前, 先求解一类稍简单的狭义随机微分方程. 与线性常微分方程求解方法类似, 由简入繁, 先求齐次解, 再求非齐次解, 最大的不同在于随机微分方程中复合函数的求导法则由 Ito 公式决定, 多了二阶偏导项, 作微分运算时尤其需要谨慎.
+解: 在求解一般线性非齐次随机微分方程之前, 先求解一类稍简单的狭义随机微分方程. 与线性常微分方程求解方法类似, 由简入繁, 先求齐次解, 再求非齐次解, 最大的不同在于随机微分方程中复合函数的求导法则由 It\"o 公式决定, 多了二阶偏导项, 作微分运算时尤其需要谨慎.
 
 狭义随机微分方程
 
@@ -4394,11 +4311,11 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \rho_{t_0}^{-1}(t)=\exp\left(-\int_{t_0}^tb_1(t)\mathrm{d}t\right)
 \end{equation}
-则可以通过 Ito 公式解上述微分方程, 即
+则可以通过 It\"o 公式解上述微分方程, 即
 \begin{equation}
   \rho_{t_0}^{-1}(t)[\mathrm{d}X_t-b_1(t) X_t]\mathrm{d}t=\rho_{t_0}^{-1}(t)[b_2(t)\mathrm{d}t+\sigma_2(t)\mathrm{d}B_t].
 \end{equation}
-令 $f(t,x)=\rho_{t_0}^{-1}(t)x$, 则由 Ito 公式可知
+令 $f(t,x)=\rho_{t_0}^{-1}(t)x$, 则由 It\"o 公式可知
 \begin{equation}
   \begin{aligned}
   \mathrm{d}\left[\rho_{t_0}^{-1}(t)X_t\right]
@@ -4433,11 +4350,11 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \rho_{t_0}(t)=\exp\left[\int_{t_0}^t\left(b_1(t)-\frac{1}{2}\sigma_1^2(t)\right)\mathrm{d}t+\int_{t_0}^t\sigma_1(t) \mathrm{d}B_t\right],
 \end{equation}
-则积分因子满足以下 Ito 微分方程
+则积分因子满足以下 It\"o 微分方程
 \begin{equation}
   \mathrm{d}\rho_{t_0}(t)=b_1(t) \rho_{t_0}(t)\mathrm{d}t+\sigma_1(t) \rho_{t_0}(t)\mathrm{d}B_t.
 \end{equation}
-令 $f(t,x)=1/x$, 则由 Ito 公式可知 $\rho_{t_0}^{-1}(t)$ 满足以下 Ito 微分方程
+令 $f(t,x)=1/x$, 则由 It\"o 公式可知 $\rho_{t_0}^{-1}(t)$ 满足以下 It\"o 微分方程
 \begin{equation}
   \begin{aligned}
     \mathrm{d}\rho_{t_0}^{-1}(t)
@@ -4449,7 +4366,7 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \mathrm{d}X_t=[b_1(t) X_t+b_2(t)]\mathrm{d}t+[\sigma_1(t) X_t+\sigma_2(t)]\mathrm{d}B_t,
 \end{equation}
-令 $g(t,x_1,x_2)=x_1x_2$, 则由二维 Ito 公式可知
+令 $g(t,x_1,x_2)=x_1x_2$, 则由二维 It\"o 公式可知
 \begin{equation}
   \begin{aligned}
     \mathrm{d}[\rho_{t_0}^{-1}(t)X_t]
@@ -4471,7 +4388,7 @@ $\forall n\geqslant1$, 求下面积分
   X_t=\rho_{t_0}(t)\left[X_{t_0}+\int_{t_0}^t\rho_{t_0}^{-1}(s)[b_2(s)-\sigma_1(s)\sigma_2(s)]\mathrm{d}s+\int_{t_0}^t\rho_{t_0}^{-1}(s)\sigma_2(s)\mathrm{d}B_s\right].
 \end{equation}
 
-\textbf{例}：求解 Ito 微分方程
+\textbf{例}：求解 It\"o 微分方程
 
 通用公式
 
@@ -4488,7 +4405,7 @@ $\forall n\geqslant1$, 求下面积分
   X_t=\rho_{t_0}(t)\left[X_{t_0}+\int_{t_0}^t\rho_{t_0}^{-1}(s)[b_2(s)-\sigma_1(s)\sigma_2(s)]\mathrm{d}s+\int_{t_0}^t\rho_{t_0}^{-1}(s)\sigma_2(s)\mathrm{d}B_s\right].
 \end{equation}
 
-$\mathrm{d}X_t=-X_t\mathrm{d}t+\mathrm{e}^{-t}\mathrm{d}B_t$
+(1) $\mathrm{d}X_t=-X_t\mathrm{d}t+\mathrm{e}^{-t}\mathrm{d}B_t$
 
 解: $b_1(t)=-1,~b_2(t)=0,~\sigma_1(t)=0,~\sigma_2(t)=\mathrm{e}^{-t}$, 则
 \begin{equation}
@@ -4504,7 +4421,7 @@ $\mathrm{d}X_t=-X_t\mathrm{d}t+\mathrm{e}^{-t}\mathrm{d}B_t$
   \end{aligned}
 \end{equation}
 
-$\mathrm{d}X_t=\gamma\mathrm{d}t+\alpha X_t\mathrm{d}B_t,~\gamma,\alpha\in\mathbb{R}$
+(2) $\mathrm{d}X_t=\gamma\mathrm{d}t+\alpha X_t\mathrm{d}B_t,~\gamma,\alpha\in\mathbb{R}$
 
 解: $b_1(t)=0,~b_2(t)=\gamma,~\sigma_1(t)=\alpha,~\sigma_2(t)=0$, 则
 \begin{equation}
@@ -4520,7 +4437,7 @@ $\mathrm{d}X_t=\gamma\mathrm{d}t+\alpha X_t\mathrm{d}B_t,~\gamma,\alpha\in\mathb
   \end{aligned}
 \end{equation}
 
-$\mathrm{d}X_t=(\mathrm{e}^{-t}+X_t)\mathrm{d}t+\sigma X_t\mathrm{d}B_t,~\sigma>0$
+(3) $\mathrm{d}X_t=(\mathrm{e}^{-t}+X_t)\mathrm{d}t+\sigma X_t\mathrm{d}B_t,~\sigma>0$
 
 解: $b_1(t)=1,~b_2(t)=\mathrm{e}^{-t},~\sigma_1(t)=\sigma,~\sigma_2(t)=0$, 则
 \begin{equation}
@@ -4536,15 +4453,15 @@ $\mathrm{d}X_t=(\mathrm{e}^{-t}+X_t)\mathrm{d}t+\sigma X_t\mathrm{d}B_t,~\sigma>
   \end{aligned}
 \end{equation}
 
-$\mathrm{d}X_t=f(t)B_t\mathrm{d}t$
+(4) $\mathrm{d}X_t=f(t)B_t\mathrm{d}t$
 
-解: 布朗运动本身即为 Ito 过程, 有 Ito 微分方程
+解: 布朗运动本身即为 It\"o 过程, 有 It\"o 微分方程
 \begin{equation}
   \mathrm{d}B_t=0\times\mathrm{d}t+1\times\mathrm{d}B_t.
 \end{equation}
 函数 $f$ 在 $[0,+\infty)$ 上连续则可积, 令其原函数为
 \begin{equation}
-  F(t)\triangleq\int_0^tf(s)\mathrm{d}s.
+  F(t):=\int_0^tf(s)\mathrm{d}s.
 \end{equation}
 令 $h(t,x)=F(t)x$, 其相应偏导数为
 \begin{equation}
@@ -4552,7 +4469,7 @@ $\mathrm{d}X_t=f(t)B_t\mathrm{d}t$
   \frac{\partial h}{\partial x}=F(t),~
   \frac{\partial^2 h}{\partial x^2}=0,
 \end{equation}
-令 $W_t=F(t)B_t$, 由 Ito 公式可知
+令 $W_t=F(t)B_t$, 由 It\"o 公式可知
 \begin{equation}
   \begin{aligned}
     \mathrm{d}W_t
@@ -4568,7 +4485,7 @@ $\mathrm{d}X_t=f(t)B_t\mathrm{d}t$
     &=\int_0^tf(s)B_s\mathrm{d}s+\int_0^tF(s)\mathrm{d}B_s,\\
   \end{aligned}
 \end{equation}
-故由 Ito 积分的一阶矩和二阶矩性质可知
+故由 It\"o 积分的一阶矩和二阶矩性质可知
 \begin{equation}
   \begin{aligned}
   X_t
@@ -4580,9 +4497,9 @@ $\mathrm{d}X_t=f(t)B_t\mathrm{d}t$
 \end{equation}
 即 $X_t$ 的概率分布是期望为 $0$, 方差为 $\displaystyle\int_0^t[F(t)-F(s)]^2\mathrm{d}s$ 的正态分布.
 
-$\mathrm{d}Y_t=f(t)B_t\mathrm{d}B_t$
+(5) $\mathrm{d}Y_t=f(t)B_t\mathrm{d}B_t$
 
-解: 布朗运动本身即为 Ito 过程, 有 Ito 微分方程
+解: 布朗运动本身即为 It\"o 过程, 有 It\"o 微分方程
 \begin{equation}
   \mathrm{d}B_t=0\times\mathrm{d}t+1\times\mathrm{d}B_t.
 \end{equation}
@@ -4592,7 +4509,7 @@ $\mathrm{d}Y_t=f(t)B_t\mathrm{d}B_t$
   \frac{\partial g}{\partial x}=f(t)x,~
   \frac{\partial^2 g}{\partial x^2}=f(t),
 \end{equation}
-令 $Z_t=f(t)B_t^2/2$, 由 Ito 公式可知
+令 $Z_t=f(t)B_t^2/2$, 由 It\"o 公式可知
 \begin{equation}
   \begin{aligned}
     \mathrm{d}Z_t
@@ -4617,7 +4534,7 @@ $\mathrm{d}Y_t=f(t)B_t\mathrm{d}B_t$
 
 \textbf{定理}： 随机微分方程解的存在和唯一性
 
-设对 $\forall t\geqslant0,~x,y\in\mathbb{R},~K>0$, $b(t,x),~\sigma(t,x)$ 满足整体 Lipschitz 条件
+设对 $\forall t\geqslant0$, $x,y\in\mathbb{R}$, $K>0$, $b(t,x)$, $\sigma(t,x)$ 满足整体 Lipschitz 条件
 \begin{equation}
   |b(t,x)-b(t,y)|+|\sigma(t,x)-\sigma(t,y)|\leqslant K|x-y|,
 \end{equation}
@@ -4625,7 +4542,7 @@ $\mathrm{d}Y_t=f(t)B_t\mathrm{d}B_t$
 \begin{equation}
   |b(t,x)|+|\sigma(t,x)|\leqslant K(1+|x|).
 \end{equation}
-$B=\{B_t,\mathcal{F}_t^B:t\geqslant0\}$ 是 $(\Omega,\mathcal{F},P)$ 上的布朗运动, $\xi$ 是 $(\Omega,\mathcal{F},P)$ 上的随机变量且与布朗运动独立, $\mathbb{E}|\xi|^2<\infty$, 则随机微分方程
+$B=\{B_t,\mathcal{F}_t^B:t\geqslant0\}$ 是 $(\Omega,\mathcal{F},\mathbb{P})$ 上的布朗运动, $\xi$ 是 $(\Omega,\mathcal{F},\mathbb{P})$ 上的随机变量且与布朗运动独立, $\mathbb{E}|\xi|^2<\infty$, 则随机微分方程
 \begin{equation}
   \mathrm{d}X_t=b(t,X_t)\mathrm{d}t+\sigma(t,X_t)\mathrm{d}B_t,\quad X_0=\xi,
 \end{equation}
