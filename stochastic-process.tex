@@ -1079,7 +1079,7 @@ $\mathbb{E}(X|Y)$ 是随机变量 $Y$ 的函数, 当 $Y=y$ 时, 它的取值为 
 
 布朗运动关于自身是鞅
 
- It\"o 积分关于布朗运动是鞅
+It\^o 积分关于布朗运动是鞅
 
 二阶矩过程
 
@@ -3797,7 +3797,7 @@ $\{X_t:t\in T\}$ 在 $T$ 上均方连续的充要条件为 $R(s,t)$ 在 $\{(t,t)
   X_t-X_a=\int_a^tX_s'\mathrm{d}s,\quad\forall t\in[a,b]
 \end{equation}
 
-\section{It\"o 随机积分}
+\section{It\^o 随机积分}
 
 \textbf{定义}：$\sigma$ 域流
 
@@ -3879,7 +3879,7 @@ $\forall g\in\mathcal{L}_2$, 定义准范数
 \begin{equation}
   g(t,\omega)=g_0(t,\omega)\mathbb{I}_{\{0\}}(t)+\sum_{k=0}^\infty g_k(t,\omega)\mathbb{I}_{(t_k,t_{k-1}]}(t)
 \end{equation}
-定义 It\"o 随机积分为
+定义 It\^o 随机积分为
 \begin{equation}
   I_g(t):=\int_0^tg_s\mathrm{d}B_s=\sum_{k=0}^\infty g_k(B_{t_{k+1}\wedge t}-B_{t_{k}\wedge t})
 \end{equation}
@@ -3887,12 +3887,12 @@ $\forall g\in\mathcal{L}_2$, 定义准范数
 \begin{equation}
   g(s,\omega)=g_0(s,\omega)\mathbb{I}_{\{0\}}(s)+\sum_{k=0}^{n-1} g_k(s,\omega)\mathbb{I}_{(t_k,t_{k-1}]}(s),
 \end{equation}
-则 It\"o 随机积分
+则 It\^o 随机积分
 \begin{equation}
   I_g(t)=\int_0^tg_s\mathrm{d}B_s=\sum_{k=0}^{n-1}g_k(B_{t_{k+1}}-B_{t_k})
 \end{equation}
 
-It\"o 积分性质-L0
+It\^o 积分性质-L0
 
 设 $g\in\mathcal{L}_0$, 则有
 
@@ -3932,7 +3932,7 @@ $\forall g\in\mathcal{L}_2$, 因 $\mathcal{L}_0$ 在 $\|\cdot\|_2$ 下是 $\math
   I_g(t)=L_2\text{-}\lim_{n\to\infty}I_{g_n}(t)=L_2\text{-}\lim_{n\to\infty}\int_0^tg_{n,u}\mathrm{d}B_u
 \end{equation}
 
-It\"o 积分性质-L2
+It\^o 积分性质-L2
 
 设 $g\in\mathcal{L}_2$, 则有
 
@@ -3976,7 +3976,7 @@ Doob 极大值不等式: 记 $\displaystyle X_t=\int_0^tg_u\mathrm{d}B_u$, 则 $
   X_t-X_0=\int_0^tg_s\mathrm{d}B_s.
 \end{equation}
 
-\textbf{例}：均方连续循序可测过程的 It\"o 积分
+\textbf{例}：均方连续循序可测过程的 It\^o 积分
 
 设 $\{\phi_t:t\geqslant0\}$ 均方连续, 关于 $\{\mathcal{F}_t\}$ 适应且循序可测, 定义
 \begin{equation}
@@ -3990,17 +3990,17 @@ Doob 极大值不等式: 记 $\displaystyle X_t=\int_0^tg_u\mathrm{d}B_u$, 则 $
 \begin{equation}
   \int_0^t\phi_u\mathrm{d}B_u=L_2\text{-}\lim_{n\to\infty}\sum_{k=0}^{n-1}\phi_{t_k^{(n)}}\left(B_{t_{k+1}^{(n)}}-B_{t_{k}^{(n)}}\right).
 \end{equation}
-上式也可以理解为 It\"o 积分的定义.
+上式也可以理解为 It\^o 积分的定义.
 
-\section{It\"o 过程与 It\"o 公式}
+\section{It\^o 过程与 It\^o 公式}
 
-\textbf{定义}：It\"o 过程
+\textbf{定义}：It\^o 过程
 
-设随机过程 $X=\{X_t:t\geqslant0\}$ 满足如下的 It\"o 随机积分方程: 对 $\forall~0\leqslant t_0<t<T$, 有
+设随机过程 $X=\{X_t:t\geqslant0\}$ 满足如下的 It\^o 随机积分方程: 对 $\forall~0\leqslant t_0<t<T$, 有
 \begin{equation}
   X_t-X_{t_0}=\int_{t_0}^tb(s,X_s)\mathrm{d}s+\int_{t_0}^t\sigma(s,X_s)\mathrm{d}B_s,
 \end{equation}
-或等价地写作 It\"o 随机微分方程
+或等价地写作 It\^o 随机微分方程
 \begin{equation}
   \mathrm{d}X_t=b(t,X_t)\mathrm{d}t+\sigma(t,X_t)\mathrm{d}B_t,
 \end{equation}
@@ -4008,23 +4008,23 @@ Doob 极大值不等式: 记 $\displaystyle X_t=\int_0^tg_u\mathrm{d}B_u$, 则 $
 \begin{equation}
   b(t,X_t)\in\mathcal{L}_T^1,~ \sigma(t,X_t)\in\mathcal{L}_T^2,
 \end{equation}
-则称 $X$ 为 It\"o 过程.
+则称 $X$ 为 It\^o 过程.
 
-\textbf{注释}： It\"o 过程与扩散过程
+\textbf{注释}： It\^o 过程与扩散过程
 
-It\"o 过程在 $b(t,X_t),~\sigma(t,X_t)$ 具有比较好的性质的情况下也是扩散过程, 其中 $b(t,X_t)$ 称为漂移系数, $\sigma(t,X_t)$ 称为扩散系数.
+It\^o 过程在 $b(t,X_t),~\sigma(t,X_t)$ 具有比较好的性质的情况下也是扩散过程, 其中 $b(t,X_t)$ 称为漂移系数, $\sigma(t,X_t)$ 称为扩散系数.
 
-\textbf{定理}： It\"o 公式
+\textbf{定理}： It\^o 公式
 
-设随机过程 $X=\{X_t:t\geqslant0\}$ 是 It\"o 过程, $y=f(t,x)$ 是二元函数, 且具有连续偏导数
+设随机过程 $X=\{X_t:t\geqslant0\}$ 是 It\^o 过程, $y=f(t,x)$ 是二元函数, 且具有连续偏导数
 \begin{equation}
   \frac{\partial f}{\partial t},~\frac{\partial f}{\partial x},\frac{\partial^2 f}{\partial x^2}.
 \end{equation}
-令 $Y_t:= f(t,X_t)$, 则过程 $Y=\{Y_t:t\geqslant0\}$ 也是随机过程, 且对 $\forall0\leqslant t_0<t$ 满足如下的 It\"o 积分方程
+令 $Y_t:= f(t,X_t)$, 则过程 $Y=\{Y_t:t\geqslant0\}$ 也是随机过程, 且对 $\forall0\leqslant t_0<t$ 满足如下的 It\^o 积分方程
 \begin{equation}
   Y_t-Y_{t_0}=\int_{t_0}^t\left[\frac{\partial f}{\partial t}+\frac{\partial f}{\partial x}b+\frac{1}{2}\frac{\partial^2 f}{\partial x^2}\sigma^2\right](s,X_s)\mathrm{d}s+\int_{t_0}^t\left(\frac{\partial f}{\partial x}\sigma\right)(s,X_s)\mathrm{d}B_s,
 \end{equation}
-或等价的 It\"o 微分方程
+或等价的 It\^o 微分方程
 \begin{equation}
   \mathrm{d}Y_t=\left[\frac{\partial f}{\partial t}+\frac{\partial f}{\partial x}b+\frac{1}{2}\frac{\partial^2 f}{\partial x^2}\sigma^2\right](t,X_t)\mathrm{d}t+\left[\frac{\partial f}{\partial x}\sigma\right](t,X_t)\mathrm{d}B_t~~(\text{a.e.}).
 \end{equation}
@@ -4049,16 +4049,16 @@ It\"o 过程在 $b(t,X_t),~\sigma(t,X_t)$ 具有比较好的性质的情况下�
 
 粗略地说, $B_{s+\Delta t}-B_s\sim\sqrt{\Delta t}$, 即 $\mathrm{d}B_t\sim\sqrt{\mathrm{d}t}$.
 
-It\"o 公式理解
+It\^o 公式理解
 
-由 It\"o 过程定义可知
+由 It\^o 过程定义可知
 
 \begin{equation}
   \mathrm{d}X_t=b(t,X_t)\mathrm{d}t+\sigma(t,X_t)\mathrm{d}B_t,
 \end{equation}
 令 $Y_t:= f(t,X_t)$, 欲求其关于 $\mathrm{d}t,~\mathrm{d}B_t$ 的全微分, 由 $\mathrm{d}B_t\sim\sqrt{\mathrm{d}t}$ 可知 $f(t,x)$ 对 $x$ 的偏导需要展开到二阶来获取那个与 $\mathrm{d}t$ 同阶的 $\mathrm{d}B_t^2$ 项.
 
-简记 $f=f(t,X_t)$, 则 It\"o 公式微分形式可以粗略理解为
+简记 $f=f(t,X_t)$, 则 It\^o 公式微分形式可以粗略理解为
 
 \begin{equation}
   \begin{aligned}
@@ -4072,7 +4072,7 @@ It\"o 公式理解
   \end{aligned}
 \end{equation}
 
-\textbf{例}：使用 It\"o 公式求解 It\"o 积分
+\textbf{例}：使用 It\^o 公式求解 It\^o 积分
 
 求证
 \begin{equation}
@@ -4088,13 +4088,13 @@ It\"o 公式理解
   \mathrm{d}\left(\frac{B_t^3}{3}\right)=B_t\mathrm{d}t+B_t^2\mathrm{d}B_t
 \end{equation}
 
-对比上式与 It\"o 公式可猜测函数 $f(t,x)=x^3/3$, 下面证明之.
+对比上式与 It\^o 公式可猜测函数 $f(t,x)=x^3/3$, 下面证明之.
 
-布朗运动本身即是 It\"o 过程, 满足 It\"o 微分方程 
+布朗运动本身即是 It\^o 过程, 满足 It\^o 微分方程 
 \begin{equation}
   \mathrm{d}B_t=0\times\mathrm{d}t+1\times\mathrm{d}B_t
 \end{equation} 
-令 $f(t,x)=x^3/3$, 则 $Y_t=f(t,B_t)=B_t^3/3$, 所以由 It\"o 公式可得
+令 $f(t,x)=x^3/3$, 则 $Y_t=f(t,B_t)=B_t^3/3$, 所以由 It\^o 公式可得
 \begin{equation}
   \begin{aligned}
   \mathrm{d}Y_t&=\mathrm{d}\left(\frac{B_t^3}{3}\right)\\
@@ -4108,18 +4108,18 @@ It\"o 公式理解
   \frac{B_t^3}{3}=\int_0^tB_s\mathrm{d}s+\int_0^tB_s^2\mathrm{d}B_s
 \end{equation}
 
-\textbf{例}：求解布朗运动自身的 $n$ 次 It\"o 积分
+\textbf{例}：求解布朗运动自身的 $n$ 次 It\^o 积分
 
 $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \int_0^tB_s^n\mathrm{d}B_s.
 \end{equation}
 
-解: 布朗运动本身即是 It\"o 过程, 满足 It\"o 微分方程 
+解: 布朗运动本身即是 It\^o 过程, 满足 It\^o 微分方程 
 \begin{equation}
   \mathrm{d}B_t=0\times\mathrm{d}t+1\times\mathrm{d}B_t
 \end{equation} 
-令 $f(t,x)=x^{n+1}/(n+1)$, 则 $Y_t=f(t,B_t)=B_t^{n+1}/(n+1)$, 所以由 It\"o 公式可得 
+令 $f(t,x)=x^{n+1}/(n+1)$, 则 $Y_t=f(t,B_t)=B_t^{n+1}/(n+1)$, 所以由 It\^o 公式可得 
 \begin{equation}
   \begin{aligned}
   \mathrm{d}Y_t&=\mathrm{d}\left(\frac{B_t^{n+1}}{n+1}\right)\\
@@ -4137,9 +4137,9 @@ $\forall n\geqslant1$, 求下面积分
   \int_0^tB_s^n\mathrm{d}B_s=\frac{B_t^{n+1}}{n+1}-\int_0^t\frac{n}{2}B_s^{n-1}\mathrm{d}s.
 \end{equation}
 
-\textbf{例}：求随机过程满足的 It\"o 微分方程
+\textbf{例}：求随机过程满足的 It\^o 微分方程
 
-利用 It\"o 公式, 求以下随机过程满足的 It\"o 微分方程:
+利用 It\^o 公式, 求以下随机过程满足的 It\^o 微分方程:
 \begin{equation}X_t=\exp(ut+\alpha B_t),\quad Y_t=\exp(t/2)\cos B_t.\end{equation}
 
 解:  令 $f(t,x)=\exp(ut+\alpha x)$, $g(t,x)=\exp(t/2)\cos x$, 它们的相应偏导数为
@@ -4150,7 +4150,7 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \frac{\partial g}{\partial t}=\frac{1}{2}\exp(t/2)\cos x,~\frac{\partial g}{\partial x}=-\exp(t/2)\sin x,\frac{\partial^2 g}{\partial x^2}=-\exp(t/2)\cos x
 \end{equation}
-所以由 It\"o 公式可知
+所以由 It\^o 公式可知
 \begin{equation}
   \begin{aligned}
     \mathrm{d}X_t&=\left[u\exp(ut+\alpha B_t)+0+\frac{1}{2}\alpha^2\exp(ut+\alpha B_t)\right]\mathrm{d}t+\alpha\exp(ut+\alpha B_t)\mathrm{d}B_t\\
@@ -4166,9 +4166,9 @@ $\forall n\geqslant1$, 求下面积分
   \end{aligned}
 \end{equation}
 
-\textbf{定义}：多元 It\"o 过程
+\textbf{定义}：多元 It\^o 过程
 
-设随机过程 $\bm{X}=\{\bm{X}_t=(X_{1,t},X_{2,t},\cdots,X_{n,t}):t\geqslant0\}$ 满足如下的多元 It\"o 随机微分方程
+设随机过程 $\bm{X}=\{\bm{X}_t=(X_{1,t},X_{2,t},\cdots,X_{n,t}):t\geqslant0\}$ 满足如下的多元 It\^o 随机微分方程
 \begin{equation}
   \mathrm{d}\bm{X}_t=\bm{b}(t,\bm{X}_t)\mathrm{d}t+\bm{\Sigma}(t,\bm{X}_t)\mathrm{d}\bm{B}_t,
 \end{equation}
@@ -4184,11 +4184,11 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \bm{B}_t=\left[B_{1,t},B_{2,t},\cdots,B_{m,t}\right]^T,
 \end{equation}
-则称 $X$ 为 $n$ 维 It\"o 过程.
+则称 $X$ 为 $n$ 维 It\^o 过程.
 
-\textbf{定理}： 多元 It\"o 公式
+\textbf{定理}： 多元 It\^o 公式
 
-设随机过程 $\bm{X}=\{\bm{X}_t:t\geqslant0\}$ 是 $n$ 维 It\"o 过程,
+设随机过程 $\bm{X}=\{\bm{X}_t:t\geqslant0\}$ 是 $n$ 维 It\^o 过程,
 \begin{equation}
   \bm{f}(t,\bm{x})=[f_1(t,\bm{x}),f_2(t,\bm{x}),\cdots,f_d(t,\bm{x})]^T
 \end{equation}
@@ -4196,13 +4196,13 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \frac{\partial f_k}{\partial t},~\frac{\partial f_k}{\partial x_i},\frac{\partial^2 f_k}{\partial x_i\partial x_j}.
 \end{equation}
-令 $\bm{Y}_t:= \bm{f}(t,\bm{X}_t)$, 则过程 $\bm{Y}=\{\bm{Y}_t:t\geqslant0\}$ 是 $d$ 维 It\"o 过程, 且对 $\forall 1\leqslant k\leqslant d$ 满足如下的 多元 It\"o 微分方程
+令 $\bm{Y}_t:= \bm{f}(t,\bm{X}_t)$, 则过程 $\bm{Y}=\{\bm{Y}_t:t\geqslant0\}$ 是 $d$ 维 It\^o 过程, 且对 $\forall 1\leqslant k\leqslant d$ 满足如下的 多元 It\^o 微分方程
 \begin{equation}
   \mathrm{d}\bm{Y}_{k,t}=\left[\frac{\partial f_k}{\partial t}+\frac{\partial f_k}{\partial x_i}b_i+\frac{1}{2}\frac{\partial^2 f_k}{\partial x_i\partial x_j}\sigma_{il}\sigma_{jl}\right](t,\bm{X}_t)\mathrm{d}t+\left[\frac{\partial f_k}{\partial x_i}\sigma_{il}\right](t,\bm{X}_t)\mathrm{d}B_{l,t}.
 \end{equation}
 需要指出的是上式使用了 Einstein 求和约定, 即重复指标自动求和.
 
-\section{It\"o 随机微分方程}
+\section{It\^o 随机微分方程}
 
 \subsection{常系数的线性随机微分方程}
 
@@ -4219,7 +4219,7 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \mathrm{e}^{b t}\mathrm{d}X_t+b\mathrm{e}^{b t} X_t\mathrm{d}t=\sigma\mathrm{e}^{b t}\mathrm{d}B_t,
 \end{equation}
-令 $f(t,x)=\mathrm{e}^{b t}x$, 由 It\"o 公式可知
+令 $f(t,x)=\mathrm{e}^{b t}x$, 由 It\^o 公式可知
 \begin{equation}
   \begin{aligned}
   \mathrm{d}(\mathrm{e}^{b t}X_t)
@@ -4254,7 +4254,7 @@ $\forall n\geqslant1$, 求下面积分
   \frac{\mathrm{d}X_t}{X_t}=b \mathrm{d}t+\sigma \mathrm{d}B_t.
 \end{equation}
 
-遂令 $f(t,x)=\ln x$, 则 $Y_t=\ln X_t$, 由 It\"o 公式可知
+遂令 $f(t,x)=\ln x$, 则 $Y_t=\ln X_t$, 由 It\^o 公式可知
 \begin{equation}
   \begin{aligned}
     \mathrm{d}Y_t
@@ -4287,7 +4287,7 @@ $\forall n\geqslant1$, 求下面积分
 
 求解 $X_t$.
 
-解: 在求解一般线性非齐次随机微分方程之前, 先求解一类稍简单的狭义随机微分方程. 与线性常微分方程求解方法类似, 由简入繁, 先求齐次解, 再求非齐次解, 最大的不同在于随机微分方程中复合函数的求导法则由 It\"o 公式决定, 多了二阶偏导项, 作微分运算时尤其需要谨慎.
+解: 在求解一般线性非齐次随机微分方程之前, 先求解一类稍简单的狭义随机微分方程. 与线性常微分方程求解方法类似, 由简入繁, 先求齐次解, 再求非齐次解, 最大的不同在于随机微分方程中复合函数的求导法则由 It\^o 公式决定, 多了二阶偏导项, 作微分运算时尤其需要谨慎.
 
 狭义随机微分方程
 
@@ -4311,11 +4311,11 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \rho_{t_0}^{-1}(t)=\exp\left(-\int_{t_0}^tb_1(t)\mathrm{d}t\right)
 \end{equation}
-则可以通过 It\"o 公式解上述微分方程, 即
+则可以通过 It\^o 公式解上述微分方程, 即
 \begin{equation}
   \rho_{t_0}^{-1}(t)[\mathrm{d}X_t-b_1(t) X_t]\mathrm{d}t=\rho_{t_0}^{-1}(t)[b_2(t)\mathrm{d}t+\sigma_2(t)\mathrm{d}B_t].
 \end{equation}
-令 $f(t,x)=\rho_{t_0}^{-1}(t)x$, 则由 It\"o 公式可知
+令 $f(t,x)=\rho_{t_0}^{-1}(t)x$, 则由 It\^o 公式可知
 \begin{equation}
   \begin{aligned}
   \mathrm{d}\left[\rho_{t_0}^{-1}(t)X_t\right]
@@ -4350,11 +4350,11 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \rho_{t_0}(t)=\exp\left[\int_{t_0}^t\left(b_1(t)-\frac{1}{2}\sigma_1^2(t)\right)\mathrm{d}t+\int_{t_0}^t\sigma_1(t) \mathrm{d}B_t\right],
 \end{equation}
-则积分因子满足以下 It\"o 微分方程
+则积分因子满足以下 It\^o 微分方程
 \begin{equation}
   \mathrm{d}\rho_{t_0}(t)=b_1(t) \rho_{t_0}(t)\mathrm{d}t+\sigma_1(t) \rho_{t_0}(t)\mathrm{d}B_t.
 \end{equation}
-令 $f(t,x)=1/x$, 则由 It\"o 公式可知 $\rho_{t_0}^{-1}(t)$ 满足以下 It\"o 微分方程
+令 $f(t,x)=1/x$, 则由 It\^o 公式可知 $\rho_{t_0}^{-1}(t)$ 满足以下 It\^o 微分方程
 \begin{equation}
   \begin{aligned}
     \mathrm{d}\rho_{t_0}^{-1}(t)
@@ -4366,7 +4366,7 @@ $\forall n\geqslant1$, 求下面积分
 \begin{equation}
   \mathrm{d}X_t=[b_1(t) X_t+b_2(t)]\mathrm{d}t+[\sigma_1(t) X_t+\sigma_2(t)]\mathrm{d}B_t,
 \end{equation}
-令 $g(t,x_1,x_2)=x_1x_2$, 则由二维 It\"o 公式可知
+令 $g(t,x_1,x_2)=x_1x_2$, 则由二维 It\^o 公式可知
 \begin{equation}
   \begin{aligned}
     \mathrm{d}[\rho_{t_0}^{-1}(t)X_t]
@@ -4388,7 +4388,7 @@ $\forall n\geqslant1$, 求下面积分
   X_t=\rho_{t_0}(t)\left[X_{t_0}+\int_{t_0}^t\rho_{t_0}^{-1}(s)[b_2(s)-\sigma_1(s)\sigma_2(s)]\mathrm{d}s+\int_{t_0}^t\rho_{t_0}^{-1}(s)\sigma_2(s)\mathrm{d}B_s\right].
 \end{equation}
 
-\textbf{例}：求解 It\"o 微分方程
+\textbf{例}：求解 It\^o 微分方程
 
 通用公式
 
@@ -4455,7 +4455,7 @@ $\forall n\geqslant1$, 求下面积分
 
 (4) $\mathrm{d}X_t=f(t)B_t\mathrm{d}t$
 
-解: 布朗运动本身即为 It\"o 过程, 有 It\"o 微分方程
+解: 布朗运动本身即为 It\^o 过程, 有 It\^o 微分方程
 \begin{equation}
   \mathrm{d}B_t=0\times\mathrm{d}t+1\times\mathrm{d}B_t.
 \end{equation}
@@ -4469,7 +4469,7 @@ $\forall n\geqslant1$, 求下面积分
   \frac{\partial h}{\partial x}=F(t),~
   \frac{\partial^2 h}{\partial x^2}=0,
 \end{equation}
-令 $W_t=F(t)B_t$, 由 It\"o 公式可知
+令 $W_t=F(t)B_t$, 由 It\^o 公式可知
 \begin{equation}
   \begin{aligned}
     \mathrm{d}W_t
@@ -4485,7 +4485,7 @@ $\forall n\geqslant1$, 求下面积分
     &=\int_0^tf(s)B_s\mathrm{d}s+\int_0^tF(s)\mathrm{d}B_s,\\
   \end{aligned}
 \end{equation}
-故由 It\"o 积分的一阶矩和二阶矩性质可知
+故由 It\^o 积分的一阶矩和二阶矩性质可知
 \begin{equation}
   \begin{aligned}
   X_t
@@ -4499,7 +4499,7 @@ $\forall n\geqslant1$, 求下面积分
 
 (5) $\mathrm{d}Y_t=f(t)B_t\mathrm{d}B_t$
 
-解: 布朗运动本身即为 It\"o 过程, 有 It\"o 微分方程
+解: 布朗运动本身即为 It\^o 过程, 有 It\^o 微分方程
 \begin{equation}
   \mathrm{d}B_t=0\times\mathrm{d}t+1\times\mathrm{d}B_t.
 \end{equation}
@@ -4509,7 +4509,7 @@ $\forall n\geqslant1$, 求下面积分
   \frac{\partial g}{\partial x}=f(t)x,~
   \frac{\partial^2 g}{\partial x^2}=f(t),
 \end{equation}
-令 $Z_t=f(t)B_t^2/2$, 由 It\"o 公式可知
+令 $Z_t=f(t)B_t^2/2$, 由 It\^o 公式可知
 \begin{equation}
   \begin{aligned}
     \mathrm{d}Z_t
